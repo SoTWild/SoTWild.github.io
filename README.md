@@ -1,2 +1,2 @@
 # SoTWild.github.io
-Introduction
+This is a personal blog website.
