@@ -8,4 +8,4 @@
 
 ## [Link+](/blog/link/introduction/Link.html)
 
-## [Haphyxlos](/blog/haphyxlos/introduction/haphyxlos.html)
+## [Haphyxlos](/blog/Haphyxlos/introduction/Haphyxlos.html)
