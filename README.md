@@ -44,7 +44,7 @@
 
 
 
-##### 本项目开源地址：[SoTWild/WebServer (github.com)](https://github.com/SoTWild/WebServer)（待建立）
+##### 本项目开源地址：[SoTWild/SoTWild.github.io](https://github.com/SoTWild/SoTWild.github.io)
 
 ##### 联系站长：
 
