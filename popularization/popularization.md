@@ -6,28 +6,28 @@
 
 
 
-### 2022/02/20：[如何从0搭建一个个人服务器？](popularization/20220220.html)
+### 2022/02/20：[如何从0搭建一个个人服务器？](/popularization/20220220.html)
 
-### 2022/02/21：[什么是氮化镓，为什么它有良好的前景？](popularization/20220221.html)
+### 2022/02/21：[什么是氮化镓，为什么它有良好的前景？](/popularization/20220221.html)
 
-### 2022/02/22：[为什么王水比制出它的盐酸、硝酸强得多？](popularization/20220222.html)
+### 2022/02/22：[为什么王水比制出它的盐酸、硝酸强得多？](/popularization/20220222.html)
 
-### 2022/02/23：[什么是 東方Project ？](popularization/20220223.html)
+### 2022/02/23：[什么是 東方Project ？](/popularization/20220223.html)
 
-### 2022/02/24：[什么是 塞尔达传说 ？](popularization/20220224.html)
+### 2022/02/24：[什么是 塞尔达传说 ？](/popularization/20220224.html)
 
-### 2022/02/25：[电池的过去和未来](popularization/20220225.html)
+### 2022/02/25：[电池的过去和未来](/popularization/20220225.html)
 
-### 2022/02/26：[什么是 量子力学 ？](popularization/20220226.html)
+### 2022/02/26：[什么是 量子力学 ？](/popularization/20220226.html)
 
-### 2022/02/27：[一款游戏的开发流程](popularization/20220227,html)
+### 2022/02/27：[一款游戏的开发流程](/popularization/20220227,html)
 
-### 2022/02/28：[如何科学地洗衣服](popularization/20220228.html)
+### 2022/02/28：[如何科学地洗衣服](/popularization/20220228.html)
 
-### 2022/03/01：[打印机的种类与如何挑选打印机](popularization/20220301.html)
+### 2022/03/01：[打印机的种类与如何挑选打印机](/popularization/20220301.html)
 
-### 2022/03/02：[什么是 低碳饮食 ，到底好不好 ？](popularization/20220302.html)
+### 2022/03/02：[什么是 低碳饮食 ，到底好不好 ？](/popularization/20220302.html)
 
-### 2022/03/03：[怎样不失眠 ？](popularization/20220303.html)
+### 2022/03/03：[怎样不失眠 ？](/popularization/20220303.html)
 
-### 2022/03/04：[怎么做到 低碳生活 ？](popularization/20220304,html)
+### 2022/03/04：[怎么做到 低碳生活 ？](/popularization/20220304,html)
