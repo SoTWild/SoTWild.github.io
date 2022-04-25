@@ -1,0 +1,770 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="Shortcut Icon" href="https://i2.imgu.cc/images/2022/02/24/CIoiY.png" type="image/x-icon" />
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>语文</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='语文'><span>语文</span></h1><p>&nbsp;</p><p><span>这里包括了 </span><em><span>人民教育出版社</span></em><span>  </span><strong><span>语文课本</span></strong><span>中</span><strong><span>初中 6 册书中的</span><em><span>部分</span></em><span> 重要古诗文</span></strong><span>。并且还有</span><strong><span>几篇优质文章</span></strong><span>，希望你学习愉快。</span></p><h1 id='）'><span>：）</span></h1><h5 id='注意可能有部分字词存在不同版本本站只供参考'><em><strong><span>注意：可能有部分字词存在不同版本，本站只供参考！</span></strong></em></h5><p>&nbsp;</p><h4 id='戳我下载pdf文档'><a href='/download/study/common/chinese/chinese.pdf'><span>戳我下载PDF文档</span></a></h4><p>&nbsp;</p><hr /><h1 id='目录'><span>目录：</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#语文">语文</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n4"><a class="md-toc-inner" href="#）">：）</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n5"><a class="md-toc-inner" href="#注意可能有部分字词存在不同版本本站只供参考"><em><strong>注意：可能有部分字词存在不同版本，本站只供参考！</strong></em></a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n616"><a class="md-toc-inner" href="#戳我下载pdf文档">戳我下载PDF文档</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n7"><a class="md-toc-inner" href="#目录">目录：</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n11"><a class="md-toc-inner" href="#七年级上">#七年级上：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13"><a class="md-toc-inner" href="#观沧海">观沧海</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n14"><a class="md-toc-inner" href="#作者曹操">作者：曹操</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n17"><a class="md-toc-inner" href="#闻王昌龄左迁龙标遥有此寄">闻王昌龄左迁龙标遥有此寄</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n18"><a class="md-toc-inner" href="#作者李白">作者：李白</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n21"><a class="md-toc-inner" href="#次北固山下">次北固山下</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n22"><a class="md-toc-inner" href="#作者王湾">作者：王湾</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n25"><a class="md-toc-inner" href="#天净沙·秋思">天净沙·秋思</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n26"><a class="md-toc-inner" href="#作者马致远">作者：马致远</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n29"><a class="md-toc-inner" href="#论语十二章">论语十二章</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n30"><a class="md-toc-inner" href="#作者孔子及其弟子-先秦">作者：孔子及其弟子 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n44"><a class="md-toc-inner" href="#峨眉山月歌">峨眉山月歌</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n45"><a class="md-toc-inner" href="#作者李白-唐代-1">作者：李白 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n48"><a class="md-toc-inner" href="#江南逢李龟年">江南逢李龟年</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n49"><a class="md-toc-inner" href="#作者杜甫">作者：杜甫</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n52"><a class="md-toc-inner" href="#行军九日思长安故园">行军九日思长安故园</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n53"><a class="md-toc-inner" href="#作者岑参-唐代-1">作者：岑参 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n56"><a class="md-toc-inner" href="#夜上受降城闻笛">夜上受降城闻笛</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n57"><a class="md-toc-inner" href="#作者李益-唐代">作者：李益 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n60"><a class="md-toc-inner" href="#诫子书">诫子书</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n61"><a class="md-toc-inner" href="#作者诸葛亮-两汉-1">作者：诸葛亮 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n64"><a class="md-toc-inner" href="#穿井得一人">穿井得一人</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n65"><a class="md-toc-inner" href="#作者吕不韦-先秦">作者：吕不韦 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n68"><a class="md-toc-inner" href="#杞人忧天">杞人忧天</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n69"><a class="md-toc-inner" href="#作者列子-先秦-1">作者：《列子》 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n78"><a class="md-toc-inner" href="#秋词其一）">秋词（其一）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n79"><a class="md-toc-inner" href="#作者刘禹锡-唐代-1">作者：刘禹锡 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n82"><a class="md-toc-inner" href="#夜雨寄北">夜雨寄北</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n83"><a class="md-toc-inner" href="#作者李商隐-唐代-1">作者：李商隐 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" href="#十一月四日风雨大作">十一月四日风雨大作</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n87"><a class="md-toc-inner" href="#作者陆游-1">作者：陆游</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n90"><a class="md-toc-inner" href="#潼关">潼关</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n91"><a class="md-toc-inner" href="#作者谭嗣同-清代">作者：谭嗣同 〔清代〕</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n96"><a class="md-toc-inner" href="#七年级下">#七年级下：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n98"><a class="md-toc-inner" href="#木兰诗">木兰诗</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n99"><a class="md-toc-inner" href="#乐府诗集-南北朝">乐府诗集 〔南北朝〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n108"><a class="md-toc-inner" href="#卖油翁">卖油翁</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n109"><a class="md-toc-inner" href="#作者欧阳修-宋代-1">作者：欧阳修 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n113"><a class="md-toc-inner" href="#竹里馆">竹里馆</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n114"><a class="md-toc-inner" href="#作者王维-唐代-1">作者：王维 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n117"><a class="md-toc-inner" href="#春夜洛城闻笛">春夜洛城闻笛</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n118"><a class="md-toc-inner" href="#作者李白-唐代-2">作者：李白 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n121"><a class="md-toc-inner" href="#逢入京使">逢入京使</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n122"><a class="md-toc-inner" href="#作者岑参-唐代-2">作者：岑参 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n125"><a class="md-toc-inner" href="#晚春">晚春</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n126"><a class="md-toc-inner" href="#作者韩愈-唐代-1">作者：韩愈 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#陋室铭">陋室铭</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n130"><a class="md-toc-inner" href="#作者刘禹锡-唐代-2">作者：刘禹锡 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n133"><a class="md-toc-inner" href="#爱莲说">爱莲说</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n134"><a class="md-toc-inner" href="#作者周敦颐-宋代">作者：周敦颐 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n138"><a class="md-toc-inner" href="#登幽州台歌">登幽州台歌</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n139"><a class="md-toc-inner" href="#作者陈子昂-唐代">作者：陈子昂 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n142"><a class="md-toc-inner" href="#望岳">望岳</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n143"><a class="md-toc-inner" href="#作者杜甫-唐代-1">作者：杜甫 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n146"><a class="md-toc-inner" href="#登飞来峰">登飞来峰</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n147"><a class="md-toc-inner" href="#作者王安石-宋代">作者：王安石 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n150"><a class="md-toc-inner" href="#游山西村">游山西村</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n151"><a class="md-toc-inner" href="#作者陆游-宋代">作者：陆游 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n154"><a class="md-toc-inner" href="#己亥杂诗其五）">己亥杂诗（其五）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n155"><a class="md-toc-inner" href="#作者龚自珍-清代">作者：龚自珍 〔清代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n158"><a class="md-toc-inner" href="#河中石兽">河中石兽</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n159"><a class="md-toc-inner" href="#作者纪昀-清代">作者：纪昀 〔清代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n164"><a class="md-toc-inner" href="#泊秦淮">泊秦淮</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n168"><a class="md-toc-inner" href="#贾生">贾生</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n172"><a class="md-toc-inner" href="#过松源晨炊漆公店其五）">过松源晨炊漆公店（其五）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n173"><a class="md-toc-inner" href="#作者杨万里-宋代">作者：杨万里 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n176"><a class="md-toc-inner" href="#约客">约客</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n177"><a class="md-toc-inner" href="#作者赵师秀-宋代">作者：赵师秀 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n182"><a class="md-toc-inner" href="#八年级上">#八年级上：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n184"><a class="md-toc-inner" href="#三峡">三峡</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n185"><a class="md-toc-inner" href="#作者郦道元-南北朝">作者：郦道元 〔南北朝〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n191"><a class="md-toc-inner" href="#答谢中书书">答谢中书书</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n192"><a class="md-toc-inner" href="#作者陶弘景-南北朝">作者：陶弘景 〔南北朝〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n195"><a class="md-toc-inner" href="#记承天寺夜游">记承天寺夜游</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n196"><a class="md-toc-inner" href="#作者苏轼-宋代-1">作者：苏轼 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n199"><a class="md-toc-inner" href="#与朱元思书">与朱元思书</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n200"><a class="md-toc-inner" href="#作者吴均-南北朝">作者：吴均 〔南北朝〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n205"><a class="md-toc-inner" href="#野望">野望</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n206"><a class="md-toc-inner" href="#作者王绩-唐代">作者：王绩 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n209"><a class="md-toc-inner" href="#黄鹤楼">黄鹤楼</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n210"><a class="md-toc-inner" href="#作者崔颢-唐代">作者：崔颢 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n213"><a class="md-toc-inner" href="#使至塞上">使至塞上</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n214"><a class="md-toc-inner" href="#作者王维-唐代-2">作者：王维 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n217"><a class="md-toc-inner" href="#渡荆门送别">渡荆门送别</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n218"><a class="md-toc-inner" href="#作者李白-唐代-3">作者：李白 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n221"><a class="md-toc-inner" href="#钱塘湖春行">钱塘湖春行</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n222"><a class="md-toc-inner" href="#作者白居易-唐代-1">作者：白居易 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n225"><a class="md-toc-inner" href="#庭中有奇树">庭中有奇树</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n226"><a class="md-toc-inner" href="#作者佚名-两汉-1">作者：佚名 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#龟虽寿">龟虽寿</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n230"><a class="md-toc-inner" href="#作者曹操-两汉">作者：曹操 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n233"><a class="md-toc-inner" href="#赠从弟">赠从弟</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n234"><a class="md-toc-inner" href="#作者刘祯">作者：刘祯</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n237"><a class="md-toc-inner" href="#梁甫行">梁甫行</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n238"><a class="md-toc-inner" href="#作者曹植-魏晋">作者：曹植 〔魏晋〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n241"><a class="md-toc-inner" href="#富贵不能淫">富贵不能淫</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n242"><a class="md-toc-inner" href="#作者孟子-先秦">作者：孟子 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n246"><a class="md-toc-inner" href="#生于忧患死于安乐">生于忧患，死于安乐</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n247"><a class="md-toc-inner" href="#作者孟子及其弟子-先秦-1">作者：孟子及其弟子 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n251"><a class="md-toc-inner" href="#愚公移山">愚公移山</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n252"><a class="md-toc-inner" href="#作者列子-先秦-2">作者：列子 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n258"><a class="md-toc-inner" href="#周亚夫军细柳">周亚夫军细柳</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n259"><a class="md-toc-inner" href="#作者司马迁-两汉-1">作者：司马迁 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n264"><a class="md-toc-inner" href="#饮酒其五）">饮酒（其五）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n265"><a class="md-toc-inner" href="#作者陶渊明-魏晋-1">作者：陶渊明 〔魏晋〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n268"><a class="md-toc-inner" href="#春望">春望</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n269"><a class="md-toc-inner" href="#作者杜甫-唐代-2">作者：杜甫 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n272"><a class="md-toc-inner" href="#雁门太守行">雁门太守行</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n273"><a class="md-toc-inner" href="#作者李贺">作者：李贺</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n276"><a class="md-toc-inner" href="#赤壁">赤壁</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n277"><a class="md-toc-inner" href="#作者杜牧-唐代">作者：杜牧 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n280"><a class="md-toc-inner" href="#渔家傲天接云涛连晓雾）">渔家傲（天接云涛连晓雾）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n281"><a class="md-toc-inner" href="#作者李清照-宋代">作者：李清照 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n286"><a class="md-toc-inner" href="#八年级下">#八年级下：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n288"><a class="md-toc-inner" href="#桃花源记">桃花源记</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n289"><a class="md-toc-inner" href="#作者陶渊明-魏晋-2">作者：陶渊明 〔魏晋〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n296"><a class="md-toc-inner" href="#小石潭记">小石潭记</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n297"><a class="md-toc-inner" href="#作者柳宗元-唐代">作者：柳宗元 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n304"><a class="md-toc-inner" href="#关雎">关雎</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n305"><a class="md-toc-inner" href="#作者佚名-先秦-1">作者：佚名 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n308"><a class="md-toc-inner" href="#蒹葭">蒹葭</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n309"><a class="md-toc-inner" href="#作者佚名-先秦-2">作者：佚名 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n312"><a class="md-toc-inner" href="#式微">式微</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n313"><a class="md-toc-inner" href="#作者佚名-先秦-3">作者：佚名 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n316"><a class="md-toc-inner" href="#子衿">子衿</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n317"><a class="md-toc-inner" href="#作者佚名-先秦-4">作者：佚名 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n320"><a class="md-toc-inner" href="#送杜少府之任蜀州">送杜少府之任蜀州</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n321"><a class="md-toc-inner" href="#作者王勃-唐代">作者：王勃 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n324"><a class="md-toc-inner" href="#望洞庭湖赠张丞相">望洞庭湖赠张丞相</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n325"><a class="md-toc-inner" href="#作者孟浩然">作者：孟浩然</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n328"><a class="md-toc-inner" href="#北冥有鱼">北冥有鱼</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n329"><a class="md-toc-inner" href="#先秦庄周的逍遥游节选">先秦庄周的《逍遥游(节选)》</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n332"><a class="md-toc-inner" href="#庄子与惠子游于濠梁之上">庄子与惠子游于濠梁之上</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n333"><a class="md-toc-inner" href="#作者庄周-先秦">作者：庄周 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n336"><a class="md-toc-inner" href="#虽有嘉肴">虽有嘉肴</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n337"><a class="md-toc-inner" href="#作者戴圣-两汉">作者：戴圣 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n340"><a class="md-toc-inner" href="#大道之行也">大道之行也</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n341"><a class="md-toc-inner" href="#作者礼记-先秦">作者：礼记 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n344"><a class="md-toc-inner" href="#马说">马说</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n345"><a class="md-toc-inner" href="#作者韩愈-唐代-2">作者：韩愈 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n350"><a class="md-toc-inner" href="#茅屋为秋风所破歌">茅屋为秋风所破歌</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n351"><a class="md-toc-inner" href="#作者杜甫-唐代-3">作者：杜甫 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n357"><a class="md-toc-inner" href="#卖炭翁">卖炭翁</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n358"><a class="md-toc-inner" href="#作者白居易-唐代-2">作者：白居易 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n361"><a class="md-toc-inner" href="#题破山寺后禅院">题破山寺后禅院</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n362"><a class="md-toc-inner" href="#作者常建-唐代">作者：常建 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n365"><a class="md-toc-inner" href="#送友人">送友人</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n366"><a class="md-toc-inner" href="#作者李白-唐代-4">作者：李白 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n369"><a class="md-toc-inner" href="#卜算子·黄州定慧院寓居作">卜算子·黄州定慧院寓居作</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n370"><a class="md-toc-inner" href="#作者苏轼-宋代-2">作者：苏轼 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n373"><a class="md-toc-inner" href="#卜算子·咏梅">卜算子·咏梅</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n374"><a class="md-toc-inner" href="#作者陆游-2">作者：陆游</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n379"><a class="md-toc-inner" href="#九年级上">#九年级上：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n381"><a class="md-toc-inner" href="#岳阳楼记">岳阳楼记</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n382"><a class="md-toc-inner" href="#作者范仲淹-宋代-1">作者：范仲淹 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n389"><a class="md-toc-inner" href="#醉翁亭记">醉翁亭记</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n390"><a class="md-toc-inner" href="#作者欧阳修-宋代-2">作者：欧阳修 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n396"><a class="md-toc-inner" href="#湖心亭看雪">湖心亭看雪</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n397"><a class="md-toc-inner" href="#作者张岱-明代">作者：张岱 〔明代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n401"><a class="md-toc-inner" href="#行路难其一）">行路难（其一）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n402"><a class="md-toc-inner" href="#作者李白-唐代-5">作者：李白 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n405"><a class="md-toc-inner" href="#酬乐天扬州初逢席上见赠">酬乐天扬州初逢席上见赠</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n406"><a class="md-toc-inner" href="#作者刘禹锡-唐代-3">作者：刘禹锡 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n409"><a class="md-toc-inner" href="#水调歌头">水调歌头</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n410"><a class="md-toc-inner" href="#作者苏轼-宋代-3">作者：苏轼 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n415"><a class="md-toc-inner" href="#商山早行">商山早行</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n416"><a class="md-toc-inner" href="#作者温庭筠-唐代">作者：温庭筠 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n419"><a class="md-toc-inner" href="#月夜忆舍弟">月夜忆舍弟</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n420"><a class="md-toc-inner" href="#作者杜甫-唐代-4">作者：杜甫 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n423"><a class="md-toc-inner" href="#长沙过贾谊宅">长沙过贾谊宅</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n424"><a class="md-toc-inner" href="#作者刘长卿">作者：刘长卿</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n427"><a class="md-toc-inner" href="#左迁至蓝关示侄孙湘">左迁至蓝关示侄孙湘</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n428"><a class="md-toc-inner" href="#作者韩愈-唐代-3">作者：韩愈 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n431"><a class="md-toc-inner" href="#丑奴儿·书博山道中壁">丑奴儿·书博山道中壁</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n432"><a class="md-toc-inner" href="#作者辛弃疾-宋代">作者：辛弃疾 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n436"><a class="md-toc-inner" href="#行香子">行香子</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n437"><a class="md-toc-inner" href="#作者秦观-宋代">作者：秦观 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n441"><a class="md-toc-inner" href="#无题相见时难别亦难）">无题（相见时难别亦难）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n442"><a class="md-toc-inner" href="#作者李商隐-唐代-2">作者：李商隐 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n445"><a class="md-toc-inner" href="#咸阳城东楼">咸阳城东楼</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n446"><a class="md-toc-inner" href="#作者许浑">作者：许浑</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n451"><a class="md-toc-inner" href="#九年级下">#九年级下：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n453"><a class="md-toc-inner" href="#月夜">月夜</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n454"><a class="md-toc-inner" href="#作者杜甫-唐代-5">作者：杜甫 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n457"><a class="md-toc-inner" href="#鱼我所欲也">鱼我所欲也</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n458"><a class="md-toc-inner" href="#作者孟子及其弟子-先秦-2">作者：孟子及其弟子 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n462"><a class="md-toc-inner" href="#唐雎不辱使命">唐雎不辱使命</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n463"><a class="md-toc-inner" href="#作者刘向-撰-两汉-1">作者：刘向 撰 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n469"><a class="md-toc-inner" href="#送东阳马生序">送东阳马生序</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n470"><a class="md-toc-inner" href="#作者宋濂-明代">作者：宋濂 〔明代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n476"><a class="md-toc-inner" href="#渔家傲·秋思">渔家傲·秋思</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n477"><a class="md-toc-inner" href="#作者范仲淹-宋代-2">作者：范仲淹 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n481"><a class="md-toc-inner" href="#江城子·密州出猎">江城子·密州出猎</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n482"><a class="md-toc-inner" href="#作者苏轼-宋代-4">作者：苏轼 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n486"><a class="md-toc-inner" href="#破阵子·为陈同甫赋壮语以寄之">破阵子·为陈同甫赋壮语以寄之</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n487"><a class="md-toc-inner" href="#作者辛弃疾-1">作者：辛弃疾</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n491"><a class="md-toc-inner" href="#满江红小住京华）">满江红（小住京华）</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n492"><a class="md-toc-inner" href="#作者秋瑾-近现代">作者：秋瑾 〔近现代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n496"><a class="md-toc-inner" href="#曹刿论战">曹刿论战</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n497"><a class="md-toc-inner" href="#作者左丘明-先秦">作者：左丘明 〔先秦〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n502"><a class="md-toc-inner" href="#邹忌讽齐王纳谏">邹忌讽齐王纳谏</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n503"><a class="md-toc-inner" href="#作者刘向-撰-两汉-2">作者：刘向 撰 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n508"><a class="md-toc-inner" href="#陈涉世家">陈涉世家</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n509"><a class="md-toc-inner" href="#作者司马迁-两汉-2">作者：司马迁 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n538"><a class="md-toc-inner" href="#出师表">出师表</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n539"><a class="md-toc-inner" href="#作者诸葛亮-两汉-2">作者：诸葛亮 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n549"><a class="md-toc-inner" href="#十五从军征">十五从军征</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n550"><a class="md-toc-inner" href="#作者佚名-两汉-2">作者：佚名 〔两汉〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n553"><a class="md-toc-inner" href="#白雪歌送武判官归京">白雪歌送武判官归京</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n554"><a class="md-toc-inner" href="#作者岑参-唐代-3">作者：岑参 〔唐代〕</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n557"><a class="md-toc-inner" href="#南乡子·登京口北固亭有怀">南乡子·登京口北固亭有怀</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n558"><a class="md-toc-inner" href="#作者辛弃疾-2">作者：辛弃疾</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n562"><a class="md-toc-inner" href="#过零丁洋">过零丁洋</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n563"><a class="md-toc-inner" href="#作者文天祥-宋代">作者：文天祥 〔宋代〕</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n568"><a class="md-toc-inner" href="#优秀文章">优秀文章：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n570"><a class="md-toc-inner" href="#捕风者">捕风者 </a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n571"><a class="md-toc-inner" href="#彭家河">彭家河</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n581"><a class="md-toc-inner" href="#你的光照亮了我的世界">你的光照亮了我的世界</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n599"><a class="md-toc-inner" href="#星星缀满我的脸">星星缀满我的脸</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n600"><a class="md-toc-inner" href="#傅菲">傅菲</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n603"><a class="md-toc-inner" href="#雕刻岁月">雕刻岁月</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n604"><a class="md-toc-inner" href="#尤今">尤今</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n626"><a class="md-toc-inner" href="#待补充">待补充……</a></span></p></div><hr /><p>&nbsp;</p><h1 id='七年级上'><span>#七年级上：</span></h1><p>&nbsp;</p><h3 id='观沧海'><span>观沧海</span></h3><h6 id='作者曹操'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_f4d9b1ed94dc.aspx'><span>曹操</span></a></h6><p><strong><span>东临碣石，以观沧海。</span></strong>
+<span>		</span><strong><span>水何澹澹，山岛竦峙。</span></strong>
+<span>		</span><strong><span>树木丛生，百草丰茂。</span></strong>
+<span>		</span><strong><span>秋风萧瑟，洪波涌起。</span></strong>
+<span>		</span><strong><span>日月之行，若出其中；</span></strong>
+<span>		</span><strong><span>星汉灿烂，若出其里。</span></strong>
+<span>		</span><strong><span>幸甚至哉，歌以咏志。</span></strong></p><p>&nbsp;</p><h3 id='闻王昌龄左迁龙标遥有此寄'><span>闻王昌龄左迁龙标遥有此寄</span></h3><h6 id='作者李白'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a></h6><p><strong><span>杨花落尽子规啼，闻道龙标过五溪。</span>
+<span>		</span><span>我寄愁心与明月，随君直到夜郎西。</span></strong></p><p>&nbsp;</p><h3 id='次北固山下'><span>次北固山下</span></h3><h6 id='作者王湾'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_af94a5c4ceea.aspx'><span>王湾</span></a></h6><p><strong><span>客路青山外，行舟绿水前。</span>
+<span>		</span><span>潮平两岸阔，风正一帆悬。</span>
+<span>		</span><span>海日生残夜，江春入旧年。</span>
+<span>		</span><span>乡书何处达？归雁洛阳边。</span></strong></p><p>&nbsp;</p><h3 id='天净沙·秋思'><span>天净沙·秋思</span></h3><h6 id='作者马致远'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_d0f71489043c.aspx'><span>马致远</span></a></h6><p><strong><span>枯藤老树昏鸦，小桥流水人家，古道西风瘦马。</span><span>		</span><span>夕阳西下，断肠人在天涯。</span></strong></p><p>&nbsp;</p><h3 id='论语十二章'><span>论语十二章</span></h3><h6 id='作者孔子及其弟子-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=孔子及其弟子'><span>孔子及其弟子</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”《学而》</span></strong></p><p><strong><span>曾子曰：“吾日三省吾身：为人谋而不忠乎？与朋友交而不信乎？传不习乎？”《学而》</span></strong></p><p><strong><span>子曰：“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不逾矩。”《为政》</span></strong></p><p><strong><span>子曰：“温故而知新，可以为师矣。”《为政》</span></strong></p><p><strong><span>子曰：“学而不思则罔，思而不学则殆。”《为政》</span></strong></p><p><strong><span>子曰：“贤哉，回也！一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐。贤哉，回也！”《雍也》</span></strong></p><p><strong><span>子曰：“知之者不如好之者，好之者不如乐之者。”《雍也》</span></strong></p><p><strong><span>子曰：“饭疏食，饮水，曲肱而枕之，乐亦在其中矣。不义而富且贵，于我如浮云。”《述而》</span></strong></p><p><strong><span>子曰：“三人行，必有我师焉。择其善者而从之，其不善者而改之。”《述而》</span></strong></p><p><strong><span>子在川上曰：“逝者如斯夫，不舍昼夜。”《子罕》</span></strong></p><p><strong><span>子曰：“三军可夺帅也，匹夫不可夺志也。”《子罕》</span></strong></p><p><strong><span>子夏曰：“博学而笃志，切问而近思，仁在其中矣。”《子张》</span></strong></p><p>&nbsp;</p><h3 id='峨眉山月歌'><span>峨眉山月歌</span></h3><h6 id='作者李白-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>峨眉山月半轮秋，影入平羌江水流。</span></strong>
+<span>		</span><strong><span>夜发清溪向三峡，思君不见下渝州。</span></strong></p><p>&nbsp;</p><h3 id='江南逢李龟年'><span>江南逢李龟年</span></h3><h6 id='作者杜甫'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a></h6><p><strong><span>岐王宅里寻常见，崔九堂前几度闻。</span></strong>
+<span>		</span><strong><span>正是江南好风景，落花时节又逢君。</span></strong></p><p>&nbsp;</p><h3 id='行军九日思长安故园'><span>行军九日思长安故园</span></h3><h6 id='作者岑参-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_0969d1da1ac1.aspx'><span>岑参</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>强欲登高去，无人送酒来。</span></strong>
+<span>		</span><strong><span>遥怜故园菊，应傍战场开。</span></strong></p><p>&nbsp;</p><h3 id='夜上受降城闻笛'><span>夜上受降城闻笛</span></h3><h6 id='作者李益-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_da2cd14d14b1.aspx'><span>李益</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>回乐烽前沙似雪，受降城外月如霜。</span></strong>
+<span>		</span><strong><span>不知何处吹芦管，一夜征人尽望乡。</span></strong></p><p>&nbsp;</p><h3 id='诫子书'><span>诫子书</span></h3><h6 id='作者诸葛亮-两汉-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e82a672a1ca9.aspx'><span>诸葛亮</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>夫君子之行，静以修身，俭以养德。非淡泊无以明志，非宁静无以致远。夫学须静也，才须学也，非学无以广才，非志无以成学。淫慢则不能励精，险躁则不能治性。年与时驰，意与日去，遂成枯落，多不接世，悲守穷庐，将复何及！</span></strong></p><p>&nbsp;</p><h3 id='穿井得一人'><span>穿井得一人</span></h3><h6 id='作者吕不韦-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e08ad9ff94cb.aspx'><span>吕不韦</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>宋之丁氏，家无井而出溉汲，常一人居外。及其家穿井，告人曰：“吾穿井得一人。”有闻而传者：“丁氏穿井得一人。”国人道之，闻之于宋君。宋君令人问之于丁氏，丁氏对曰：“得一人之使，非得一人于井中也。”求闻之若此，不若无闻也。</span></strong></p><p>&nbsp;</p><h3 id='杞人忧天'><span>杞人忧天</span></h3><h6 id='作者列子-先秦-1'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=《列子》'><span>《列子》</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>杞国有人忧天地崩坠，身亡所寄，废寝食者。</span></strong></p><p><strong><span>又有忧彼之所忧者，因往晓之，曰：“天，积气耳，亡处亡气。若屈伸呼吸，终日在天中行止，奈何忧崩坠乎？”</span></strong></p><p><strong><span>其人曰：“天果积气，日月星宿，不当坠耶？”</span></strong></p><p><strong><span>晓之者曰：“日月星宿，亦积气中之有光耀者，只使坠，亦不能有所中伤。”</span></strong></p><p><strong><span>其人曰：“奈地坏何？”</span></strong></p><p><strong><span>晓之者曰：“地，积块耳，充塞四虚，亡处亡块。若躇步跐蹈，终日在地上行止，奈何忧其坏？”</span></strong></p><p><strong><span>其人舍然大喜，晓之者亦舍然大喜。</span></strong></p><p>&nbsp;</p><h3 id='秋词其一）'><span>秋词（其一）</span></h3><h6 id='作者刘禹锡-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e3c4e8cf2646.aspx'><span>刘禹锡</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>自古逢秋悲寂寥，我言秋日胜春朝。</span></strong>
+<span>		</span><strong><span>晴空一鹤排云上，便引诗情到碧霄。</span></strong></p><p>&nbsp;</p><h3 id='夜雨寄北'><span>夜雨寄北</span></h3><h6 id='作者李商隐-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_bc94c92721b8.aspx'><span>李商隐</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>君问归期未有期，巴山夜雨涨秋池。</span></strong>
+<span>		</span><strong><span>何当共剪西窗烛，却话巴山夜雨时。</span></strong></p><p>&nbsp;</p><h3 id='十一月四日风雨大作'><span>十一月四日风雨大作</span></h3><h6 id='作者陆游-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_efd5da0ed1a1.aspx'><span>陆游</span></a></h6><p><strong><span>僵卧孤村不自哀，尚思为国戍轮台。</span></strong>
+<span>		</span><strong><span>夜阑卧听风吹雨，铁马冰河入梦来。</span></strong></p><p>&nbsp;</p><h3 id='潼关'><span>潼关</span></h3><h6 id='作者谭嗣同-清代'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=谭嗣同'><span>谭嗣同</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=清代'><span>〔清代〕</span></a></h6><p><strong><span>终古高云簇此城，秋风吹散马蹄声。</span></strong>
+<span>		</span><strong><span>河流大野犹嫌束，山入潼关不解平。</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='七年级下'><span>#七年级下：</span></h1><p>&nbsp;</p><h3 id='木兰诗'><span>木兰诗</span></h3><h6 id='乐府诗集-南北朝'><a href='https://so.gushiwen.cn/search.aspx?value=乐府诗集'><span>乐府诗集</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=南北朝'><span>〔南北朝〕</span></a></h6><p><strong><span>唧唧复唧唧，木兰当户织。不闻机杼声，唯闻女叹息。</span></strong></p><p><strong><span>问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。</span></strong></p><p><strong><span>东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。</span></strong></p><p><strong><span>万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。</span></strong></p><p><strong><span>归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。</span></strong></p><p><strong><span>爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床。脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。</span></strong></p><p><strong><span>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌？</span></strong></p><p>&nbsp;</p><h3 id='卖油翁'><span>卖油翁</span></h3><h6 id='作者欧阳修-宋代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_7ab3b8200774.aspx'><span>欧阳修</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>陈康肃公善射，当世无双 ，公亦以此自矜。尝射于家圃，有卖油翁释担而立，睨之久而不去。见其发矢十中八九，但微颔之。</span></strong></p><p><strong><span>康肃问曰：“汝亦知射乎？吾射不亦精乎？”翁曰：“无他， 但手熟尔。”康肃忿然曰：“尔安敢轻吾射！”翁曰：“以我酌油知之。”乃取一葫芦置于地，以钱覆其口，徐以杓酌油沥之，自钱孔入，而钱不湿。因曰：“我亦无他，惟手熟尔。”康肃笑而遣之。</span></strong></p><p>&nbsp;</p><h3 id='竹里馆'><span>竹里馆</span></h3><h6 id='作者王维-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_52fceee85532.aspx'><span>王维</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>独坐幽篁里，弹琴复长啸。</span></strong>
+<span>		</span><strong><span>深林人不知，明月来相照。</span></strong></p><p>&nbsp;</p><h3 id='春夜洛城闻笛'><span>春夜洛城闻笛</span></h3><h6 id='作者李白-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>谁家玉笛暗飞声，散入春风满洛城。</span></strong>
+<span>		</span><strong><span>此夜曲中闻折柳，何人不起故园情。</span></strong></p><p>&nbsp;</p><h3 id='逢入京使'><span>逢入京使</span></h3><h6 id='作者岑参-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_0969d1da1ac1.aspx'><span>岑参</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>故园东望路漫漫，双袖龙钟泪不干。</span></strong>
+<span>		</span><strong><span>马上相逢无纸笔，凭君传语报平安。</span></strong></p><p>&nbsp;</p><h3 id='晚春'><span>晚春</span></h3><h6 id='作者韩愈-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_1abe13750637.aspx'><span>韩愈</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>草树知春不久归，百般红紫斗芳菲。</span></strong>
+<span>		</span><strong><span>杨花榆荚无才思，惟解漫天作雪飞。</span></strong></p><p>&nbsp;</p><h3 id='陋室铭'><span>陋室铭</span></h3><h6 id='作者刘禹锡-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e3c4e8cf2646.aspx'><span>刘禹锡</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。谈笑有鸿儒，往来无白丁。可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。南阳诸葛庐，西蜀子云亭。孔子云：何陋之有？</span></strong></p><p>&nbsp;</p><h3 id='爱莲说'><span>爱莲说</span></h3><h6 id='作者周敦颐-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b9737a950f1f.aspx'><span>周敦颐</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</span></strong></p><p><strong><span>予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻。莲之爱，同予者何人？牡丹之爱，宜乎众矣。</span></strong></p><p>&nbsp;</p><h3 id='登幽州台歌'><span>登幽州台歌</span></h3><h6 id='作者陈子昂-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_be16b2b23d0a.aspx'><span>陈子昂</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>前不见古人，后不见来者。</span></strong>
+<span>		</span><strong><span>念天地之悠悠，独怆然而涕下！</span></strong></p><p>&nbsp;</p><h3 id='望岳'><span>望岳</span></h3><h6 id='作者杜甫-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>岱宗夫如何？齐鲁青未了。</span></strong>
+<span>		</span><strong><span>造化钟神秀，阴阳割昏晓。</span></strong>
+<span>		</span><strong><span>荡胸生曾云，决眦入归鸟。</span></strong>
+<span>		</span><strong><span>会当凌绝顶，一览众山小。</span></strong></p><p>&nbsp;</p><h3 id='登飞来峰'><span>登飞来峰</span></h3><h6 id='作者王安石-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_6485481407d1.aspx'><span>王安石</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>飞来山上千寻塔，闻说鸡鸣见日升。</span></strong>
+<span>		</span><strong><span>不畏浮云遮望眼，自缘身在最高层。</span></strong></p><p>&nbsp;</p><h3 id='游山西村'><span>游山西村</span></h3><h6 id='作者陆游-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_efd5da0ed1a1.aspx'><span>陆游</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>莫笑农家腊酒浑，丰年留客足鸡豚。</span></strong>
+<span>		</span><strong><span>山重水复疑无路，柳暗花明又一村。</span></strong>
+<span>		</span><strong><span>箫鼓追随春社近，衣冠简朴古风存。</span></strong>
+<span>		</span><strong><span>从今若许闲乘月，拄杖无时夜叩门。</span></strong></p><p>&nbsp;</p><h3 id='己亥杂诗其五）'><span>己亥杂诗（其五）</span></h3><h6 id='作者龚自珍-清代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e0c140ccdde2.aspx'><span>龚自珍</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=清代'><span>〔清代〕</span></a></h6><p><strong><span>浩荡离愁白日斜，吟鞭东指即天涯。</span></strong>
+<span>		</span><strong><span>落红不是无情物，化作春泥更护花。</span></strong></p><p>&nbsp;</p><h3 id='河中石兽'><span>河中石兽</span></h3><h6 id='作者纪昀-清代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_6fbeeeefce3b.aspx'><span>纪昀</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=清代'><span>〔清代〕</span></a></h6><p><strong><span>沧州南一寺临河干，山门圮于河，二石兽并沉焉。阅十余岁，僧募金重修，求二石兽于水中，竟不可得，以为顺流下矣。棹数小舟，曳铁钯，寻十余里无迹。</span></strong></p><p><strong><span>一讲学家设帐寺中，闻之笑曰：“尔辈不能究物理。是非木杮，岂能为暴涨携之去？乃石性坚重，沙性松浮，湮于沙上，渐沉渐深耳。沿河求之，不亦颠乎？”众服为确论。</span></strong></p><p><strong><span>一老河兵闻之，又笑曰：“凡河中失石，当求之于上流。盖石性坚重，沙性松浮，水不能冲石，其反激之力，必于石下迎水处啮沙为坎穴，渐激渐深，至石之半，石必倒掷坎穴中。如是再啮，石又再转。转转不已，遂反溯流逆上矣。求之下流，固颠；求之地中，不更颠乎？”如其言，果得于数里外。然则天下之事，但知其一，不知其二者多矣，可据理臆断欤？</span></strong></p><p>&nbsp;</p><h3 id='泊秦淮'><span>泊秦淮</span></h3><p><span>作者：</span><a href='https://so.gushiwen.cn/authorv_727e9dff8850.aspx'><span>杜牧</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></p><p><strong><span>烟笼寒水月笼沙，夜泊秦淮近酒家。</span></strong>
+<span>		</span><strong><span>商女不知亡国恨，隔江犹唱后庭花。</span></strong></p><p>&nbsp;</p><h3 id='贾生'><span>贾生</span></h3><p><span>作者：</span><a href='https://so.gushiwen.cn/authorv_bc94c92721b8.aspx'><span>李商隐</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></p><p><strong><span>宣室求贤访逐臣，贾生才调更无伦。</span></strong>
+<span>		</span><strong><span>可怜夜半虚前席，不问苍生问鬼神。</span></strong></p><p>&nbsp;</p><h3 id='过松源晨炊漆公店其五）'><span>过松源晨炊漆公店（其五）</span></h3><h6 id='作者杨万里-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_677ad0bb97e7.aspx'><span>杨万里</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>莫言下岭便无难，赚得行人错喜欢。</span></strong>
+<span>		</span><strong><span>政入万山围子里，一山放出一山拦。</span></strong></p><p>&nbsp;</p><h3 id='约客'><span>约客</span></h3><h6 id='作者赵师秀-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_d8982abe5810.aspx'><span>赵师秀</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>黄梅时节家家雨，青草池塘处处蛙。</span></strong>
+<span>		</span><strong><span>有约不来过夜半，闲敲棋子落灯花。</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='八年级上'><span>#八年级上：</span></h1><p>&nbsp;</p><h3 id='三峡'><span>三峡</span></h3><h6 id='作者郦道元-南北朝'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_4b13c1698a34.aspx'><span>郦道元</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=南北朝'><span>〔南北朝〕</span></a></h6><p><strong><span>自三峡七百里中，两岸连山，略无阙处。重岩叠嶂，隐天蔽日，自非亭午夜分，不见曦月。</span></strong></p><p><strong><span>至于夏水襄陵，沿溯阻绝。或王命急宣，有时朝发白帝，暮到江陵，其间千二百里，虽乘奔御风，不以疾也。</span></strong></p><p><strong><span>春冬之时，则素湍绿潭，回清倒影，绝巘多生怪柏，悬泉瀑布，飞漱其间，清荣峻茂，良多趣味。</span></strong></p><p><strong><span>每至晴初霜旦，林寒涧肃，常有高猿长啸，属引凄异，空谷传响，哀转久绝。故渔者歌曰：“巴东三峡巫峡长，猿鸣三声泪沾裳。”</span></strong></p><p>&nbsp;</p><h3 id='答谢中书书'><span>答谢中书书</span></h3><h6 id='作者陶弘景-南北朝'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_4cbc370b2db5.aspx'><span>陶弘景</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=南北朝'><span>〔南北朝〕</span></a></h6><p><strong><span>山川之美，古来共谈。高峰入云，清流见底。两岸石壁，五色交辉。青林翠竹，四时俱备。晓雾将歇，猿鸟乱鸣；夕日欲颓，沉鳞竞跃。实是欲界之仙都。自康乐以来，未复有能与其奇者。</span></strong></p><p>&nbsp;</p><h3 id='记承天寺夜游'><span>记承天寺夜游</span></h3><h6 id='作者苏轼-宋代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_3b99a16ff2dd.aspx'><span>苏轼</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。</span></strong></p><p>&nbsp;</p><h3 id='与朱元思书'><span>与朱元思书</span></h3><h6 id='作者吴均-南北朝'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_da41370d6cf5.aspx'><span>吴均</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=南北朝'><span>〔南北朝〕</span></a></h6><p><strong><span>风烟俱净，天山共色。从流飘荡，任意东西。自富阳至桐庐一百许里，奇山异水，天下独绝。</span></strong></p><p><strong><span>水皆缥碧，千丈见底。游鱼细石，直视无碍。急湍甚箭，猛浪若奔。</span></strong></p><p><strong><span>夹岸高山，皆生寒树，负势竞上，互相轩邈，争高直指，千百成峰。泉水激石，泠泠作响；好鸟相鸣，嘤嘤成韵。蝉则千转不穷，猿则百叫无绝。鸢飞戾天者，望峰息心；经纶世务者，窥谷忘反。横柯上蔽，在昼犹昏；疏条交映，有时见日。</span></strong></p><p>&nbsp;</p><h3 id='野望'><span>野望</span></h3><h6 id='作者王绩-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_6d77998d6dac.aspx'><span>王绩</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>东皋薄暮望，徙倚欲何依。</span></strong>
+<span>		</span><strong><span>树树皆秋色，山山唯落晖。</span></strong>
+<span>		</span><strong><span>牧人驱犊返，猎马带禽归。</span></strong>
+<span>		</span><strong><span>相顾无相识，长歌怀采薇。</span></strong></p><p>&nbsp;</p><h3 id='黄鹤楼'><span>黄鹤楼</span></h3><h6 id='作者崔颢-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_9ff65fca16cc.aspx'><span>崔颢</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>昔人已乘黄鹤去，此地空余黄鹤楼。</span></strong>
+<span>		</span><strong><span>黄鹤一去不复返，白云千载空悠悠。</span></strong>
+<span>		</span><strong><span>晴川历历汉阳树，芳草萋萋鹦鹉洲。</span></strong>
+<span>		</span><strong><span>日暮乡关何处是？烟波江上使人愁。</span></strong></p><p>&nbsp;</p><h3 id='使至塞上'><span>使至塞上</span></h3><h6 id='作者王维-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_52fceee85532.aspx'><span>王维</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>单车欲问边，属国过居延。</span></strong>
+<span>		</span><strong><span>征蓬出汉塞，归雁入胡天。</span></strong>
+<span>		</span><strong><span>大漠孤烟直，长河落日圆。</span></strong>
+<span>		</span><strong><span>萧关逢候骑，都护在燕然。</span></strong></p><p>&nbsp;</p><h3 id='渡荆门送别'><span>渡荆门送别</span></h3><h6 id='作者李白-唐代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>渡远荆门外，来从楚国游。</span></strong>
+<span>		</span><strong><span>山随平野尽，江入大荒流。</span></strong>
+<span>		</span><strong><span>月下飞天镜，云生结海楼。</span></strong>
+<span>		</span><strong><span>仍怜故乡水，万里送行舟。</span></strong></p><p>&nbsp;</p><h3 id='钱塘湖春行'><span>钱塘湖春行</span></h3><h6 id='作者白居易-唐代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_85097dd0c645.aspx'><span>白居易</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>孤山寺北贾亭西，水面初平云脚低。</span></strong>
+<span>		</span><strong><span>几处早莺争暖树，谁家新燕啄春泥。</span></strong>
+<span>		</span><strong><span>乱花渐欲迷人眼，浅草才能没马蹄。</span></strong>
+<span>		</span><strong><span>最爱湖东行不足，绿杨阴里白沙堤。</span></strong></p><p>&nbsp;</p><h3 id='庭中有奇树'><span>庭中有奇树</span></h3><h6 id='作者佚名-两汉-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>庭中有奇树，绿叶发华滋。</span></strong>
+<span>		</span><strong><span>攀条折其荣，将以遗所思。</span></strong>
+<span>		</span><strong><span>馨香盈怀袖，路远莫致之。</span></strong>
+<span>		</span><strong><span>此物何足贵？但感别经时。</span></strong></p><p>&nbsp;</p><h3 id='龟虽寿'><span>龟虽寿</span></h3><h6 id='作者曹操-两汉'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_f4d9b1ed94dc.aspx'><span>曹操</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>神龟虽寿，犹有竟时。</span></strong>
+<span>		</span><strong><span>腾蛇乘雾，终为土灰。</span></strong>
+<span>		</span><strong><span>老骥伏枥，志在千里。</span></strong>
+<span>		</span><strong><span>烈士暮年，壮心不已。</span></strong>
+<span>		</span><strong><span>盈缩之期，不但在天；</span></strong>
+<span>		</span><strong><span>养怡之福，可得永年。</span></strong>
+<span>		</span><strong><span>幸甚至哉，歌以咏志。</span></strong></p><p>&nbsp;</p><h3 id='赠从弟'><span>赠从弟</span></h3><h6 id='作者刘祯'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=刘祯'><span>刘祯</span></a></h6><p><strong><span>亭亭山上松，瑟瑟谷中风。</span></strong>
+<span>		</span><strong><span>风声一何盛，松枝一何劲！</span></strong>
+<span>		</span><strong><span>冰霜正惨凄，终岁常端正。</span></strong>
+<span>		</span><strong><span>岂不罹凝寒，松柏有本性！</span></strong></p><p>&nbsp;</p><h3 id='梁甫行'><span>梁甫行</span></h3><h6 id='作者曹植-魏晋'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_6c695909f577.aspx'><span>曹植</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=魏晋'><span>〔魏晋〕</span></a></h6><p><strong><span>八方各异气，千里殊风雨。</span></strong>
+<span>		</span><strong><span>剧哉边海民，寄身于草野。</span></strong>
+<span>		</span><strong><span>妻子象禽兽，行止依林阻。</span></strong>
+<span>		</span><strong><span>柴门何萧条，狐兔翔我宇。</span></strong></p><p>&nbsp;</p><h3 id='富贵不能淫'><span>富贵不能淫</span></h3><h6 id='作者孟子-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=孟子'><span>孟子</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>景春曰：“公孙衍、张仪岂不诚大丈夫哉？一怒而诸侯惧，安居而天下熄。”</span></strong></p><p><strong><span>孟子曰：“是焉得为大丈夫乎？子未学礼乎？丈夫之冠也，父命之；女子之嫁也，母命之，往送之门，戒之曰：‘往之女家，必敬必戒，无违夫子！’以顺为正者，妾妇之道也。居天下之广居，立天下之正位，行天下之大道。得志，与民由之；不得志，独行其道。富贵不能淫，贫贱不能移，威武不能屈，此之谓大丈夫。”</span></strong></p><p>&nbsp;</p><h3 id='生于忧患死于安乐'><span>生于忧患，死于安乐</span></h3><h6 id='作者孟子及其弟子-先秦-1'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=孟子及其弟子'><span>孟子及其弟子</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>舜发于畎亩之中，傅说举于版筑之间，胶鬲举于鱼盐之中，管夷吾举于士，孙叔敖举于海，百里奚举于市。故天将降大任于是人也，必先苦其心志，劳其筋骨，饿其体肤，空乏其身，行拂乱其所为，所以动心忍性，曾益其所不能。</span></strong></p><p><strong><span>人恒过，然后能改；困于心，衡于虑，而后作；征于色，发于声，而后喻。入则无法家拂士，出则无敌国外患者，国恒亡。然后知生于忧患而死于安乐也。</span></strong></p><p>&nbsp;</p><h3 id='愚公移山'><span>愚公移山</span></h3><h6 id='作者列子-先秦-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_de8c4d88daec.aspx'><span>列子</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>太行、王屋二山，方七百里，高万仞，本在冀州之南，河阳之北。</span></strong></p><p><strong><span>北山愚公者，年且九十，面山而居。惩山北之塞，出入之迂也，聚室而谋曰：“吾与汝毕力平险，指通豫南，达于汉阴，可乎？”杂然相许。其妻献疑曰：“以君之力，曾不能损魁父之丘，如太行、王屋何？且焉置土石？”杂曰：“投诸渤海之尾，隐土之北。”遂率子孙荷担者三夫，叩石垦壤，箕畚运于渤海之尾。邻人京城氏之孀妻有遗男，始龀，跳往助之。寒暑易节，始一反焉。</span></strong></p><p><strong><span>河曲智叟笑而止之曰：“甚矣，汝之不惠！以残年余力，曾不能毁山之一毛，其如土石何？”北山愚公长息曰：“汝心之固，固不可彻，曾不若孀妻弱子。虽我之死，有子存焉。子又生孙，孙又生子；子又有子，子又有孙；子子孙孙无穷匮也，而山不加增，何苦而不平？”河曲智叟亡以应。</span></strong></p><p><strong><span>操蛇之神闻之，惧其不已也，告之于帝。帝感其诚，命夸娥氏二子负二山，一厝朔东，一厝雍南。自此，冀之南，汉之阴，无陇断焉。</span></strong></p><p>&nbsp;</p><h3 id='周亚夫军细柳'><span>周亚夫军细柳</span></h3><h6 id='作者司马迁-两汉-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_f01178aaa8c0.aspx'><span>司马迁</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>文帝之后六年，匈奴大入边。乃以宗正刘礼为将军，军霸上；祝兹侯徐厉为将军，军棘门；以河内守亚夫为将军，军细柳：以备胡。</span></strong></p><p><strong><span>上自劳军。至霸上及棘门军，直驰入，将以下骑送迎。已而之细柳军，军士吏被甲，锐兵刃，彀弓弩，持满。天子先驱至，不得入。先驱曰：“天子且至！”军门都尉曰：“将军令曰：‘军中闻将军令，不闻天子之诏。’”居无何，上至，又不得入。于是上乃使使持节诏将军：“吾欲入劳军。”亚夫乃传言开壁门。壁门士吏谓从属车骑曰：“将军约，军中不得驱驰。”于是天子乃按辔徐行。至营，将军亚夫持兵揖曰：“介胄之士不拜，请以军礼见。”天子为动，改容式车。使人称谢：“皇帝敬劳将军。”成礼而去。</span></strong></p><p><strong><span>既出军门，群臣皆惊。文帝曰：“嗟乎，此真将军矣！曩者霸上、棘门军，若儿戏耳，其将固可袭而虏也。至于亚夫，可得而犯邪！”称善者久之。</span></strong></p><p>&nbsp;</p><h3 id='饮酒其五）'><span>饮酒（其五）</span></h3><h6 id='作者陶渊明-魏晋-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_07d17f8539d7.aspx'><span>陶渊明</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=魏晋'><span>〔魏晋〕</span></a></h6><p><strong><span>结庐在人境，而无车马喧。</span></strong>
+<span>		</span><strong><span>问君何能尔？心远地自偏。</span></strong>
+<span>		</span><strong><span>采菊东篱下，悠然见南山。</span></strong>
+<span>		</span><strong><span>山气日夕佳，飞鸟相与还。</span></strong>
+<span>		</span><strong><span>此中有真意，欲辨已忘言。</span></strong></p><p>&nbsp;</p><h3 id='春望'><span>春望</span></h3><h6 id='作者杜甫-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>国破山河在，城春草木深。</span></strong>
+<span>		</span><strong><span>感时花溅泪，恨别鸟惊心。</span></strong>
+<span>		</span><strong><span>烽火连三月，家书抵万金。</span></strong>
+<span>		</span><strong><span>白头搔更短，浑欲不胜簪。</span></strong></p><p>&nbsp;</p><h3 id='雁门太守行'><span>雁门太守行</span></h3><h6 id='作者李贺'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_74d46d599f15.aspx'><span>李贺</span></a></h6><p><strong><span>黑云压城城欲摧，甲光向日金鳞开。</span></strong>
+<span>		</span><strong><span>角声满天秋色里，塞上燕脂凝夜紫。</span></strong>
+<span>		</span><strong><span>半卷红旗临易水，霜重鼓寒声不起。</span></strong>
+<span>		</span><strong><span>报君黄金台上意，提携玉龙为君死。</span></strong></p><p>&nbsp;</p><h3 id='赤壁'><span>赤壁</span></h3><h6 id='作者杜牧-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_727e9dff8850.aspx'><span>杜牧</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>折戟沉沙铁未销，自将磨洗认前朝。</span></strong>
+<span>		</span><strong><span>东风不与周郎便，铜雀春深锁二乔。</span></strong></p><p>&nbsp;</p><h3 id='渔家傲天接云涛连晓雾）'><span>渔家傲（天接云涛连晓雾）</span></h3><h6 id='作者李清照-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_9cb3b7c0e4a0.aspx'><span>李清照</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>天接云涛连晓雾，星河欲转千帆舞。仿佛梦魂归帝所。闻天语，殷勤问我归何处。</span></strong>
+<span>		</span><strong><span>我报路长嗟日暮，学诗谩有惊人句。九万里风鹏正举。风休住，蓬舟吹取三山去！</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='八年级下'><span>#八年级下：</span></h1><p>&nbsp;</p><h3 id='桃花源记'><span>桃花源记</span></h3><h6 id='作者陶渊明-魏晋-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_07d17f8539d7.aspx'><span>陶渊明</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=魏晋'><span>〔魏晋〕</span></a></h6><p><strong><span>晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，芳草鲜美，落英缤纷。渔人甚异之，复前行，欲穷其林。</span></strong></p><p><strong><span>林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田、美池、桑竹之属。阡陌交通，鸡犬相闻。其中往来种作，男女衣着，悉如外人。黄发垂髫，并怡然自乐。</span></strong></p><p><strong><span>见渔人，乃大惊，问所从来。具答之。便要还家，设酒杀鸡作食。村中闻有此人，咸来问讯。自云先世避秦时乱，率妻子邑人来此绝境，不复出焉，遂与外人间隔。问今是何世，乃不知有汉，无论魏晋。此人一一为具言所闻，皆叹惋。余人各复延至其家，皆出酒食。停数日，辞去。此中人语云：“不足为外人道也。”</span></strong></p><p><strong><span>既出，得其船，便扶向路，处处志之。及郡下，诣太守，说如此。太守即遣人随其往，寻向所志，遂迷，不复得路。</span></strong></p><p><strong><span>南阳刘子骥，高尚士也，闻之，欣然规往。未果，寻病终。后遂无问津者。</span></strong></p><p>&nbsp;</p><h3 id='小石潭记'><span>小石潭记</span></h3><h6 id='作者柳宗元-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_0ba13a22799e.aspx'><span>柳宗元</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>从小丘西行百二十步，隔篁竹，闻水声，如鸣珮环，心乐之。伐竹取道，下见小潭，水尤清冽。全石以为底，近岸，卷石底以出，为坻，为屿，为嵁，为岩。青树翠蔓，蒙络摇缀，参差披拂。</span></strong></p><p><strong><span>潭中鱼可百许头，皆若空游无所依。日光下澈，影布石上，佁然不动；俶尔远逝，往来翕忽。似与游者相乐。</span></strong></p><p><strong><span>潭西南而望，斗折蛇行，明灭可见。其岸势犬牙差互，不可知其源。</span></strong></p><p><strong><span>坐潭上，四面竹树环合，寂寥无人，凄神寒骨，悄怆幽邃。以其境过清，不可久居，乃记之而去。</span></strong></p><p><strong><span>同游者：吴武陵，龚古，余弟宗玄。隶而从者，崔氏二小生，曰恕己，曰奉壹。</span></strong></p><p>&nbsp;</p><h3 id='关雎'><span>关雎</span></h3><h6 id='作者佚名-先秦-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>关关雎鸠，在河之洲。窈窕淑女，君子好逑。</span></strong>
+<span>		</span><strong><span>参差荇菜，左右流之。窈窕淑女，寤寐求之。</span></strong>
+<span>		</span><strong><span>求之不得，寤寐思服。悠哉悠哉，辗转反侧。</span></strong>
+<span>		</span><strong><span>参差荇菜，左右采之。窈窕淑女，琴瑟友之。</span></strong>
+<span>		</span><strong><span>参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。</span></strong></p><p>&nbsp;</p><h3 id='蒹葭'><span>蒹葭</span></h3><h6 id='作者佚名-先秦-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>蒹葭苍苍，白露为霜。所谓伊人，在水一方。</span><span>		</span><span>溯洄从之，道阻且长。溯游从之，宛在水中央。</span></strong>
+<span>		</span><strong><span>蒹葭萋萋，白露未晞。所谓伊人，在水之湄。</span><span>		</span><span>溯洄从之，道阻且跻。溯游从之，宛在水中坻。</span></strong>
+<span>		</span><strong><span>蒹葭采采，白露未已。所谓伊人，在水之涘。</span><span>		</span><span>溯洄从之，道阻且右。溯游从之，宛在水中沚。</span></strong></p><p>&nbsp;</p><h3 id='式微'><span>式微</span></h3><h6 id='作者佚名-先秦-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>式微，式微，胡不归？微君之故，胡为乎中露？</span></strong>
+<span>		</span><strong><span>式微，式微，胡不归？微君之躬，胡为乎泥中？</span></strong></p><p>&nbsp;</p><h3 id='子衿'><span>子衿</span></h3><h6 id='作者佚名-先秦-4'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>青青子衿，悠悠我心。纵我不往，子宁不嗣音？</span></strong>
+<span>		</span><strong><span>青青子佩，悠悠我思。纵我不往，子宁不来？</span></strong>
+<span>		</span><strong><span>挑兮达兮，在城阙兮。一日不见，如三月兮！</span></strong></p><p>&nbsp;</p><h3 id='送杜少府之任蜀州'><span>送杜少府之任蜀州</span></h3><h6 id='作者王勃-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e6b970da08cd.aspx'><span>王勃</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>城阙辅三秦，风烟望五津。</span></strong>
+<span>		</span><strong><span>与君离别意，同是宦游人。</span></strong>
+<span>		</span><strong><span>海内存知己，天涯若比邻。</span></strong>
+<span>		</span><strong><span>无为在歧路，儿女共沾巾。</span></strong></p><p>&nbsp;</p><h3 id='望洞庭湖赠张丞相'><span>望洞庭湖赠张丞相</span></h3><h6 id='作者孟浩然'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_3811e4e1f460.aspx'><span>孟浩然</span></a></h6><p><strong><span>八月湖水平，涵虚混太清。</span></strong>
+<span>		</span><strong><span>气蒸云梦泽，波撼岳阳城。</span></strong>
+<span>		</span><strong><span>欲济无舟楫，端居耻圣明。</span></strong>
+<span>		</span><strong><span>坐观垂钓者，徒有羡鱼情。</span></strong></p><p>&nbsp;</p><h3 id='北冥有鱼'><span>北冥有鱼</span></h3><h6 id='先秦庄周的逍遥游节选'><span>先秦</span><a href='https://so.gushiwen.cn/authorv_6e442cfc26e0.aspx'><span>庄周</span></a><span>的《</span><a href='https://so.gushiwen.cn/shiwenv_2f0c361cecb1.aspx'><span>逍遥游(节选)</span></a><span>》</span></h6><p><strong><span>北冥有鱼，其名为鲲。鲲之大，不知其几千里也。化而为鸟，其名为鹏。鹏之背，不知其几千里也，怒而飞，其翼若垂天之云。是鸟也，海运则将徙于南冥。南冥者，天池也。《齐谐》者，志怪者也。《谐》之言曰：“鹏之徙于南冥也，水击三千里，抟扶摇而上者九万里，去以六月息者也。”野马也，尘埃也，生物之以息相吹也。天之苍苍，其正色邪？其远而无所至极邪？其视下也，亦若是则已矣。</span></strong></p><p>&nbsp;</p><h3 id='庄子与惠子游于濠梁之上'><span>庄子与惠子游于濠梁之上</span></h3><h6 id='作者庄周-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_6e442cfc26e0.aspx'><span>庄周</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>庄子与惠子游于濠梁之上。庄子曰：“鲦鱼出游从容，是鱼之乐也。”惠子曰：“子非鱼，安知鱼之乐？”庄子曰：“子非我，安知我不知鱼之乐？”惠子曰：“我非子，固不知子矣；子固非鱼也，子之不知鱼之乐，全矣！”庄子曰：“请循其本。子曰‘汝安知鱼乐’云者，既已知吾知之而问我。我知之濠上也。”</span></strong></p><p>&nbsp;</p><h3 id='虽有嘉肴'><span>虽有嘉肴</span></h3><h6 id='作者戴圣-两汉'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_86098ff24be6.aspx'><span>戴圣</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>虽有嘉肴，弗食，不知其旨也；虽有至道，弗学，不知其善也。是故学然后知不足，教然后知困。知不足，然后能自反也；知困，然后能自强也。故曰：教学相长也。《兑命》曰“学学半”，其此之谓乎！</span></strong></p><p>&nbsp;</p><h3 id='大道之行也'><span>大道之行也</span></h3><h6 id='作者礼记-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=礼记'><span>礼记</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>大道之行也，天下为公。选贤与能，讲信修睦。故人不独亲其亲，不独子其子，使老有所终，壮有所用，幼有所长，矜、寡、孤、独、废疾者皆有所养，男有分，女有归。货恶其弃于地也，不必藏于己；力恶其不出于身也，不必为己。是故谋闭而不兴，盗窃乱贼而不作，故外户而不闭。是谓大同。</span></strong></p><p>&nbsp;</p><h3 id='马说'><span>马说</span></h3><h6 id='作者韩愈-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_1abe13750637.aspx'><span>韩愈</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>世有伯乐，然后有千里马。千里马常有，而伯乐不常有。故虽有名马，祗辱于奴隶人之手，骈死于槽枥之间，不以千里称也。</span></strong></p><p><strong><span>马之千里者，一食或尽粟一石。食马者不知其能千里而食也。是马也，虽有千里之能，食不饱，力不足，才美不外见，且欲与常马等不可得，安求其能千里也？</span></strong></p><p><strong><span>策之不以其道，食之不能尽其材，鸣之而不能通其意，执策而临之，曰：“天下无马！”呜呼！其真无马邪？其真不知马也！</span></strong></p><p>&nbsp;</p><h3 id='茅屋为秋风所破歌'><span>茅屋为秋风所破歌</span></h3><h6 id='作者杜甫-唐代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>八月秋高风怒号，卷我屋上三重茅。茅飞渡江洒江郊，高者挂罥长林梢，下者飘转沉塘坳。</span></strong></p><p><strong><span>南村群童欺我老无力，忍能对面为盗贼。公然抱茅入竹去，唇焦口燥呼不得，归来倚杖自叹息。</span></strong></p><p><strong><span>俄顷风定云墨色，秋天漠漠向昏黑。布衾多年冷似铁，娇儿恶卧踏里裂。床头屋漏无干处，雨脚如麻未断绝。自经丧乱少睡眠，长夜沾湿何由彻！</span></strong></p><p><strong><span>安得广厦千万间，大庇天下寒士俱欢颜！风雨不动安如山。呜呼！何时眼前突兀见此屋，吾庐独破受冻死亦足！</span></strong></p><p>&nbsp;</p><h3 id='卖炭翁'><span>卖炭翁</span></h3><h6 id='作者白居易-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_85097dd0c645.aspx'><span>白居易</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>卖炭翁，伐薪烧炭南山中。</span></strong>
+<span>		</span><strong><span>满面尘灰烟火色，两鬓苍苍十指黑。</span></strong>
+<span>		</span><strong><span>卖炭得钱何所营？身上衣裳口中食。</span></strong>
+<span>		</span><strong><span>可怜身上衣正单，心忧炭贱愿天寒。</span></strong>
+<span>		</span><strong><span>夜来城外一尺雪，晓驾炭车辗冰辙。</span></strong>
+<span>		</span><strong><span>牛困人饥日已高，市南门外泥中歇。</span></strong>
+<span>		</span><strong><span>翩翩两骑来是谁？黄衣使者白衫儿。</span></strong>
+<span>		</span><strong><span>手把文书口称敕，回车叱牛牵向北。</span></strong>
+<span>		</span><strong><span>一车炭，千余斤，宫使驱将惜不得。</span></strong>
+<span>		</span><strong><span>半匹红纱一丈绫，系向牛头充炭直。</span></strong></p><p>&nbsp;</p><h3 id='题破山寺后禅院'><span>题破山寺后禅院</span></h3><h6 id='作者常建-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_68a453f313d5.aspx'><span>常建</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>清晨入古寺，初日照高林。</span></strong>
+<span>		</span><strong><span>曲径通幽处，禅房花木深。</span></strong>
+<span>		</span><strong><span>山光悦鸟性，潭影空人心。</span></strong>
+<span>		</span><strong><span>万籁此都寂，但余钟磬音。</span></strong></p><p>&nbsp;</p><h3 id='送友人'><span>送友人</span></h3><h6 id='作者李白-唐代-4'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>青山横北郭，白水绕东城。</span></strong>
+<span>		</span><strong><span>此地一为别，孤蓬万里征。</span></strong>
+<span>		</span><strong><span>浮云游子意，落日故人情。</span></strong>
+<span>		</span><strong><span>挥手自兹去，萧萧班马鸣。</span></strong></p><p>&nbsp;</p><h3 id='卜算子·黄州定慧院寓居作'><span>卜算子·黄州定慧院寓居作</span></h3><h6 id='作者苏轼-宋代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_3b99a16ff2dd.aspx'><span>苏轼</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>缺月挂疏桐，漏断人初静。谁见幽人独往来，缥缈孤鸿影。</span></strong>
+<span>		</span><strong><span>惊起却回头，有恨无人省。拣尽寒枝不肯栖，寂寞沙洲冷。</span></strong></p><p>&nbsp;</p><h3 id='卜算子·咏梅'><span>卜算子·咏梅</span></h3><h6 id='作者陆游-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_efd5da0ed1a1.aspx'><span>陆游</span></a></h6><p><strong><span>驿外断桥边，寂寞开无主。已是黄昏独自愁，更著风和雨。</span></strong>
+<span>　　</span><strong><span>无意苦争春，一任群芳妒。零落成泥碾作尘，只有香如故。</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='九年级上'><span>#九年级上：</span></h1><p>&nbsp;</p><h3 id='岳阳楼记'><span>岳阳楼记</span></h3><h6 id='作者范仲淹-宋代-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_c2c3edb9c1b1.aspx'><span>范仲淹</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>庆历四年春，滕子京谪守巴陵郡。越明年，政通人和，百废具兴，乃重修岳阳楼，增其旧制，刻唐贤今人诗赋于其上，属予作文以记之。</span></strong></p><p><strong><span>予观夫巴陵胜状，在洞庭一湖。衔远山，吞长江，浩浩汤汤，横无际涯，朝晖夕阴，气象万千，此则岳阳楼之大观也，前人之述备矣。然则北通巫峡，南极潇湘，迁客骚人，多会于此，览物之情，得无异乎？</span></strong></p><p><strong><span>若夫淫雨霏霏，连月不开，阴风怒号，浊浪排空，日星隐曜，山岳潜形，商旅不行，樯倾楫摧，薄暮冥冥，虎啸猿啼。登斯楼也，则有去国怀乡，忧谗畏讥，满目萧然，感极而悲者矣。</span></strong></p><p><strong><span>至若春和景明，波澜不惊，上下天光，一碧万顷，沙鸥翔集，锦鳞游泳，岸芷汀兰，郁郁青青。而或长烟一空，皓月千里，浮光跃金，静影沉璧，渔歌互答，此乐何极！登斯楼也，则有心旷神怡，宠辱偕忘，把酒临风，其喜洋洋者矣。</span></strong></p><p><strong><span>嗟夫！予尝求古仁人之心，或异二者之为，何哉？不以物喜，不以己悲，居庙堂之高则忧其民，处江湖之远则忧其君。是进亦忧，退亦忧。然则何时而乐耶？其必曰“先天下之忧而忧，后天下之乐而乐”乎！噫！微斯人，吾谁与归？时六年九月十五日。</span></strong></p><p>&nbsp;</p><h3 id='醉翁亭记'><span>醉翁亭记</span></h3><h6 id='作者欧阳修-宋代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_7ab3b8200774.aspx'><span>欧阳修</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>环滁皆山也。其西南诸峰，林壑尤美，望之蔚然而深秀者，琅琊也。山行六七里，渐闻水声潺潺，而泻出于两峰之间者，酿泉也。峰回路转，有亭翼然临于泉上者，醉翁亭也。作亭者谁？山之僧智仙也。名之者谁？太守自谓也。太守与客来饮于此，饮少辄醉，而年又最高，故自号曰醉翁也。醉翁之意不在酒，在乎山水之间也。山水之乐，得之心而寓之酒也。</span></strong></p><p><strong><span>若夫日出而林霏开，云归而岩穴暝，晦明变化者，山间之朝暮也。野芳发而幽香，佳木秀而繁阴，风霜高洁，水落而石出者，山间之四时也。朝而往，暮而归，四时之景不同，而乐亦无穷也。</span></strong></p><p><strong><span>至于负者歌于途，行者休于树，前者呼，后者应，伛偻提携，往来而不绝者，滁人游也。临溪而渔，溪深而鱼肥，酿泉为酒，泉香而酒洌，山肴野蔌，杂然而前陈者，太守宴也。宴酣之乐，非丝非竹，射者中，弈者胜，觥筹交错，起坐而喧哗者，众宾欢也。苍颜白发，颓然乎其间者，太守醉也。</span></strong></p><p><strong><span>已而夕阳在山，人影散乱，太守归而宾客从也。树林阴翳，鸣声上下，游人去而禽鸟乐也。然而禽鸟知山林之乐，而不知人之乐；人知从太守游而乐，而不知太守之乐其乐也。醉能同其乐，醒能述以文者，太守也。太守谓谁？庐陵欧阳修也。</span></strong></p><p>&nbsp;</p><h3 id='湖心亭看雪'><span>湖心亭看雪</span></h3><h6 id='作者张岱-明代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_cce8f82d981b.aspx'><span>张岱</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=明代'><span>〔明代〕</span></a></h6><p><strong><span>崇祯五年十二月，余住西湖。大雪三日，湖中人鸟声俱绝。是日更定矣，余拏一小舟，拥毳衣炉火，独往湖心亭看雪。雾凇沆砀，天与云与山与水，上下一白。湖上影子，惟长堤一痕、湖心亭一点、与余舟一芥、舟中人两三粒而已。</span></strong></p><p><strong><span>到亭上，有两人铺毡对坐，一童子烧酒炉正沸。见余大喜曰：“湖中焉得更有此人！”拉余同饮。余强饮三大白而别。问其姓氏，是金陵人，客此。及下船，舟子喃喃曰：“莫说相公痴，更有痴似相公者。”</span></strong></p><p>&nbsp;</p><h3 id='行路难其一）'><span>行路难（其一）</span></h3><h6 id='作者李白-唐代-5'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b90660e3e492.aspx'><span>李白</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>金樽清酒斗十千，玉盘珍羞直万钱。</span></strong>
+<span>		</span><strong><span>停杯投箸不能食，拔剑四顾心茫然。</span></strong>
+<span>		</span><strong><span>欲渡黄河冰塞川，将登太行雪满山。</span></strong>
+<span>		</span><strong><span>闲来垂钓碧溪上，忽复乘舟梦日边。</span></strong>
+<span>		</span><strong><span>行路难，行路难，多歧路，今安在？</span></strong>
+<span>		</span><strong><span>长风破浪会有时，直挂云帆济沧海。</span></strong></p><p>&nbsp;</p><h3 id='酬乐天扬州初逢席上见赠'><span>酬乐天扬州初逢席上见赠</span></h3><h6 id='作者刘禹锡-唐代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e3c4e8cf2646.aspx'><span>刘禹锡</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>巴山楚水凄凉地，二十三年弃置身。</span></strong>
+<span>		</span><strong><span>怀旧空吟闻笛赋，到乡翻似烂柯人。</span></strong>
+<span>		</span><strong><span>沉舟侧畔千帆过，病树前头万木春。</span></strong>
+<span>		</span><strong><span>今日听君歌一曲，暂凭杯酒长精神。</span></strong></p><p>&nbsp;</p><h3 id='水调歌头'><span>水调歌头</span></h3><h6 id='作者苏轼-宋代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_3b99a16ff2dd.aspx'><span>苏轼</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。</span></strong></p><p><strong><span>明月几时有？把酒问青天。不知天上宫阙，今夕是何年。我欲乘风归去，又恐琼楼玉宇，高处不胜寒。起舞弄清影，何似在人间。</span></strong></p><p><strong><span>转朱阁，低绮户，照无眠。不应有恨，何事长向别时圆？人有悲欢离合，月有阴晴圆缺，此事古难全。但愿人长久，千里共婵娟。</span></strong></p><p>&nbsp;</p><h3 id='商山早行'><span>商山早行</span></h3><h6 id='作者温庭筠-唐代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_c367ccd8cd08.aspx'><span>温庭筠</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>晨起动征铎，客行悲故乡。</span></strong>
+<span>		</span><strong><span>鸡声茅店月，人迹板桥霜。</span></strong>
+<span>		</span><strong><span>槲叶落山路，枳花明驿墙。</span></strong>
+<span>		</span><strong><span>因思杜陵梦，凫雁满回塘。</span></strong></p><p>&nbsp;</p><h3 id='月夜忆舍弟'><span>月夜忆舍弟</span></h3><h6 id='作者杜甫-唐代-4'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>戍鼓断人行，边秋一雁声。</span></strong>
+<span>		</span><strong><span>露从今夜白，月是故乡明。</span></strong>
+<span>		</span><strong><span>有弟皆分散，无家问死生。</span></strong>
+<span>		</span><strong><span>寄书长不达，况乃未休兵。</span></strong></p><p>&nbsp;</p><h3 id='长沙过贾谊宅'><span>长沙过贾谊宅</span></h3><h6 id='作者刘长卿'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_b3e23d54ee99.aspx'><span>刘长卿</span></a></h6><p><strong><span>三年谪宦此栖迟，万古惟留楚客悲。</span></strong>
+<span>		</span><strong><span>秋草独寻人去后，寒林空见日斜时。</span></strong>
+<span>		</span><strong><span>汉文有道恩犹薄，湘水无情吊岂知。</span></strong>
+<span>		</span><strong><span>寂寂江山摇落处，怜君何事到天涯。</span></strong></p><p>&nbsp;</p><h3 id='左迁至蓝关示侄孙湘'><span>左迁至蓝关示侄孙湘</span></h3><h6 id='作者韩愈-唐代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_1abe13750637.aspx'><span>韩愈</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>一封朝奏九重天，夕贬潮州路八千。</span></strong>
+<span>		</span><strong><span>欲为圣明除弊事，肯将衰朽惜残年！</span></strong>
+<span>		</span><strong><span>云横秦岭家何在？雪拥蓝关马不前。</span></strong>
+<span>		</span><strong><span>知汝远来应有意，好收吾骨瘴江边。</span></strong></p><p>&nbsp;</p><h3 id='丑奴儿·书博山道中壁'><span>丑奴儿·书博山道中壁</span></h3><h6 id='作者辛弃疾-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_a7900666497f.aspx'><span>辛弃疾</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>少年不识愁滋味，爱上层楼。爱上层楼，为赋新词强说愁。</span></strong></p><p><strong><span>而今识尽愁滋味，欲说还休。欲说还休，却道“天凉好个秋”！</span></strong></p><p>&nbsp;</p><h3 id='行香子'><span>行香子</span></h3><h6 id='作者秦观-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_d4825d86f017.aspx'><span>秦观</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>树绕村庄，水满陂塘。倚东风，豪兴徜徉。小园几许，收尽春光。有桃花红，李花白，菜花黄。</span></strong></p><p><strong><span>远远围墙，隐隐茅堂。飏青旗，流水桥旁。偶然乘兴，步过东冈。正莺儿啼，燕儿舞，蝶儿忙。</span></strong></p><p>&nbsp;</p><h3 id='无题相见时难别亦难）'><span>无题（相见时难别亦难）</span></h3><h6 id='作者李商隐-唐代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_bc94c92721b8.aspx'><span>李商隐</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>相见时难别亦难，东风无力百花残。</span></strong>
+<span>		</span><strong><span>春蚕到死丝方尽，蜡炬成灰泪始干。</span></strong>
+<span>		</span><strong><span>晓镜但愁云鬓改，夜吟应觉月光寒。</span></strong>
+<span>		</span><strong><span>蓬山此去无多路，青鸟殷勤为探看。</span></strong></p><p>&nbsp;</p><h3 id='咸阳城东楼'><span>咸阳城东楼</span></h3><h6 id='作者许浑'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_ff17134b62ff.aspx'><span>许浑</span></a></h6><p><strong><span>一上高城万里愁，蒹葭杨柳似汀洲。</span></strong>
+<span>		</span><strong><span>溪云初起日沉阁，山雨欲来风满楼。</span></strong>
+<span>		</span><strong><span>鸟下绿芜秦苑夕，蝉鸣黄叶汉宫秋。</span></strong>
+<span>		</span><strong><span>行人莫问当年事，故国东来渭水流。</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='九年级下'><span>#九年级下：</span></h1><p>&nbsp;</p><h3 id='月夜'><span>月夜</span></h3><h6 id='作者杜甫-唐代-5'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_515ea88d1858.aspx'><span>杜甫</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>今夜鄜州月，闺中只独看。</span></strong>
+<span>		</span><strong><span>遥怜小儿女，未解忆长安。</span></strong>
+<span>		</span><strong><span>香雾云鬟湿，清辉玉臂寒。</span></strong>
+<span>		</span><strong><span>何时倚虚幌，双照泪痕干。</span></strong></p><p>&nbsp;</p><h3 id='鱼我所欲也'><span>鱼我所欲也</span></h3><h6 id='作者孟子及其弟子-先秦-2'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=孟子及其弟子'><span>孟子及其弟子</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>鱼，我所欲也；熊掌，亦我所欲也。二者不可得兼，舍鱼而取熊掌者也。生，亦我所欲也；义，亦我所欲也。二者不可得兼，舍生而取义者也。生亦我所欲，所欲有甚于生者，故不为苟得也；死亦我所恶，所恶有甚于死者，故患有所不辟也。如使人之所欲莫甚于生，则凡可以得生者何不用也？使人之所恶莫甚于死者，则凡可以辟患者何不为也？由是则生而有不用也，由是则可以辟患而有不为也。是故所欲有甚于生者，所恶有甚于死者。非独贤者有是心也，人皆有之，贤者能勿丧耳。</span></strong></p><p><strong><span>一箪食，一豆羹，得之则生，弗得则死。呼尔而与之，行道之人弗受；蹴尔而与之，乞人不屑也。万钟则不辩礼义而受之，万钟于我何加焉！为宫室之美、妻妾之奉、所识穷乏者得我与？乡为身死而不受，今为宫室之美为之；乡为身死而不受，今为妻妾之奉为之；乡为身死而不受，今为所识穷乏者得我而为之：是亦不可以已乎？此之谓失其本心。</span></strong></p><p>&nbsp;</p><h3 id='唐雎不辱使命'><span>唐雎不辱使命</span></h3><h6 id='作者刘向-撰-两汉-1'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=刘向+撰'><span>刘向 撰</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>秦王使人谓安陵君曰：“寡人欲以五百里之地易安陵，安陵君其许寡人！”安陵君曰：“大王加惠，以大易小，甚善；虽然，受地于先王，愿终守之，弗敢易！”秦王不说。安陵君因使唐雎使于秦。</span></strong></p><p><strong><span>秦王谓唐雎曰：“寡人以五百里之地易安陵，安陵君不听寡人，何也？且秦灭韩亡魏，而君以五十里之地存者，以君为长者，故不错意也。今吾以十倍之地，请广于君，而君逆寡人者，轻寡人与？”唐雎对曰：“否，非若是也。安陵君受地于先王而守之，虽千里不敢易也，岂直五百里哉？”</span></strong></p><p><strong><span>秦王怫然怒，谓唐雎曰：“公亦尝闻天子之怒乎？”唐雎对曰：“臣未尝闻也。”秦王曰：“天子之怒，伏尸百万，流血千里。”唐雎曰：“大王尝闻布衣之怒乎？”秦王曰：“布衣之怒，亦免冠徒跣，以头抢地尔。”唐雎曰：“此庸夫之怒也，非士之怒也。夫专诸之刺王僚也，彗星袭月；聂政之刺韩傀也，白虹贯日；要离之刺庆忌也，仓鹰击于殿上。此三子者，皆布衣之士也，怀怒未发，休祲降于天，与臣而将四矣。若士必怒，伏尸二人，流血五步，天下缟素，今日是也。”挺剑而起。</span></strong><span> </span></p><p><strong><span>秦王色挠，长跪而谢之曰：“先生坐！何至于此！寡人谕矣：夫韩、魏灭亡，而安陵以五十里之地存者，徒以有先生也。”</span></strong></p><p>&nbsp;</p><h3 id='送东阳马生序'><span>送东阳马生序</span></h3><h6 id='作者宋濂-明代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_00133162b1d0.aspx'><span>宋濂</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=明代'><span>〔明代〕</span></a></h6><p><strong><span>余幼时即嗜学。家贫，无从致书以观，每假借于藏书之家，手自笔录，计日以还。天大寒，砚冰坚，手指不可屈伸，弗之怠。录毕，走送之，不敢稍逾约。以是人多以书假余，余因得遍观群书。既加冠，益慕圣贤之道 。又患无硕师名人与游，尝趋百里外，从乡之先达执经叩问。先达德隆望尊，门人弟子填其室，未尝稍降辞色。余立侍左右，援疑质理，俯身倾耳以请；或遇其叱咄，色愈恭，礼愈至，不敢出一言以复；俟其欣悦，则又请焉。故余虽愚，卒获有所闻。</span></strong></p><p><strong><span>当余之从师也，负箧曳屣行深山巨谷中。穷冬烈风，大雪深数尺，足肤皲裂而不知。至舍，四支僵劲不能动，媵人持汤沃灌，以衾拥覆，久而乃和。寓逆旅，主人日再食，无鲜肥滋味之享。同舍生皆被绮绣，戴朱缨宝饰之帽，腰白玉之环，左佩刀，右备容臭，烨然若神人；余则缊袍敝衣处其间，略无慕艳意，以中有足乐者，不知口体之奉不若人也。盖余之勤且艰若此。 今虽耄老，未有所成，犹幸预君子之列，而承天子之宠光，缀公卿之后，日侍坐备顾问，四海亦谬称其氏名，况才之过于余者乎？</span></strong></p><p><strong><span>今诸生学于太学，县官日有廪稍之供，父母岁有裘葛之遗，无冻馁之患矣；坐大厦之下而诵诗书，无奔走之劳矣；有司业、博士为之师，未有问而不告、求而不得者也；凡所宜有之书，皆集于此，不必若余之手录，假诸人而后见也。其业有不精、德有不成者，非天质之卑，则心不若余之专耳，岂他人之过哉？</span></strong></p><p><strong><span>东阳马生君则，在太学已二年，流辈甚称其贤。余朝京师，生以乡人子谒余，撰长书以为贽，辞甚畅达。与之论辨，言和而色夷。自谓少时用心于学甚劳，是可谓善学者矣。其将归见其亲也，余故道为学之难以告之。谓余勉乡人以学者，余之志也；诋我夸际遇之盛而骄乡人者，岂知予者哉？</span></strong></p><p>&nbsp;</p><h3 id='渔家傲·秋思'><span>渔家傲·秋思</span></h3><h6 id='作者范仲淹-宋代-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_c2c3edb9c1b1.aspx'><span>范仲淹</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>塞下秋来风景异，衡阳雁去无留意。四面边声连角起，千嶂里，长烟落日孤城闭。</span></strong></p><p><strong><span>浊酒一杯家万里，燕然未勒归无计。羌管悠悠霜满地，人不寐，将军白发征夫泪。</span></strong></p><p>&nbsp;</p><h3 id='江城子·密州出猎'><span>江城子·密州出猎</span></h3><h6 id='作者苏轼-宋代-4'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_3b99a16ff2dd.aspx'><span>苏轼</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>老夫聊发少年狂，左牵黄，右擎苍，锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。</span></strong></p><p><strong><span>酒酣胸胆尚开张。鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北望，射天狼。</span></strong></p><p>&nbsp;</p><h3 id='破阵子·为陈同甫赋壮语以寄之'><span>破阵子·为陈同甫赋壮语以寄之</span></h3><h6 id='作者辛弃疾-1'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_a7900666497f.aspx'><span>辛弃疾</span></a></h6><p><strong><span>醉里挑灯看剑，梦回吹角连营。八百里分麾下炙，五十弦翻塞外声，沙场秋点兵。</span></strong></p><p><strong><span>马作的卢飞快，弓如霹雳弦惊。了却君王天下事，赢得生前身后名。可怜白发生！</span></strong></p><p>&nbsp;</p><h3 id='满江红小住京华）'><span>满江红（小住京华）</span></h3><h6 id='作者秋瑾-近现代'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=秋瑾'><span>秋瑾</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=近现代'><span>〔近现代〕</span></a></h6><p><strong><span>小住京华，早又是中秋佳节。为篱下黄花开遍，秋容如拭。四面歌残终破楚，八年风味徒思浙。苦将侬强派作蛾眉，殊未屑！</span></strong></p><p><strong><span>身不得，男儿列，心却比，男儿烈。算平生肝胆，因人常热。俗子胸襟谁识我？英雄末路当磨折。莽红尘何处觅知音？青衫湿！</span></strong></p><p>&nbsp;</p><h3 id='曹刿论战'><span>曹刿论战</span></h3><h6 id='作者左丘明-先秦'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_1585930d4e76.aspx'><span>左丘明</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=先秦'><span>〔先秦〕</span></a></h6><p><strong><span>十年春，齐师伐我。公将战，曹刿请见。其乡人曰：“肉食者谋之，又何间焉？”刿曰：“肉食者鄙，未能远谋。”乃入见。问：“何以战？”公曰：“衣食所安，弗敢专也，必以分人。”对曰：“小惠未遍，民弗从也。”公曰：“牺牲玉帛，弗敢加也，必以信。”对曰：“小信未孚，神弗福也。”公曰：“小大之狱，虽不能察，必以情。”对曰：“忠之属也。可以一战。战则请从。”</span></strong></p><p><strong><span>公与之乘，战于长勺。公将鼓之。刿曰：“未可。”齐人三鼓。刿曰：“可矣。”齐师败绩。公将驰之。刿曰：“未可。”下视其辙，登轼而望之，曰：“可矣。”遂逐齐师。</span></strong></p><p><strong><span>既克，公问其故。对曰：“夫战，勇气也。一鼓作气，再而衰，三而竭。彼竭我盈，故克之。夫大国，难测也，惧有伏焉。吾视其辙乱，望其旗靡，故逐之。”</span></strong></p><p>&nbsp;</p><h3 id='邹忌讽齐王纳谏'><span>邹忌讽齐王纳谏</span></h3><h6 id='作者刘向-撰-两汉-2'><span>作者：</span><a href='https://so.gushiwen.cn/search.aspx?value=刘向+撰'><span>刘向 撰</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>邹忌修八尺有余，而形貌昳丽。朝服衣冠，窥镜，谓其妻曰：“我孰与城北徐公美？”其妻曰：“君美甚，徐公何能及君也？”城北徐公，齐国之美丽者也。忌不自信，而复问其妾曰：“吾孰与徐公美？”妾曰：“徐公何能及君也？”旦日，客从外来，与坐谈，问之客曰：“吾与徐公孰美？”客曰：“徐公不若君之美也。”明日徐公来，孰视之，自以为不如；窥镜而自视，又弗如远甚。暮寝而思之，曰：“吾妻之美我者，私我也；妾之美我者，畏我也；客之美我者，欲有求于我也。”</span></strong></p><p><strong><span>于是入朝见威王，曰：“臣诚知不如徐公美。臣之妻私臣，臣之妾畏臣，臣之客欲有求于臣，皆以美于徐公。今齐地方千里，百二十城，宫妇左右莫不私王，朝廷之臣莫不畏王，四境之内莫不有求于王：由此观之，王之蔽甚矣。”</span></strong></p><p><strong><span>王曰：“善。”乃下令：“群臣吏民能面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝，闻寡人之耳者，受下赏。”令初下，群臣进谏，门庭若市；数月之后，时时而间进；期年之后，虽欲言，无可进者。燕、赵、韩、魏闻之，皆朝于齐。此所谓战胜于朝廷。</span></strong></p><p>&nbsp;</p><h3 id='陈涉世家'><span>陈涉世家</span></h3><h6 id='作者司马迁-两汉-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_f01178aaa8c0.aspx'><span>司马迁</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>陈胜者，阳城人也，字涉。吴广者，阳夏人也，字叔。陈涉少时，尝与人佣耕，辍耕之垄上，怅恨久之，曰：“苟富贵，无相忘。”佣者笑而应曰：“若为佣耕，何富贵也？”陈涉太息曰：“嗟乎！燕雀安知鸿鹄之志哉！”</span></strong></p><p><strong><span>二世元年七月，发闾左適戍渔阳，九百人屯大泽乡。陈胜﹑吴广皆次当行，为屯长。会天大雨，道不通，度已失期。失期，法皆斩。陈胜﹑吴广乃谋曰：“今亡亦死，举大计亦死；等死，死国可乎？”陈胜曰：“天下苦秦久矣。吾闻二世少子也，不当立，当立者乃公子扶苏。扶苏以数谏故，上使外将兵。今或闻无罪，二世杀之。百姓多闻其贤，未知其死也。项燕为楚将，数有功，爱士卒，楚人怜之。或以为死，或以为亡。今诚以吾众诈自称公子扶苏﹑项燕，为天下唱，宜多应者。”吴广以为然。乃行卜。卜者知其指意，曰：“足下事皆成，有功。然足下卜之鬼乎！”陈胜﹑吴广喜，念鬼，曰：“此教我先威众耳。”乃丹书帛曰“陈胜王”，置人所罾鱼腹中。卒买鱼烹食，得鱼腹中书，固以怪之矣。又间令吴广之次所旁丛祠中，夜篝火，狐鸣呼曰：“大楚兴，陈胜王。”卒皆夜惊恐。旦日，卒中往往语，皆指目陈胜。</span></strong></p><p><strong><span>吴广素爱人，士卒多为用者。将尉醉，广故数言欲亡，忿恚尉，令辱之，以激怒其众。尉果笞广。尉剑挺，广起，夺而杀尉。陈胜佐之，并杀两尉。召令徒属曰：“公等遇雨，皆已失期，失期当斩。藉第令毋斩，而戍死者固十六七。且壮士不死即已，死即举大名耳，王侯将相宁有种乎！”徒属皆曰：“敬受命。”乃诈称公子扶苏﹑项燕，从民欲也。袒右，称大楚。为坛而盟，祭以尉首。陈胜自立为将军，吴广为都尉。攻大泽乡，收而攻蕲。蕲下，乃令符离人葛婴将兵徇蕲以东。攻铚、酂、苦、柘、谯皆下之。行收兵。比至陈，车六七百乘，骑千余，卒数万人。攻陈，陈守令皆不在，独守丞与战谯门中。弗胜，守丞死，乃入据陈。数日，号令召三老﹑豪杰与皆来会计事。三老﹑豪杰皆曰：“将军身被坚执锐，伐无道，诛暴秦，复立楚国之社稷，功宜为王。”陈涉乃立为王，号为张楚。当此时，诸郡县苦秦吏者，皆刑其长吏，杀之以应陈涉。乃以吴叔为假王，监诸将以西击荥阳。令陈人武臣、张耳、陈馀徇赵地，令汝阴人邓宗徇九江郡。当此时，楚兵数千人为聚者，不可胜数。</span></strong></p><p><strong><span>葛婴至东城，立襄强为楚王。婴后闻陈王已立，因杀襄强，还报。至陈，陈王诛杀葛婴。陈王令魏人周市北徇魏地。吴广围荥阳。李由为三川守，守荥阳，吴叔弗能下。陈王征国之豪杰与计，以上蔡人房君蔡赐为上柱国。</span></strong></p><p><strong><span>周文，陈之贤人也，尝为项燕军视日，事春申君，自言习兵，陈王与之将军印，西击秦。行收兵至关，车千乘，卒数十万，至戏，军焉。秦令少府章邯免郦山徒﹑人奴产子生，悉发以击楚大军，尽败之。周文败，走出关，止次曹阳二三月。章邯追败之，复走次渑池十余日。章邯击，大破之。周文自刭，军遂不战。</span></strong></p><p><strong><span>武臣到邯郸，自立为赵王，陈馀为大将军，张耳、召骚为左右丞相。陈王怒，捕系武臣等家室，欲诛之。柱国曰：“秦未亡而诛赵王将相家属，此生一秦也。不如因而立之。”陈王乃遣使者贺赵，而徙系武臣等家属宫中，而封耳子张敖为成都君，趣赵兵，亟入关。赵王将相相与谋曰：“王王赵，非楚意也。楚已诛秦，必加兵於赵。计莫如毋西兵，使使北徇燕地以自广也。赵南据大河，北有燕、代，楚虽胜秦，不敢制赵。若楚不胜秦，必重赵。赵乘秦之弊，可以得志于天下。”赵王以为然，因不西兵，而遣故上谷卒史韩广将兵北徇燕地。</span></strong></p><p><strong><span>燕故贵人豪杰谓韩广曰：“楚已立王，赵又已立王。燕虽小，亦万乘之国也，原将军立为燕王。”韩广曰：“广母在赵，不可。”燕人曰：“赵方西忧秦，南忧楚，其力不能禁我。且以楚之彊，不敢害赵王将相之家，赵独安敢害将军之家！”韩广以为然，乃自立为燕王。居数月，赵奉燕王母及家属归之燕。</span></strong></p><p><strong><span>当此之时，诸将之徇地者，不可胜数。周市北徇地至狄，狄人田儋杀狄令，自立为齐王，以齐反击周市。市军散，还至魏地，欲立魏后故宁陵君咎为魏王。时咎在陈王所，不得之魏。魏地已定，欲相与立周市为魏王，周市不肯。使者五反，陈王乃立宁陵君咎为魏王，遣之国。周市卒为相。</span></strong></p><p><strong><span>将军田臧等相与谋曰：“周章军已破矣，秦兵旦暮至，我围荥阳城弗能下，秦军至，必大败。不如少遗兵，足以守荥阳，悉精兵迎秦军。今假王骄，不知兵权，不可与计，非诛之，事恐败。”因相与矫王令以诛吴叔，献其首于陈王。陈王使使赐田臧楚令尹印，使为上将。田臧乃使诸将李归等守荥阳城，自以精兵西迎秦军于敖仓。与战，田臧死，军破。章邯进兵击李归等荥阳下，破之，李归等死。</span></strong></p><p><strong><span>阳城人邓说将兵居郯，章邯别将击破之，邓说军散走陈。铚人伍徐将兵居许，章邯击破之，伍徐军皆散走陈。陈王诛邓说。</span></strong></p><p><strong><span>陈王初立时，陵人秦嘉﹑铚人董譄﹑符离人朱鸡石﹑取虑人郑布﹑徐人丁疾等皆特起，将兵围东海守庆于郯。陈王闻，乃使武平君畔为将军，监郯下军。秦嘉不受命，嘉自立为大司马，恶属武平君。告军吏曰：“武平君年少，不知兵事，勿听！”因矫以王命杀武平君畔。</span></strong></p><p><strong><span>章邯已破伍徐，击陈，柱国房君死。章邯又进兵击陈西张贺军。陈王出监战，军破，张贺死。</span></strong></p><p><strong><span>腊月，陈王之汝阴，还至下城父，其御庄贾杀以降秦。陈胜葬砀，谥曰隐王。</span></strong></p><p><strong><span>陈王故涓人将军吕臣为仓头军，起新阳，攻陈下之，杀庄贾，复以陈为楚。</span></strong></p><p><strong><span>初，陈王至陈，令铚人宋留将兵定南阳，入武关。留已徇南阳，闻陈王死，南阳复为秦。宋留不能入武关，乃东至新蔡，遇秦军，宋留以军降秦。秦传留至咸阳，车裂留以徇。</span></strong></p><p><strong><span>秦嘉等闻陈王军破出走，乃立景驹为楚王，引兵之方与，欲击秦军定陶下。使公孙庆使齐王，欲与并力俱进。齐王曰：“闻陈王战败，不知其死生，楚安得不请而立王！”公孙庆曰：“齐不请楚而立王，楚何故请齐而立王！且楚首事，当令于天下。”田儋诛杀公孙庆。</span></strong></p><p><strong><span>秦左右校复攻陈，下之。吕将军走，收兵复聚。鄱盗当阳君黥布之兵相收，复击秦左右校，破之青波，复以陈为楚。会项梁立怀王孙心为楚王。</span></strong></p><p><strong><span>陈胜王凡六月。已为王，王陈。其故人尝与佣耕者闻之，之陈，扣宫门曰：“吾欲见涉。”宫门令欲缚之。自辩数，乃置，不肯为通。陈王出，遮道而呼涉。陈王闻之，乃召见，载与俱归。入宫，见殿屋帷帐，客曰：“夥颐！涉之为王沉沉者！”楚人谓多为伙，故天下传之，夥涉为王，由陈涉始。客出入愈益发舒，言陈王故情。或说陈王曰：“客愚无知，颛妄言，轻威。”陈王斩之。诸陈王故人皆自引去，由是无亲陈王者。陈王以朱房为中正，胡武为司过，主司群臣。诸将徇地，至，令之不是者，系而罪之，以苛察为忠。其所不善者，弗下吏，辄自治之。陈王信用之。诸将以其故不亲附，此其所以败也。</span></strong></p><p><strong><span>陈胜虽已死，其所置遣侯王将相竟亡秦，由涉首事也。高祖时为陈涉置守頉三十家砀，至今血食。</span></strong></p><p><strong><span>褚先生曰：地形险阻，所以为固也；兵革刑法，所以为治也。犹未足恃也。夫先王以仁义为本，而以固塞文法为枝叶，岂不然哉！吾闻贾生之称曰：</span></strong></p><p><strong><span>“秦孝公据肴函之固，拥雍州之地，君臣固守，以窥周室，有席卷天下、包举宇内、囊括四海之意，并吞八荒之心。当是时也，商君佐之，内立法度，务耕织，修守战之具；外连衡而斗诸侯。于是秦人拱手而取西河之外。</span></strong></p><p><strong><span>“孝公既没，惠文、武、昭襄蒙故业因遗策，南取汉中，西举巴蜀，东割膏腴之地，收要害之郡。诸侯恐惧，会盟而谋弱秦，不爱珍器、重宝、肥饶之地，以致天下之士，合从缔交，相与为一。当此之时，齐有孟尝，赵有平原，楚有春申，魏有信陵。此四君者，皆明智而忠信，宽厚而爱人，尊贤而重士，约从离横，兼韩、魏、燕、赵、宋、卫、中山之众。于是六国之士，有宁越、徐尚、苏秦、杜赫之属为之谋，齐明、周最、陈轸、召滑、楼缓、翟景、苏厉、乐毅之徒通其意，吴起、孙膑、带佗、倪良、王廖、田忌、廉颇、赵奢之伦制其兵。尝以十倍之地，百万之众，叩关而攻秦。秦人开关而延敌，九国之师逡巡遁逃而不敢进。秦无亡矢遗镞之费，而天下诸侯已困矣。于是从散约解，争割地以赂秦。秦有余力而制其弊，追亡逐北，伏尸百万，流血飘橹。因利乘便，宰割天下，分裂河山。强国请服，弱国入朝。</span></strong></p><p><strong><span>“施及孝文王、庄襄王，享国之日浅，国家无事。</span></strong></p><p><strong><span>“及至始皇，奋六世之余烈，振长策而御宇内，吞二周而亡诸侯，履至尊而制六合，执敲朴以鞭笞天下，威振四海。南取百越之地，以为桂林、象郡。百越之君，俯首系颈，委命下吏。乃使蒙恬北筑长城而守藩篱，却匈奴七百余里。胡人不敢南下而牧马，士不敢弯弓而报怨。于是废先王之道，燔百家之言，以愚黔首；隳名城，杀豪俊，收天下之兵聚之咸阳，销锋鍉，铸以为金人十二，以弱天下之民。然后践华为城，因河为池，据亿丈之城、临不测之溪以为固。良将劲驽，守要害之处；信臣精卒，陈利兵而谁何。天下已定，始皇之心，自以为关中之固，金城千里，子孙帝王万世之业也。</span></strong></p><p><strong><span>“始皇既没，余威震于殊俗。 然陈涉瓮牖绳枢之子，氓隶之人，而迁徙之徒也；材能不及中人，非有仲尼、墨翟之贤，陶朱、猗顿之富。蹑足行伍之间，倔起阡陌之中，率罢散之卒，将数百之众，转而攻秦，斩木为兵，揭竿为旗，天下云集而响应，赢粮而景从。山东豪俊遂并起而亡秦族矣。</span></strong></p><p><strong><span>“且夫天下非小弱也，雍州之地，肴函之固，自若也；陈涉之位，非尊于齐、楚、燕、赵、韩、魏、宋、卫、中山之君也；锄耰棘矜，不铦于钩戟长铩也；适戍之众，非抗于九国之师也；深谋远虑，行军用兵之道，非及向时之士也。然而成败异变，功业相反。试使山东之国与陈涉度长絜大，比权量力，则不可同年而语矣。然秦以区区之地，致万乘之势，序八州而朝同列，百有余年矣。然后以六合为家，肴函为宫。一夫作难而七庙隳，身死人手，为天下笑者，何也？仁义不施而攻守之势异也。”</span></strong></p><p><strong><span>【索隐述赞】天下匈匈，海内乏主，掎鹿争捷，瞻乌爰处。陈胜首事，厥号张楚。鬼怪是凭，鸿鹄自许。葛婴东下，周文西拒。始亲朱房，又任胡武。伙颐见杀，腹心不与。庄贾何人，反噬城父！</span></strong></p><p>&nbsp;</p><h3 id='出师表'><span>出师表</span></h3><h6 id='作者诸葛亮-两汉-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_e82a672a1ca9.aspx'><span>诸葛亮</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>先帝创业未半而中道崩殂，今天下三分，益州疲弊，此诚危急存亡之秋也。然侍卫之臣不懈于内，忠志之士忘身于外者，盖追先帝之殊遇，欲报之于陛下也。诚宜开张圣听，以光先帝遗德，恢弘志士之气，不宜妄自菲薄，引喻失义，以塞忠谏之路也。</span></strong></p><p><strong><span>宫中府中，俱为一体；陟罚臧否，不宜异同。若有作奸犯科及为忠善者，宜付有司论其刑赏，以昭陛下平明之理，不宜偏私，使内外异法也。</span></strong></p><p><strong><span>侍中、侍郎郭攸之、费祎、董允等，此皆良实，志虑忠纯，是以先帝简拔以遗陛下。愚以为宫中之事，事无大小，悉以咨之，然后施行，必能裨补阙漏，有所广益。</span></strong></p><p><strong><span>将军向宠，性行淑均，晓畅军事，试用于昔日，先帝称之曰能，是以众议举宠为督。愚以为营中之事，悉以咨之，必能使行阵和睦，优劣得所。</span></strong></p><p><strong><span>亲贤臣，远小人，此先汉所以兴隆也；亲小人，远贤臣，此后汉所以倾颓也。先帝在时，每与臣论此事，未尝不叹息痛恨于桓、灵也。侍中、尚书、长史、参军，此悉贞良死节之臣，愿陛下亲之信之，则汉室之隆，可计日而待也。</span></strong></p><p><strong><span>臣本布衣，躬耕于南阳，苟全性命于乱世，不求闻达于诸侯。先帝不以臣卑鄙，猥自枉屈，三顾臣于草庐之中，咨臣以当世之事，由是感激，遂许先帝以驱驰。后值倾覆，受任于败军之际，奉命于危难之间，尔来二十有一年矣。</span></strong></p><p><strong><span>先帝知臣谨慎，故临崩寄臣以大事也。受命以来，夙夜忧叹，恐托付不效，以伤先帝之明；故五月渡泸，深入不毛。今南方已定，兵甲已足，当奖率三军，北定中原，庶竭驽钝，攘除奸凶，兴复汉室，还于旧都。此臣所以报先帝而忠陛下之职分也。至于斟酌损益，进尽忠言，则攸之、祎、允之任也。</span></strong></p><p><strong><span>愿陛下托臣以讨贼兴复之效，不效，则治臣之罪，以告先帝之灵。若无兴德之言，则责攸之、祎、允等之慢，以彰其咎；陛下亦宜自谋，以咨诹善道，察纳雅言，深追先帝遗诏。臣不胜受恩感激。今当远离，临表涕零，不知所言。</span></strong></p><p>&nbsp;</p><h3 id='十五从军征'><span>十五从军征</span></h3><h6 id='作者佚名-两汉-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_2128926194cd.aspx'><span>佚名</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=两汉'><span>〔两汉〕</span></a></h6><p><strong><span>十五从军征，八十始得归。</span></strong>
+<span>		</span><strong><span>道逢乡里人：“家中有阿谁？”</span></strong>
+<span>		</span><strong><span>“遥看是君家，松柏冢累累。”</span></strong>
+<span>		</span><strong><span>兔从狗窦入，雉从梁上飞。</span></strong>
+<span>		</span><strong><span>中庭生旅谷，井上生旅葵。</span></strong>
+<span>		</span><strong><span>舂谷持作饭，采葵持作羹。</span></strong>
+<span>		</span><strong><span>羹饭一时熟，不知饴阿谁。</span></strong>
+<span>		</span><strong><span>出门东向看，泪落沾我衣。</span></strong></p><p>&nbsp;</p><h3 id='白雪歌送武判官归京'><span>白雪歌送武判官归京</span></h3><h6 id='作者岑参-唐代-3'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_0969d1da1ac1.aspx'><span>岑参</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=唐代'><span>〔唐代〕</span></a></h6><p><strong><span>北风卷地白草折，胡天八月即飞雪。</span></strong>
+<span>		</span><strong><span>忽如一夜春风来，千树万树梨花开。</span></strong>
+<span>		</span><strong><span>散入珠帘湿罗幕，狐裘不暖锦衾薄。</span></strong>
+<span>		</span><strong><span>将军角弓不得控，都护铁衣冷难着。</span></strong>
+<span>		</span><strong><span>瀚海阑干百丈冰，愁云惨淡万里凝。</span></strong>
+<span>		</span><strong><span>中军置酒饮归客，胡琴琵琶与羌笛。</span></strong>
+<span>		</span><strong><span>纷纷暮雪下辕门，风掣红旗冻不翻。</span></strong>
+<span>		</span><strong><span>轮台东门送君去，去时雪满天山路。</span></strong>
+<span>		</span><strong><span>山回路转不见君，雪上空留马行处。</span></strong></p><p>&nbsp;</p><h3 id='南乡子·登京口北固亭有怀'><span>南乡子·登京口北固亭有怀</span></h3><h6 id='作者辛弃疾-2'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_a7900666497f.aspx'><span>辛弃疾</span></a></h6><p><strong><span>何处望神州？满眼风光北固楼。千古兴亡多少事？悠悠。不尽长江滚滚流。</span></strong></p><p><strong><span>年少万兜鍪，坐断东南战未休。天下英雄谁敌手？曹刘。生子当如孙仲谋。</span></strong></p><p>&nbsp;</p><h3 id='过零丁洋'><span>过零丁洋</span></h3><h6 id='作者文天祥-宋代'><span>作者：</span><a href='https://so.gushiwen.cn/authorv_7ef6502f1e96.aspx'><span>文天祥</span></a><span> </span><a href='https://so.gushiwen.cn/shiwens/default.aspx?cstr=宋代'><span>〔宋代〕</span></a></h6><p><strong><span>辛苦遭逢起一经，干戈寥落四周星。</span></strong>
+<span>		</span><strong><span>山河破碎风飘絮，身世浮沉雨打萍。</span></strong>
+<span>		</span><strong><span>惶恐滩头说惶恐，零丁洋里叹零丁。</span></strong>
+<span>		</span><strong><span>人生自古谁无死？留取丹心照汗青。</span></strong></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='优秀文章'><span>优秀文章：</span></h1><p>&nbsp;</p><h3 id='捕风者'><span>捕风者 </span></h3><h6 id='彭家河'><span>彭家河</span></h6><p><span> 我曾经想看到风的形状，可它形无定式来去无踪；我也曾想捕捉风的味道，可是，风静隐于虚无之中，风动，带来的却是他处的味道；我也曾琢磨过风的声音，才知道风本无声，只是有许多声音都被风一路带来又一路带走……</span></p><p><span>在我离开农村进入小县城之后，仿佛进入一个听觉和味觉的荒漠。身处日益膨胀和来不及完善的城市，我成天浸泡在城市污秽的味道和繁杂的声音之中，只能独自怀念着风清气正的乡下时光。</span></p><p><span>虽然风的形状不可看见，但是风经过之处，也总有从静到动的提示。草倒叶飞、云转幡动，这都是风在说它来了。可能风还在远处，我们就远远地发现了风的脚印。在乡下；如果站在木格的窗子背后，只要看到对面青山上的树在摇摆，山路上的雨衣在飘动，瓦房上的炊烟在扭腰，这些都是在说，那就是风。当然，居住在高高的电梯公寓，隔着双层的玻璃窗子，也只有那些粗壮烟囱上方的烟雾或者花花绿绿的商铺彩旗，在天空中写着“风”，如果没有这些烟囱或者旗子，应该是看不到风的身影的。看庭前花开花落，望天外云卷云舒，本是件简单的事，然而，要在城市灰蒙蒙的天底下看看云，实在是十分奢侈的想法。当然，在行色匆匆的人流中，没有谁会停下来静静看一会儿风的来去和风的大小，都是在奔波行走讨价还价的间隙，偶尔由鼻翼、肌肤、耳朵听闻风的踪迹。</span></p><p><span>多年前的一个五月，我在农忙时节回到乡下，刚下过暴雨，溪里池里水都涨起来了。在那个雨过天睛的黄昏，我坐在青草地上乘凉，阵阵温和的晚风吹过，风中满载着布谷的歌唱、虫子的嘶鸣，还有牛的长调，我突然觉得，这样的五月，才算是完整或者完美的。之后，我也时常回乡下去，更多的时候就在春节前后，等到天黑定了，山里山外全是静默的，偶尔有人家点燃一串鞭炮，响过之后，夜晚更显得寂静了。</span></p><p><span>对于风中味道的触摸，主要依靠鼻翼，舌头无须过多参与。风中的味道，在乡下，更多的是花花草草传出的消息。当然，花要把消息告诉的不是人，而是那些远远近近的虫子，只不过让人也无意中捕获了。花的消息，风在以一种更加隐秘的方法传播，也是一种不可看见不可听闻的方式。因而，在乡下，一个人的嗅觉是十分灵敏的。</span></p><p><span>村口人家的饭熟了，村尾的人都知道是些什么菜。如果是在饥饿的年代，就有不少无事的孩子过去串门了。如果闻见有腊肉的味道，那一定是家里来了远客；如果是酸菜红苕的味道，就不过去凑热闹了。每年端午，家家都会用新面蒸馒头，一大早，</span>
+<span> 村子就全笼罩在一层淡淡的馒头香味中，虽然各家各户还把馒头扣在蒸笼里，但是只要鼻翼轻微动一下，就知道哪家的包子是肉馅的，哪家是菜馅的，还有哪家用的是洋槐花作瓤。</span></p><p><span>乡下，风的味道不仅四季各异，而且一天之中也不断变换，早上凉，中午热，晚上冷。当然，如此简单的词语无力把乡村的风在纸上再现，或者将其描述得原汁原味。</span></p><p><span>封闭在厚厚的水泥墙里，百无聊赖地想到了乡下的风声和风味。风中遥远的声音和淡淡的味道，正如我刻骨的乡愁和莫名的悲伤。</span></p><hr /><h3 id='你的光照亮了我的世界'><span>你的光照亮了我的世界</span></h3><p><span>亲爱的自己：</span></p><p><span>见字如面。</span></p><p><span>近来总想和你谈谈。累了吧？你瞧，你眼中的光好像黯淡了不少。</span></p><p><span>你从来都不是最耀眼的孩子。你的五官普普通通，唱歌五音不全，没有过人的聪明才智，也没有与人周旋的八面玲珑。</span></p><p><span>你生在破晓前的黑夜，后来你才知道，万物因太阳而生。</span></p><p><span>记得吗？初二那段日子，你想参加作文竞赛。于是，你成了那个灯光下奋笔疾书的女孩，因为你也有个作家梦呢。你轻轻告诉自己：“我要证明，我可以！”</span></p><p><span>可是后来，你落选了。那天的雪下得那样大，行云似不再流转，枯木似不再萌发。你低下头，想掩藏你的失落，可是眼中的泪早已打了三转，一颤，落在作文纸上。</span></p><p><span>荆棘铺满前路，但眺望是青春的姿态。</span></p><p><span>你在心中默念：我不会放弃的！亲爱的自己，我知道，你不是认命的孩子。黑夜里出生的孩子，向往黎明的温暖。于是，你向往着炽热的阳光。</span></p><p><span>最让我感动的是初三的那节语文课。你平常是多么羞涩啊，可是，就是这样一个羞涩的孩子，居然能鼓起勇气站在讲台上，在同学和老师的鼓励下昂起头大声地朗读自己的作文。我看到，窗边有一束金光挤进来，洒在你青春洋溢的面庞上。</span></p><p><span>自此，那束金光便追随着你。</span></p><p><span>回首那些或难过或开怀的记忆，你眼中的光是否明亮了几分？</span>
+<span> 现在的你或许会因劳累而叹息，但是看到这些奋斗的痕迹，你便会充满斗志，昂扬进取。</span></p><p><span>无论冬日的黑夜多么寒冷黑暗，向阳的花始终向往光明！</span></p><p><span>一位外国导演说过：“虽然辛苦，可我还是会选择那种滚烫的人生。”回首看看那个逐梦少女身上散发的光，然后就此展开新的征程吧！</span></p><p><span>过去的自己，你的努力似一道光，照亮了现在的我和我的世界。谢谢你，亲爱的自己！</span></p><p><span>2020年7月14日</span></p><hr /><h4 id='星星缀满我的脸'><span>星星缀满我的脸</span></h4><h6 id='傅菲'><span>傅菲</span></h6><p><span>人世间，唯有星辰和星辰下的旷野，让人不会厌倦。</span>
+<span>		</span><span>当我仰望星空，觉得它像巨大的谜，我永远也无法猜透。星空的存在，是生命中最大的诱惑。星空浩瀚无边，亘古不变，散发的清光纯洁如水。星空下的人间，从来都是寂然的。一个热爱孤独的人，星空会带给他沉默的伴侣。海子在《黑夜的献诗》中说:“天空一无所有，为何给我安慰。”天空一无所有，除了无处不在的星光。给我们安慰的，不是别的，恰恰是如星辰般的孤独。</span>
+<span>		</span><span>星光照耀过多少人，谁又知道呢?每一个人都数过星星，可谁又数得清呢?星光是一把把刀，呼呼呼，从我们头顶飞过。我们看不到刀，也看不到刀光，看到的是星星如钉子，被钉在苍穹的悬崖峭壁上。我们遥望星空时，会想起什么呢?星宿是时间的同行者。它们就像与我们失散已久的人，它们尘埃一样的面容发出友爱的光。我们需要寻找的人，都居住在峭壁之上的湖泊里。他们手腕挂着铃铛，脸颊贴着锡箔--他们用古老的巫术，让我们结束梦魇，让我们回到河流的出生地。</span>
+<span>		</span><span>夜色温柔。星空下，你会想起谁?</span>
+<span>		</span><span>会想起生火做饭的人，会想起给花浇水的人，会想起把门打开又关上的人，会想起在雪中紧紧拥吻的人，会想起不回信的人......</span>
+<span>		</span><span>我会想起你。我微微仰起头，闭上眼睛，星星便缀满我的脸。旷野无人，万物冥寂，星光的马蹄踏过我的心房。旷野上有人在轻轻传唱，传唱--那是你写给我的诗句:</span>
+<span>		</span><span>抬头时</span>
+<span>		</span><span>我看见了夜空中的一颗星星</span></p><hr /><h4 id='雕刻岁月'><span>雕刻岁月</span></h4><h6 id='尤今'><span>尤今</span></h6><p><span>读到一篇短文，作者提及他在博物馆看到一件巧夺天工的艺术品--玉雕龙舟，当他为这件艺术品的鬼斧神工啧啧叹赏时，他同时也为雕刻者的命运发出同情的哀叹。</span>
+<span>他认为，一刀一刀地耗损人生的许多岁月来慢慢完成一件艺术品的过程，其实是很残忍的。原因是:把一个有才气、有抱负的年轻人深锁在一间工作室里，只安排一件事情给他做，年轻人青春正茂的世界，会因此而变得狭窄和黑暗。</span>
+<span>​</span><span>		</span><span>我不同意这个看法。我非鱼，亦知鱼之乐。</span>
+<span>​</span><span>		</span><span>一件完美的雕刻品，必定包含着雕刻者那一股铁杵磨成针的毅力、那一种吸纳各家之长为技艺的努力、那一份凝聚万千意志于十指的专注，还有，缺一不可的自信与自重。</span>
+<span>​</span><span>		</span><span>当雕刻者刻下第一刀时，他也许正是青丝满头、意气风发的少年，完成最后一刀时，他或许已变成动作迟缓且两鬓斑白的老者;可是，衣带渐宽终不悔--实际上，他雕刻的不是物品，而是岁月。</span>
+<span>​</span><span>		</span><span>当他把原始平凡的材料转化成匠心独具的艺术品时，他也将一种惊天动地的美雕刻进了永垂不朽的岁月。</span>
+<span>​</span><span>		</span><span>他的世界，不狭窄、不黑暗，相反，明亮如阳光、辽阔如宇宙。</span></p><p>&nbsp;</p><hr /><h6 id='待补充'><span>待补充……</span></h6></div></div>
+</body>
+</html>

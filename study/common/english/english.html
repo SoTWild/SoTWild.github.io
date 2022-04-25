@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="Shortcut Icon" href="https://i2.imgu.cc/images/2022/02/24/CIoiY.png" type="image/x-icon" />
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>英语</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='英语'><span>英语</span></h1><p>&nbsp;</p><p><span>这里包括了我搜集到的部分单词，并且还有</span><strong><span>几篇优质文章</span></strong><span>，希望你学习愉快。</span></p><h1 id='）'><span>：）</span></h1><hr /><h1 id='目录'><span>目录：</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#英语">英语</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n5"><a class="md-toc-inner" href="#）">：）</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n10"><a class="md-toc-inner" href="#目录">目录：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n18"><a class="md-toc-inner" href="#星期week">星期(week)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n26"><a class="md-toc-inner" href="#月份month">月份(month)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n39"><a class="md-toc-inner" href="#季节season">季节(season)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n44"><a class="md-toc-inner" href="#时间time">时间(time)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n54"><a class="md-toc-inner" href="#国家country">国家(country)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n65"><a class="md-toc-inner" href="#大洲continent">大洲(Continent)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n70"><a class="md-toc-inner" href="#方位direction">方位(direction)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n77"><a class="md-toc-inner" href="#交通工具transport">交通工具(transport)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n85"><a class="md-toc-inner" href="#饮食diet">饮食(diet)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n92"><a class="md-toc-inner" href="#米面及肉类食品">米面及肉类食品</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n102"><a class="md-toc-inner" href="#水果fruit">水果(fruit)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n108"><a class="md-toc-inner" href="#蔬菜vegetable">蔬菜(vegetable)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" href="#零食snack">零食(snack)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n128"><a class="md-toc-inner" href="#饮料drink">饮料(drink)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n134"><a class="md-toc-inner" href="#调料relish">调料(relish)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n139"><a class="md-toc-inner" href="#学习用品">学习用品</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n145"><a class="md-toc-inner" href="#颜色color">颜色(color)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n158"><a class="md-toc-inner" href="#衣着">衣着</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n174"><a class="md-toc-inner" href="#科目subject">科目(subject)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n184"><a class="md-toc-inner" href="#身体部位body">身体部位(body)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n202"><a class="md-toc-inner" href="#亲属relative">亲属(relative)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n218"><a class="md-toc-inner" href="#动物animal">动物(animal)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n243"><a class="md-toc-inner" href="#职业job">职业(job)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n259"><a class="md-toc-inner" href="#公共场所">公共场所</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n279"><a class="md-toc-inner" href="#学校school">学校(school)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n285"><a class="md-toc-inner" href="#房间room">房间(room)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n290"><a class="md-toc-inner" href="#宇宙">宇宙</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n301"><a class="md-toc-inner" href="#天气weather">天气(weather)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n307"><a class="md-toc-inner" href="#运动sport">运动(sport)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n314"><a class="md-toc-inner" href="#乐器musical-instruments">乐器(musical instruments)</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n320"><a class="md-toc-inner" href="#合成法">合成法</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n321"><a class="md-toc-inner" href="#由两个或者两个以上的词合成新词这种构词法叫做合成法">由两个或者两个以上的词合成新词，这种构词法叫做合成法。</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n344"><a class="md-toc-inner" href="#前缀">前缀</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n370"><a class="md-toc-inner" href="#后缀">后缀</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n388"><a class="md-toc-inner" href="#特例-1">特例：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n400"><a class="md-toc-inner" href="#2-ist人名词后缀">2)-ist(人，名词后缀)：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n461"><a class="md-toc-inner" href="#特例-2">特例：</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n701"><a class="md-toc-inner" href="#作文">作文：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n699"><a class="md-toc-inner" href="#演讲一类">演讲一类：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n709"><a class="md-toc-inner" href="#回信一类">回信一类：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n744"><a class="md-toc-inner" href="#待补充">待补充……</a></span></p></div><hr /><h3 id='星期week'><span>星期(week)</span></h3><p><strong><span>Monday(星期一)</span></strong></p><p><strong><span>Tuesday(星期二)</span></strong></p><p><strong><span>Wednesday(星期三)</span></strong></p><p><strong><span>Thursday(星期四)</span></strong></p><p><strong><span>Friday(星期五)</span></strong></p><p><strong><span>Saturday(星期六)</span></strong></p><p><strong><span>Sunday(星期天)</span></strong></p><p>&nbsp;</p><h3 id='月份month'><span>月份(month)</span></h3><p><strong><span>January(一月)</span></strong></p><p><strong><span>February(二月)</span></strong></p><p><strong><span>March(三月)</span></strong></p><p><strong><span>April(四月)</span></strong></p><p><strong><span>May(五月)</span></strong></p><p><strong><span>June(六月)</span></strong></p><p><strong><span>July(七月)</span></strong></p><p><strong><span>August(八月)</span></strong></p><p><strong><span>September(九月)</span></strong></p><p><strong><span>October(十月)</span></strong></p><p><strong><span>November(十一月)</span></strong></p><p><strong><span>December(十二月)</span></strong></p><p>&nbsp;</p><h3 id='季节season'><span>季节(season)</span></h3><p><strong><span>spring(春节)</span></strong></p><p><strong><span>summer(夏天)</span></strong></p><p><strong><span>autumn(秋天)</span></strong></p><p><strong><span>winter(冬天)</span></strong></p><p>&nbsp;</p><h3 id='时间time'><span>时间(time)</span></h3><p><strong><span>second(秒)</span></strong></p><p><strong><span>minute(分)</span></strong></p><p><strong><span>hour(小时)</span></strong></p><p><strong><span>day(天)</span></strong></p><p><strong><span>night(夜)</span></strong></p><p><strong><span>week(星期)</span></strong></p><p><strong><span>month(月份)</span></strong></p><p><strong><span>year(年)</span></strong></p><p><strong><span>century(世纪)</span></strong></p><p>&nbsp;</p><h3 id='国家country'><span>国家(country)</span></h3><p><strong><span>China(中国)</span></strong></p><p><strong><span>Japan(日本)</span></strong></p><p><strong><span>England(英国)</span></strong></p><p><strong><span>India(印度)</span></strong></p><p><strong><span>Canada(加拿大)</span></strong></p><p><strong><span>America / the United States / USA (美国)</span></strong></p><p><strong><span>Australia(澳大利亚)</span></strong></p><p><strong><span>Germany(德国)</span></strong></p><p><strong><span>Russia(俄罗斯)</span></strong></p><p><strong><span>France(法国)</span></strong></p><p>&nbsp;</p><h3 id='大洲continent'><span>大洲(Continent)</span></h3><p><strong><span>Asia(亚洲)</span></strong></p><p><strong><span>Africa(非洲)</span></strong></p><p><strong><span>America(美洲)</span></strong></p><p><strong><span>Europe(欧洲)</span></strong></p><p>&nbsp;</p><h3 id='方位direction'><span>方位(direction)</span></h3><p><strong><span>east(东)</span></strong></p><p><strong><span>south(南)</span></strong></p><p><strong><span>west(西)</span></strong></p><p><strong><span>north(北)</span></strong></p><p><strong><span>left(左)</span></strong></p><p><strong><span>right(右)</span></strong></p><p>&nbsp;</p><h3 id='交通工具transport'><span>交通工具(transport)</span></h3><p><strong><span>bike / bicycle(自行车)</span></strong></p><p><strong><span>bus(公共汽车)</span></strong></p><p><strong><span>car(小汽车)</span></strong></p><p><strong><span>jeep(吉普车)</span></strong></p><p><strong><span>train(火车)</span></strong></p><p><strong><span>ship(轮船)</span></strong></p><p><strong><span>plane(飞机)</span></strong></p><p>&nbsp;</p><h3 id='饮食diet'><span>饮食(diet)</span></h3><p><strong><span>breakfast(早餐)</span></strong></p><p><strong><span>lunch(午餐)</span></strong></p><p><strong><span>supper(晚餐)</span></strong></p><p><strong><span>dinner(正餐、晚餐)</span></strong></p><p><strong><span>snack(快餐)</span></strong></p><p><strong><span>picnic(野餐)</span></strong></p><p>&nbsp;</p><h3 id='米面及肉类食品'><span>米面及肉类食品</span></h3><p><strong><span>rice(米、米饭)</span></strong></p><p><strong><span>porridge(粥)</span></strong></p><p><strong><span>(rice) dumpling(饺子;粽子;汤圆)</span></strong></p><p><strong><span>noodle【常用复数】(面条)</span></strong></p><p><strong><span>meat(肉)</span></strong></p><p><strong><span>beef(牛肉)</span></strong></p><p><strong><span>mutton(羊肉)</span></strong></p><p><strong><span>chicken(鸡肉)</span></strong></p><p><strong><span>egg(鸡蛋)</span></strong></p><p>&nbsp;</p><h3 id='水果fruit'><span>水果(fruit)</span></h3><p><strong><span>Apple(苹果)</span></strong></p><p><strong><span>banana(香蕉)</span></strong></p><p><strong><span>pear(梨子)</span></strong></p><p><strong><span>orange(橙子)</span></strong></p><p><strong><span>strawberry(草莓)</span></strong></p><p>&nbsp;</p><h3 id='蔬菜vegetable'><span>蔬菜(vegetable)</span></h3><p><strong><span>tomato(西红柿)</span></strong></p><p><strong><span>potato(马铃薯)</span></strong></p><p><strong><span>carrot(胡萝卜)</span></strong></p><p><strong><span>cabbage(洋白菜、卷心菜)</span></strong></p><p><strong><span>onion(洋葱)</span></strong></p><p>&nbsp;</p><h3 id='零食snack'><span>零食(snack)</span></h3><p><strong><span>chocolate(巧克力)</span></strong></p><p><strong><span>hamburger(汉堡包)</span></strong></p><p><strong><span>cake(蛋糕)</span></strong></p><p><strong><span>bread(面包)</span></strong></p><p><strong><span>mooncake(月饼)</span></strong></p><p><strong><span>ice cream(冰淇淋)</span></strong></p><p><strong><span>cheese(奶酪)</span></strong></p><p><strong><span>salad(沙拉)</span></strong></p><p><strong><span>dessert(甜食)</span></strong></p><p><strong><span>candy(糖果)</span></strong></p><p><strong><span>biscuit(饼干)</span></strong></p><p><strong><span>pie(馅饼)</span></strong></p><p><strong><span>cheese(干酪;奶酪)</span></strong></p><p>&nbsp;</p><h3 id='饮料drink'><span>饮料(drink)</span></h3><p><strong><span>juice(果汁)</span></strong></p><p><strong><span>milk(牛奶)</span></strong></p><p><strong><span>tea(茶)</span></strong></p><p><strong><span>green tea(绿茶)</span></strong></p><p><strong><span>coffee(咖啡)</span></strong></p><p>&nbsp;</p><h3 id='调料relish'><span>调料(relish)</span></h3><p><strong><span>butter(黄油)</span></strong></p><p><strong><span>sauce(酱油)</span></strong></p><p><strong><span>sugar(糖)</span></strong></p><p><strong><span>salt(盐)</span></strong></p><p>&nbsp;</p><h3 id='学习用品'><span>学习用品</span></h3><p><strong><span>pen(钢笔)</span></strong></p><p><strong><span>pencil(铅笔)</span></strong></p><p><strong><span>eraser(橡皮擦)</span></strong></p><p><strong><span>ruler(直尺)</span></strong></p><p><strong><span>knife(小刀)</span></strong></p><p>&nbsp;</p><h3 id='颜色color'><span>颜色(color)</span></h3><p><strong><span>red 红色(的)</span></strong></p><p><strong><span>yellow黄色(的)</span></strong></p><p><strong><span>blue蓝色(的)</span></strong></p><p><strong><span>green绿色(的)</span></strong></p><p><strong><span>black黑色(的)</span></strong></p><p><strong><span>white白色(的)</span></strong></p><p><strong><span>orange橙黄色(的)</span></strong></p><p><strong><span>brown棕色(的)</span></strong></p><p><strong><span>pink粉红色(的)</span></strong></p><p><strong><span>purple紫色(的)</span></strong></p><p><strong><span>gray灰色(的)</span></strong></p><p>&nbsp;</p><h3 id='衣着'><span>衣着</span></h3><p><strong><span>clothes(衣服)</span></strong></p><p><strong><span>hat(帽子)</span></strong></p><p><strong><span>shirt(衬衫)</span></strong></p><p><strong><span>T-shirt(男衬衫)</span></strong></p><p><strong><span>coat(外套、上衣)</span></strong></p><p><strong><span>raincoat(雨衣)</span></strong></p><p><strong><span>uniform(制服)</span></strong></p><p><strong><span>skirt(裙子)</span></strong></p><p><strong><span>dress(裙子、衣服)</span></strong></p><p><strong><span>trousers(裤子)</span></strong></p><p><strong><span>pants(裤子)</span></strong></p><p><strong><span>jeans(牛仔裤)</span></strong></p><p><strong><span>shorts(短裤)</span></strong></p><p><strong><span>sock(袜子)</span></strong></p><p><strong><span>shoe(鞋子)</span></strong></p><p>&nbsp;</p><h3 id='科目subject'><span>科目(subject)</span></h3><p><strong><span>Chinese(汉语)</span></strong></p><p><strong><span>math(数学)</span></strong></p><p><strong><span>English(英语)</span></strong></p><p><strong><span>history(历史)</span></strong></p><p><strong><span>geography(地理)</span></strong></p><p><strong><span>biology(生物)</span></strong></p><p><strong><span>physics(物理)</span></strong></p><p><strong><span>chemistry(化学)</span></strong></p><p><strong><span>P.E.(体育)</span></strong></p><p>&nbsp;</p><h3 id='身体部位body'><span>身体部位(body)</span></h3><p><strong><span>head(头)</span></strong></p><p><strong><span>hair(头发)</span></strong></p><p><strong><span>neck(脖子)</span></strong></p><p><strong><span>eye(眼睛)</span></strong></p><p><strong><span>nose(鼻子)</span></strong></p><p><strong><span>mouth(嘴巴)</span></strong></p><p><strong><span>tooth(牙齿)</span></strong></p><p><strong><span>ear(耳朵)</span></strong></p><p><strong><span>face(脸)</span></strong></p><p><strong><span>arm(手臂)</span></strong></p><p><strong><span>hand(手)</span></strong></p><p><strong><span>finger(手指)</span></strong></p><p><strong><span>heart(心)</span></strong></p><p><strong><span>back(背部)</span></strong></p><p><strong><span>knee(膝盖)</span></strong></p><p><strong><span>leg(腿)</span></strong></p><p><strong><span>foot(脚)</span></strong></p><p>&nbsp;</p><h3 id='亲属relative'><span>亲属(relative)</span></h3><p><strong><span>father(父亲)</span></strong></p><p><strong><span>mother(妈妈)</span></strong></p><p><strong><span>parents(父母)</span></strong></p><p><strong><span>grandfather / grandpa(爷爷、外公)</span></strong></p><p><strong><span>grandmother / grandma(奶奶、外婆)</span></strong></p><p><strong><span>grandparents(爷爷奶奶、外公外婆)</span></strong></p><p><strong><span>brother(哥、弟)</span></strong></p><p><strong><span>sister(姐、妹)</span></strong></p><p><strong><span>cousin堂(表)兄弟、堂(表)姐妹</span></strong></p><p><strong><span>husband(丈夫)</span></strong></p><p><strong><span>妻子(wife)</span></strong></p><p><strong><span>son(儿子)</span></strong></p><p><strong><span>daughter(女儿)</span></strong></p><p><strong><span>uncle(叔、伯、舅、姨夫、姑父)</span></strong></p><p><strong><span>aunt(姨母、姑母、伯母、婶母、舅母)</span></strong></p><p>&nbsp;</p><h3 id='动物animal'><span>动物(animal)</span></h3><p><strong><span>lion(狮子)</span></strong></p><p><strong><span>tiger(老虎)</span></strong></p><p><strong><span>elephant(大象)</span></strong></p><p><strong><span>camel(骆驼)</span></strong></p><p><strong><span>cow(奶牛)</span></strong></p><p><strong><span>pig(猪)</span></strong></p><p><strong><span>fox(狐狸)</span></strong></p><p><strong><span>snake(蛇)</span></strong></p><p><strong><span>duck(鸭子)</span></strong></p><p><strong><span>chicken(鸡)</span></strong></p><p><strong><span>hen(母鸡)</span></strong></p><p><strong><span>bird(小鸟)</span></strong></p><p><strong><span>rabbit(兔子)</span></strong></p><p><strong><span>panda(熊猫)</span></strong></p><p><strong><span>deer(鹿)</span></strong></p><p><strong><span>giraffe(长颈鹿)</span></strong></p><p><strong><span>sheep(羊)</span></strong></p><p><strong><span>fish(鱼)</span></strong></p><p><strong><span>ant(蚂蚁)</span></strong></p><p><strong><span>mouse (mice) / rat(老鼠)</span></strong></p><p><strong><span>dog(狗)</span></strong></p><p><strong><span>cat(猫)</span></strong></p><p><strong><span>monkey(猴子)</span></strong></p><p><strong><span>pig(猪)</span></strong></p><p>&nbsp;</p><h3 id='职业job'><span>职业(job)</span></h3><p><strong><span>teacher(老师)</span></strong></p><p><strong><span>doctor(医生)</span></strong></p><p><strong><span>nurse(护士)</span></strong></p><p><strong><span>policeman(男警察)</span></strong></p><p><strong><span>policewoman(女警察)</span></strong></p><p><strong><span>reporter(记者)</span></strong></p><p><strong><span>shop assistant(店员)</span></strong></p><p><strong><span>bank clerk(银行职员)</span></strong></p><p><strong><span>waiter(服务员)</span></strong></p><p><strong><span>scientist(科学家)</span></strong></p><p><strong><span>student(学生)</span></strong></p><p><strong><span>farmer(农民)</span></strong></p><p><strong><span>fisherman(渔夫)</span></strong></p><p><strong><span>cook(厨师)</span></strong></p><p><strong><span>barber(理发师)</span></strong></p><p>&nbsp;</p><h3 id='公共场所'><span>公共场所</span></h3><p><strong><span>shop / store(商店)</span></strong></p><p><strong><span>bank(银行)</span></strong></p><p><strong><span>hospital(医院)</span></strong></p><p><strong><span>police station(警察局)</span></strong></p><p><strong><span>TV station(电视站)</span></strong></p><p><strong><span>stop(车站)</span></strong></p><p><strong><span>cinema(电影院)</span></strong></p><p><strong><span>theater(戏剧院)</span></strong></p><p><strong><span>hotel(旅馆)</span></strong></p><p><strong><span>restaurant(餐馆)</span></strong></p><p><strong><span>factory(工厂)</span></strong></p><p><strong><span>company(公司)</span></strong></p><p><strong><span>market(市场)</span></strong></p><p><strong><span>supermarket(超市)</span></strong></p><p><strong><span>museum(博物馆)</span></strong></p><p><strong><span>post office(邮局)</span></strong></p><p><strong><span>school(学校)</span></strong></p><p><strong><span>airport(飞机场)</span></strong></p><p><strong><span>church(教堂)</span></strong></p><p>&nbsp;</p><h3 id='学校school'><span>学校(school)</span></h3><p><strong><span>primary school(小学)</span></strong></p><p><strong><span>middle school(中学)</span></strong></p><p><strong><span>junior high school(初中)</span></strong></p><p><strong><span>senior high school(高中)</span></strong></p><p><strong><span>university(大学)</span></strong></p><p>&nbsp;</p><h3 id='房间room'><span>房间(room)</span></h3><p><strong><span>Living-room(起居室、客厅)</span></strong></p><p><strong><span>bedroom(卧室)</span></strong></p><p><strong><span>bathroom(洗澡房)</span></strong></p><p><strong><span>kitchen(厨房)</span></strong></p><p>&nbsp;</p><h3 id='宇宙'><span>宇宙</span></h3><p><strong><span>sun(太阳)</span></strong></p><p><strong><span>moon(月亮)</span></strong></p><p><strong><span>star(星星)</span></strong></p><p><strong><span>earth(地球)</span></strong></p><p><strong><span>sky(天空)</span></strong></p><p><strong><span>air(空气)</span></strong></p><p><strong><span>rain(雨)</span></strong></p><p><strong><span>cloud(云)</span></strong></p><p><strong><span>wind(风)</span></strong></p><p><strong><span>snow(雪)</span></strong></p><p>&nbsp;</p><h3 id='天气weather'><span>天气(weather)</span></h3><p><strong><span>sunny(晴朗的)</span></strong></p><p><strong><span>rainy(多雨的)</span></strong></p><p><strong><span>cloudy(多云的、阴天的)</span></strong></p><p><strong><span>windy(有风的)</span></strong></p><p><strong><span>snowy(多雪的)</span></strong></p><p>&nbsp;</p><h3 id='运动sport'><span>运动(sport)</span></h3><p><strong><span>basketball(篮球)</span></strong></p><p><strong><span>football(足球)</span></strong></p><p><strong><span>volleyball(排球)</span></strong></p><p><strong><span>baseball(网球)</span></strong></p><p><strong><span>tennis(羽毛球)</span></strong></p><p><strong><span>table tennis / ping-pong(乒乓球)</span></strong></p><p>&nbsp;</p><h3 id='乐器musical-instruments'><span>乐器(musical instruments)</span></h3><p><strong><span>drum(鼓)</span></strong></p><p><strong><span>trumpet(喇叭)</span></strong></p><p><strong><span>piano(钢琴)</span></strong></p><p><strong><span>violin(小提琴)</span></strong></p><p><strong><span>guitar(吉他)</span></strong></p><p>&nbsp;</p><h3 id='合成法'><span>合成法</span></h3><h6 id='由两个或者两个以上的词合成新词这种构词法叫做合成法'><span>由两个或者两个以上的词合成新词，这种构词法叫做合成法。</span></h6><p><strong><span>classroom(教室)=class + room，</span></strong></p><p><strong><span>worldwide(全世界的)=world(世界)+ wide(广泛的)，</span></strong></p><p><strong><span>downstairs(在楼下)=down(向下)+ stairs(楼梯)，</span></strong></p><p><strong><span>friendship(友谊)= friend(朋友)+ ship(船)，</span></strong></p><p><strong><span>everywhere(各地;到处)= every + where.</span></strong></p><p><strong><span>homework(家庭作业)=home + work,</span></strong></p><p><strong><span>housework(家务)=house + work，</span></strong></p><p><strong><span>southeast(东南部)=south + east，</span></strong></p><p><strong><span>underground(地下的)=under(在……下面)+ ground(地面)，</span></strong></p><p><strong><span>schoolbag(书包)→school + bag，</span></strong></p><p><strong><span>homeland(故乡;祖国)→home(家)+ land(土地)，</span></strong></p><p><strong><span>hometown(家乡)→home(家)+ town(镇)，</span></strong></p><p><strong><span>basketball(篮球)→basket(篮子)+ ball(球)，</span></strong></p><p><strong><span>special(adj.特殊的)→special(n.特色菜)，</span></strong></p><p><strong><span>stop(v.停止)→stop(n.车站)，</span></strong></p><p><strong><span>countryside(乡村)→country(国家;乡村)+ side(边)，</span></strong></p><p><strong><span>playground(操场)→play(玩)+ ground(地面)，</span></strong></p><p><strong><span>toothbrush(牙刷)→tooth + brush(刷)，</span></strong></p><p><strong><span>toothpaste(牙膏)→tooth + paste(糊状物)，</span></strong></p><p><strong><span>oversleep(睡过头)→over + sleep，</span></strong></p><p><strong><span>earthquake(地震)→earth(地球)+ quake(震动)</span></strong></p><p>&nbsp;</p><h3 id='前缀'><span>前缀</span></h3><p><strong><span>1)un-(不、非，表否定)：</span></strong></p><p><strong><span>able(能够……的)→unable(不能的)、</span></strong></p><p><strong><span>comfortable(舒服的)→uncomfortable(不舒服的)、</span></strong></p><p><strong><span>crowded(拥挤的)→uncrowded(不拥挤的)、</span></strong></p><p><strong><span>pleasant(令人愉快的)→unpleasant(使人不愉快的)、</span></strong></p><p><strong><span>usual(寻常的→)unusual(不同寻常的)、</span></strong></p><p><strong><span>healthy(健康的)→unhealthy(不健康的)、</span></strong></p><p><strong><span>happy(快乐的)→unhappy(不快乐的)、</span></strong></p><p><strong><span>friendly(友好的)→unfriendly(不友好的)、</span></strong></p><p>&nbsp;</p><p><strong><span>2)dis-(不、非，表否定)：</span></strong></p><p><strong><span>advantage(优点、优势)→disadvantage(缺点、劣势)、</span></strong></p><p><strong><span>cover(覆盖)→discover(发现)、</span></strong></p><p><strong><span>agree(同意)→disagree(不同意)、</span></strong></p><p><strong><span>like→dislike(不喜欢)、</span></strong></p><p><strong><span>honest(诚实的)→dishonest(不诚实的)、</span></strong></p><p><strong><span>play(玩)→display(陈列)</span></strong></p><p>&nbsp;</p><p><strong><span>3)im-(不、非，表否定)：</span></strong></p><p><strong><span>polite(有礼貌的)→impolite(不礼貌的)、</span></strong></p><p><strong><span>possible(可能的)→impossible(不可能的)</span></strong></p><p>&nbsp;</p><p><strong><span>4)re-(又、再、重新)：</span></strong></p><p><strong><span>review(复习)、return(归还)、rewrite(重写)、recycle(再循环;回收利用)</span></strong></p><p>&nbsp;</p><p><strong><span>5)inter-(相互、在一起)：</span></strong></p><p><strong><span>interview(面试)、international(国际的)、internet(因特网)</span></strong></p><p>&nbsp;</p><p><strong><span>6)en-(使)</span></strong></p><p><strong><span>encourage(鼓励)、endanger(危及;使遭受危险)</span></strong></p><p>&nbsp;</p><h3 id='后缀'><span>后缀</span></h3><p><strong><span>1)-or / -er(从事某职业的人或某类人)：</span></strong></p><p><strong><span>actor(演员)</span></strong></p><p><strong><span>visitor(参观者)</span></strong></p><p><strong><span>collector(搜集者)</span></strong></p><p><strong><span>translator(翻译家)</span></strong></p><p><strong><span>director(主任;主管)</span></strong></p><p><strong><span>singer(歌手)</span></strong></p><p><strong><span>teacher(老师)</span></strong></p><p><strong><span>reader(读者)</span></strong></p><p><strong><span>writer(作家)</span></strong></p><p><strong><span>foreigner(外国人)</span></strong></p><p><strong><span>learner(学习者)</span></strong></p><p><strong><span>villager(村民)</span></strong></p><p><strong><span>winner(胜利者)</span></strong></p><p><strong><span>foreigner(外国人)</span></strong></p><p><strong><span>owner(所有者;物主)</span></strong></p><p><strong><span>law(法律)→lawyer(律师)</span></strong></p><h5 id='特例-1'><span>特例：</span></h5><p><strong><span>post(邮寄;邮政)→poster(海报)、</span></strong></p><p><strong><span>draw(画画)—drawer(抽屉)、</span></strong></p><p><strong><span>elevate(提升)—elevator(电梯)、</span></strong></p><p><strong><span>equal(平等的)—equator(赤道)、</span></strong></p><p><strong><span>cook(煮)—cook(厨师)—cooker(厨具)、</span></strong></p><p><strong><span>flower(花)</span></strong></p><p><strong><span>finger(手指)</span></strong></p><p><strong><span>slipper(拖鞋)</span></strong></p><p><strong><span>helicopter(直升机)</span></strong></p><p><strong><span>refrigerator(冰箱)</span></strong></p><p><strong><span>calculator(计算器)</span></strong></p><p>&nbsp;</p><h3 id='2-ist人名词后缀'><span>2)-ist(人，名词后缀)：</span></h3><p><strong><span>science(科学)→scientist(科学家)、</span></strong></p><p><strong><span>art(艺术)→artist(艺术家)、</span></strong></p><p><strong><span>tour(n.﹠v.旅行)→tourist(旅行者)、</span></strong></p><p><strong><span>terrorist(恐怖分子)</span></strong></p><p>&nbsp;</p><p><strong><span>3)-tion(表示动作、状态，名词后缀)：</span></strong></p><p><strong><span>predict(v.预言)→prediction(n.预言)、</span></strong></p><p><strong><span>compete(v.竞争)→competition(n.竞争)、</span></strong></p><p><strong><span>invite(v.邀请)→invitation(n.邀请、请柬)、</span></strong></p><p><strong><span>invent(v.发明)→invention(n.发明)</span></strong></p><p><strong><span>instruct(v.指示)→instruction(n.指示;用法说明)</span></strong></p><p><strong><span>attend(v.注意)→attention(n.注意、专心)、</span></strong></p><p><strong><span>describe(v.描述)—description(n.描述)、</span></strong></p><p><strong><span>attract(v.吸引)→attraction(n.有吸引力的事物或人)、</span></strong></p><p><strong><span>pollute(v.污染)→pollution(n.污染)、</span></strong></p><p><strong><span>donate(捐赠)→donation(捐赠物;捐款)、</span></strong></p><p><strong><span>organize(组织)→organization(组织;机构)、</span></strong></p><p><strong><span>pronounce(发音)→ pronunciation(发音(法))</span></strong></p><p>&nbsp;</p><p><strong><span>4)-ment(表示动作、状态，名词后缀)：</span></strong></p><p><strong><span>develop(v.发展)→development(n.发展)、</span></strong></p><p><strong><span>advertise(v.登广告)→advertisement(n.广告)、</span></strong></p><p><strong><span>entertain(v.款待;使娱乐)→entertainment(n.娱乐)、</span></strong></p><p><strong><span>improve(v.改善)→improvement(n.改善)、</span></strong></p><p><strong><span>argue(v.争论)→argument(n.争论)、</span></strong></p><p><strong><span>state(v.陈述)→statement(n.陈述;声明)、</span></strong></p><p><strong><span>require(v.要求)→requirement(n.要求)、</span></strong></p><p><strong><span>government(政府)</span></strong></p><p>&nbsp;</p><p><strong><span>5)-ture / -ure(名词后缀)</span></strong></p><p><strong><span>picture(图画)</span></strong></p><p><strong><span>temperature(温度)</span></strong></p><p><strong><span>future(将来)</span></strong></p><p><strong><span>structure(结构;构造)</span></strong></p><p><strong><span>creature(生物)</span></strong></p><p><strong><span>pressure(压力)</span></strong></p><p><strong><span>pleasure(愉快)</span></strong></p><p>&nbsp;</p><p><strong><span>6)-th(名词后缀)</span></strong></p><p><strong><span>true(真实的)→truth(真相)</span></strong></p><p><strong><span>breath(n.呼吸)</span></strong></p><p><strong><span>birth(n.出生)</span></strong></p><p>&nbsp;</p><p><strong><span>7)-ful(充满，形容词后缀)：</span></strong></p><p><strong><span>success(成功)→successful(成功的)、</span></strong></p><p><strong><span>wonder(奇迹)→wonderful(精彩的)、</span></strong></p><p><strong><span>color→colorful(颜色鲜艳的、丰富多彩的)、</span></strong></p><p><strong><span>beauty(美的东西)→beautiful(美丽的)、</span></strong></p><p><strong><span>care→careful(仔细的、小心的)、</span></strong></p><p><strong><span>peace→peaceful(平静的、和平的)、</span></strong></p><p><strong><span>play→playful(顽皮的)</span></strong></p><p>&nbsp;</p><p><strong><span>8)-less(没有、无，形容词后缀)：</span></strong></p><p><strong><span>care→careless(粗心的)、</span></strong></p><p><strong><span>help→helpless(无助的)、</span></strong></p><p><strong><span>home→homeless(无家可归的)</span></strong></p><p>&nbsp;</p><p><strong><span>9)-y(表性质，形容词后缀)：</span></strong></p><p><strong><span>fun(乐趣)→funny(有趣的)、</span></strong></p><p><strong><span>health(健康)→healthy(健康的)、</span></strong></p><p><strong><span>sleep(睡觉)→sleepy((困倦的)、</span></strong></p><p><strong><span>taste(味道;品尝)→tasty(味美可口的)、</span></strong></p><p><strong><span>luck(运气)→lucky(幸运的)、</span></strong></p><p><strong><span>shiny(有光泽的;发亮的)</span></strong></p><p><strong><span>sleepy(困倦的)</span></strong></p><p><strong><span>guilty(内疚的;有罪的)</span></strong></p><p><strong><span>salty(含盐的;咸的)</span></strong></p><h5 id='特例-2'><span>特例：</span></h5><p><strong><span>photography(摄影业)</span></strong></p><p><strong><span>energy(活力;力量)</span></strong></p><p>&nbsp;</p><p><strong><span>10)-al(…的，形容词后缀)：</span></strong></p><p><strong><span>nature(大自然、天性)→natural(天然的、天生的、自然的)、</span></strong></p><p><strong><span>nation(国家)→national(国际的)、</span></strong></p><p><strong><span>person(个人)→personal(私人的、个人的)、</span></strong></p><p><strong><span>medicine(药、医学)→medical(医学的)、</span></strong></p><p><strong><span>normal(正常的)、final(最后的)</span></strong></p><p>&nbsp;</p><p><strong><span>11)-able(能够…的，形容词后缀)：</span></strong></p><p><strong><span>comfortable(舒服的)</span></strong></p><p><strong><span>knowledgeable(知识渊博的)</span></strong></p><p><strong><span>adjustable(可调整的)</span></strong></p><p><strong><span>suitable(合适的)</span></strong></p><p>&nbsp;</p><p><strong><span>12)-ous(形容词后缀)</span></strong></p><p><strong><span>delicious(美味的)</span></strong></p><p><strong><span>nervous(紧张的)</span></strong></p><p><strong><span>enormous(巨大的)</span></strong></p><p>&nbsp;</p><p><strong><span>13)-ern(表…方向的)：</span></strong></p><p><strong><span>eastern(东方的)</span></strong></p><p><strong><span>western(西方的)</span></strong></p><p><strong><span>southern(南方的)</span></strong></p><p><strong><span>northern(北方的)</span></strong></p><p>&nbsp;</p><p><strong><span>14)-ly(形容词或副词后缀)：</span></strong></p><p><strong><span>作形容词后缀时：lovely(可爱的)</span></strong></p><p><strong><span>friendly(友好的)</span></strong></p><p><strong><span>lively(充满活力的)</span></strong></p><p><strong><span>daily(每日的;日常的)</span></strong></p><p>&nbsp;</p><p><span>资料来自：</span><a href='https://www.hjenglish.com/new/p1360060/'><span>初中英语单词分类大全必背词汇_沪江英语学习网 (hjenglish.com)</span></a></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h1 id='作文'><span>作文：</span></h1><h6 id='演讲一类'><span>演讲一类：</span></h6><p>&nbsp;</p><p><span>At present, many students don’t do any reading after class.</span></p><p><span>Here are some reasons. First, they have too much homework to do, so they don’t have any time for reading. Second, they don’t have a good habit of reading. Third, they spend most of their free on mobile phones or on the Internet. </span></p><p><span>As we all know, reading makes a full man. Reading not only increases our knowledge but also improves our abilities. Moreover, reading makes our life more colourful.</span></p><p><span>In my opinion, it is necessary for us to spend as much time as possible reading books. I read a lot in my spare time. My favourite book is Alice in Wonderland. It is an interesting novel written by an English writer. It tells the story of a girl named Alice. She falls down a rabbit hole and goes into a strange world. I’m really interested in her magic experiences. The book is popular with people of all ages.</span></p><p><span>  I hope my school can start a reading club so that we can learn from each other. Teachers should give less homework to us so that we can have more time to read. They can also give us some advice on what to read.</span></p><p><span>  Books open up a whole new world to everyone. Let’s read together!</span></p><p>&nbsp;</p><hr /><h6 id='回信一类'><span>回信一类：</span></h6><p>&nbsp;</p><p><span>Dear Mary,</span></p><p><span>I&#39;m glad to hear from you. </span></p><p><span>As a Grade 9 student, I really feel stressed from time to time. I do have some problems. For example, I have so much homework that I have to stay up late every day. As a consequence, I often feel sleepy in class. What’s worse, I hardly have any time for my hobbies.</span></p><p><span>Whenever I am in great need, my head teacher always comes to help me. She advises me to manage my time better and go to bed earlier. She also guide me on how to achieve a balance between my schoolwork and hobbies. </span></p><p><span>My head teacher is the person who has influenced me most. She is always kind and helpful. She cares about all the students. I want to be a teacher like her when I grow up.</span></p><p><span>All the best,</span></p><p><span>Li Hua</span></p><hr /><p><span>Dear Jessie,</span></p><p><span>I’m happy to share my school life with you. I hope my answers will be helpful to you.</span></p><p><span>For one thing, I feel a little nervous because the exam is so important that I can’t imagine what life will be like if I fail. For another, I feel a bit excited. After that I have a chance to learn more.</span></p><p><span>However, there are a few problems I have to face. For example, there is always a great deal of homework every day. Sometimes I spend a lot of time working on a maths problem but still can’t work it out. Therefore, I have made full use of spare time to do my homework. If possible, I turn to my teachers and classmates for help.</span></p><p><span>So, I would like to find some proper ways to make myself feel more relaxed before the exam.</span></p><p><span>Can you give me some advice?</span></p><p><span>Yours, </span></p><p><span>Lisa</span></p><p>&nbsp;</p><hr /><h6 id='待补充'><span>待补充……</span></h6></div></div>
+</body>
+</html>

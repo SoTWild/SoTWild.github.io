@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="Shortcut Icon" href="https://i2.imgu.cc/images/2022/02/24/CIoiY.png" type="image/x-icon" />
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>如何科学地洗衣服</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='如何科学地洗衣服'><span>如何科学地洗衣服</span></h1><h6 id='written-by-sotwild'><span>【Written By SoTWild】</span></h6><p>&nbsp;</p><p><span>想要知道怎样科学地洗衣服，就先要明白各类衣服的</span><strong><span>面料成分</span></strong><span>，再以此使用恰当的方法。我接下来将为大家科普各类</span><strong><span>常见</span></strong><span>面料，并指出洗涤时的注意点。</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#如何科学地洗衣服">如何科学地洗衣服</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n2"><a class="md-toc-inner" href="#written-by-sotwild">【Written By SoTWild】</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n9"><a class="md-toc-inner" href="#·-纯棉">· 纯棉：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n26"><a class="md-toc-inner" href="#·-有机棉">· 有机棉：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n99"><a class="md-toc-inner" href="#·-莫代尔">· 莫代尔：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n131"><a class="md-toc-inner" href="#·-tc面料涤纶棉">· T/C面料(涤纶/棉)：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n142"><a class="md-toc-inner" href="#·-牛仔">· 牛仔：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n294"><a class="md-toc-inner" href="#·-灯芯绒">· 灯芯绒：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n319"><a class="md-toc-inner" href="#·-棉麻">· 棉麻：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n167"><a class="md-toc-inner" href="#·-丝麻面料">· 丝麻面料：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n353"><a class="md-toc-inner" href="#·-丝绸">· 丝绸：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n183"><a class="md-toc-inner" href="#·-真丝">· 真丝：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n208"><a class="md-toc-inner" href="#·-羊绒">· 羊绒：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n242"><a class="md-toc-inner" href="#·-尼龙锦纶）">· 尼龙（锦纶）：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n455"><a class="md-toc-inner" href="#·-皮革面料">· 皮革面料：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n52"><a class="md-toc-inner" href="#参考资料">参考资料：</a></span></p></div><h4 id='·-纯棉'><span>· 纯棉：</span></h4><p><span>天然织物、穿着舒适、透气、保暖、但易皱、不易打理、耐用性差、易褪色。所以很少 100% 棉的面料,通常含棉的成分达 95% 以上都叫纯棉。</span></p><blockquote><p><strong><span>优点：</span></strong><span>吸湿性强，染色性能好，手感柔软，穿着舒适，不会产生静电，透气性良好，防敏感,外观朴素，不易虫蛀，坚牢耐用，容易清洗。</span></p><p><strong><span>缺点：</span></strong><span>缩水率大，弹性差，易皱，服装保形性欠佳，易霉变，会有轻微褪色现象，不耐酸。</span></p></blockquote><p><img src="http://cbu01.alicdn.com/img/ibank/2017/533/850/3965058335_555901486.jpg" style="zoom:15%;" /></p><p><strong><span>对于纯棉衣服的洗涤可用以下方法：</span></strong><span>首先清洗棉质衣服不能使用过强的碱性洗涤物，建议使用配方温和，PH呈中性的洗衣液。洗涤时水温保持在 40-50°C 左右，最好轻洗或不要用大力搓揉，轻轻捏洗即可，以免最后造成衣服变型，影响尺寸，洗好后记得再用冷水冲洗透彻。洗干净之后，晾晒衣服时不可将衣服拧得太干，而应带水晾晒，并用手将衣服的襟、领、袖等处拉平，这样晾晒干的衣服会保持平整，不起皱褶。</span></p><hr /><h4 id='·-有机棉'><span>· 有机棉：</span></h4><p><span>一种使用非转基因棉花种子，按照有机农业标准生产并取得认证的棉花，它的种植过程不使用任何化学肥料或杀虫剂，环保无污染。</span></p><blockquote><p><strong><span>优点：</span></strong><span>柔软的手感以及亮丽的色泽，有机棉的耐磨性及弹性会比普通棉好很多，不易霉变，也不会过敏，吸收透气以及保暖都比较好。</span></p><p><strong><span>缺点：</span></strong><span>成本高，价格贵，抗皱性非常一般，容易粘毛。</span></p></blockquote><p><img src="https://c.b2b168.com/download.img.dns4.cn/pic/161882/p2/20161101161808_7126_zs_sy.jpg" style="zoom:33%;" /></p><p><strong><span>对于有机棉衣服的洗涤可用以下方法：</span></strong><span>可机洗也可手洗，但因纤维的弹性较差，所以洗涤时最好轻洗或不要用大力搓揉，轻轻捏洗即可，以免最后造成衣服变型，影响尺寸，洗好后记得再用冷水冲洗透彻。如果是机洗的话，请选择漂洗或弱洗，在脱水过程中时间也不宜过久。</span></p><p><span>除上述所说的外，还是以干洗最好，但是有手洗标签的，那您可以使用专用的洗涤用品或洗发水，将棉质衣物内层外翻，放到低于40℃的温水中浸泡，再进行手洗。需要注意的是清洗棉质衣服不能使用过强的碱性洗涤物，以防损坏衣物。棉织品最好选用冷水洗，那样可以保持原色泽。记得一定要将深颜色棉织物与浅颜色棉织物分开洗，以免混色。</span></p><hr /><h4 id='·-莫代尔'><span>· 莫代尔：</span></h4><p><span>一种纤维素纤维，与人棉一样同属纤维素纤维，是纯正的人造纤维。</span></p><blockquote><p><strong><span>优点：</span></strong><span>出色的吸湿能力和透气性，不易褪色，不易发黄变皱，或是缩水，有天然的垂坠感和抗皱性，带有丝绸般的光感，质感极好。</span></p><p><strong><span>缺点：</span></strong><span>极易变形，比普通棉质面料成本高，耐磨性差，易破损。</span></p></blockquote><p><img src="http://p1.itc.cn/q_70/images03/20201120/09b67d7f57004ee5b41ab115fbb5b1a5.png" alt="img" style="zoom:35%;" /></p><p><strong><span>对于莫代尔衣服的洗涤可用以下方法：</span></strong><span>莫代尔为人造纤维，较耐碱不耐酸，且相对棉耐酸耐碱性要差，洗涤时应该选用中性的洗衣液。莫代尔面料缩水率大，水洗时要随洗随浸，不可长时间浸泡。忌曝晒，应在阴凉或通风处晾晒。熨烫要喷水，在半湿半干的状态下反面熨烫，且温度不能太高。</span></p><hr /><h4 id='·-tc面料涤纶棉'><span>· T/C面料(涤纶/棉)：</span></h4><p><span>是指涤纶与棉的混纺织物的统称，采用65%—67%涤纶和33%—35%的棉花混纱线织成的纺织品，俗称棉的的确良。涤棉混纺产品，一般棉含量高于涤纶的称为CVC纱，反之为T/C纱，我们通常说的CVC是指棉含量65%以上的产品，C/T比例55/45以下的一般仍叫T/C纱。</span></p><blockquote><p><strong><span>面料工艺：</span></strong><span>采用细旦或超细旦聚醋纤维与高支精梳棉(40支、60支、80支等)交织而成。</span></p><p><strong><span>优点：</span></strong><span>面料手感挺括爽滑，色泽鲜艳，有身骨富有弹性，吸湿透气性好表面光洁，有一定防雨水功能。</span></p><p><strong><span>缺点：</span></strong><span>吸尘，难以洗涤，不能高温熨烫或者浸泡。</span></p></blockquote><p><img src="http://p9.itc.cn/q_70/images03/20201120/5e06d7e5fcad47d99ca4337d64432564.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于涤纶衣服的洗涤可用以下方法：</span></strong><span>在没有洗衣机的情况下，最好是直接泡，泡完了直接洗袖口和领口，涮出来即可。</span></p><hr /><h4 id='·-牛仔'><span>· 牛仔：</span></h4><p><span>一种较粗厚的色织经面斜纹棉布，经纱颜色深，一般为靛蓝色，纬纱颜色浅，一般为浅灰或煮练后的本白纱。又称靛蓝劳动布。</span></p><blockquote><p><strong><span>优点：</span></strong><span>一块面料可以洗出无限颜色跟风格千变万化。</span></p><p><strong><span>缺点：</span></strong><span>色牢度不好，掉色厉害，做衣服颜色控制不了。其中薄布：手感柔软，舒适，凉爽，轻便但易皱，不耐磨。厚布：耐磨，耐穿，耐洗，不易皱但手感硬，不易洗。</span></p></blockquote><p><img src="http://p4.itc.cn/q_70/images03/20201120/1237823e08cc41a29668feb430abe2f9.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于牛仔衣服的洗涤可用以下方法：</span></strong><span>牛仔衣和牛仔裤一样不需要经常洗，一般情况下穿三次到五次再进行清洗，要用清水洗涤，不然用热水很容易造成衣物褪色。牛仔衣等牛仔类的衣物最好不要使用洗衣机洗涤，洗衣机会破坏牛仔衣的版型，手洗也不可以很用力的揉搓。</span></p><hr /><h4 id='·-灯芯绒'><span>· 灯芯绒：</span></h4><p><span>割纬起绒、表面形成纵向绒条的棉织物，因灯芯绒绒条类似灯草芯而得名。灯芯绒原料以棉为主，也有与涤纶、腈纶、氨纶等化纤混纺的。</span></p><blockquote><p><strong><span>优点：</span></strong><span>手感柔软，绒条圆直，纹路清晰，绒毛丰满，质地坚牢耐磨。</span></p><p><strong><span>缺点：</span></strong><span>较易撕裂，尤其是沿着绒条方向的撕裂强力较低，容易粘毛。</span></p></blockquote><p><img src="http://p1.itc.cn/q_70/images03/20201120/5f4567eb220e43968c8af6a13b35a9fa.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于灯芯绒衣服的洗涤可用以下方法：</span></strong><span>灯芯绒不可以机洗。灯芯绒洗涤时不宜用力搓洗，宜用软毛刷顺绒毛方向轻轻刷洗，不宜熨烫，收藏时也不宜重压，以保持绒毛丰满、耸立。</span><em><span>印花灯芯绒一般先印花后刷绒，故图案设计必须考虑其刷绒后的效果，纹样不宜纤细。</span></em></p><hr /><h4 id='·-棉麻'><span>· 棉麻：</span></h4><p><span>棉麻混纺面料的统称。棉麻混纺是指棉料和麻按照一定的比例，混合纺纱织成的纺织产品。棉麻混纺有环保、透气、舒适、垂感好，穿着舒服等优势。由于该面料在干、湿情况下弹性和耐磨性都较好，尺寸稳定，缩水率小，具有挺拔、不易皱折、易洗、快干的特点，而且采用全天然纤维织造，低碳环保，与现在国际纺织服装流行趋势吻合，因此，非常适用于服装及家纺面料。</span></p><blockquote><p><strong><span>优点：</span></strong><span>透气性极好，吸湿、排湿快，轻盈凉爽，同时抑菌防霉，防静电还能防辐射以及防过敏。</span></p><p><strong><span>缺点：</span></strong><span>适合手洗，容易变形，起毛，浮色严重，易发黄，暴晒易褪色。</span></p></blockquote><p><img src="http://img.alicdn.com/bao/uploaded/i2/913040491/TB2TDqrbHJkpuFjy1zcXXa5FFXa_!!913040491.jpg" style="zoom:5%;" /></p><p><strong><span>对于棉麻衣服的洗涤可用以下方法：</span></strong><span>棉麻衣服质地柔软，如果用洗衣机用力搅甩，很容易让衣服变形、起皱，因此最好用肥皂手洗。当衣服太多实在没有时间和精力手洗的时候，可以把衣服装在可以反复使用的洗衣袋里，然后再用洗衣机的轻柔档洗涤。</span></p><hr /><h4 id='·-丝麻面料'><span>· 丝麻面料：</span></h4><p><span>就是真丝和麻混纺的面料，这个面料比较高档。</span></p><blockquote><p><strong><span>优点：</span></strong><span>天然麻织物的外观风格，有挺括性，悬垂性一般，透气性较好。</span></p><p><strong><span>缺点：</span></strong><span>缩率不稳定，易皱，色牢度较差，最好干洗。</span></p></blockquote><p><img src="http://p0.itc.cn/q_70/images03/20201120/21773bb73cca4b77a2b1297be1e36e06.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于丝麻衣服的洗涤可用以下方法：</span></strong><span>与棉织物洗涤要求基本相同。洗涤时应比棉织物要轻柔，忌用力搓洗，忌硬刷刷洗，忌用力拧绞，应折叠挤净水分。随选随浸，水温忌超过45度。忌暴晒，应阴干。与其他衣物分开洗涤。</span></p><hr /><h4 id='·-丝绸'><span>· 丝绸：</span></h4><p><span>一种纺织品，用蚕丝或合成纤维、人造纤维、长丝织成；是以蚕丝为原料纺织而成的各种丝织物的统称。</span></p><blockquote><p><strong><span>优点：</span></strong><span>色彩绚丽，富有光泽，高贵典雅，穿著舒适，吸音、吸尘、耐热性好，抗紫外线，吸、放湿性好。</span></p><p><strong><span>缺点：</span></strong><span>易生折皱，容易吸身，不够结实，褪色较快。</span></p></blockquote><p><img src="http://p3.itc.cn/q_70/images03/20201120/527503f9e49f409c971612a09556b62b.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于丝绸衣服的洗涤可用以下方法：</span></strong><span>轻柔机洗或者手洗，中性洗涤剂。</span></p><hr /><h4 id='·-真丝'><span>· 真丝：</span></h4><p><span>一般指蚕丝，包括桑蚕丝、柞蚕丝、蓖麻蚕丝、木薯蚕丝等。真丝被称为“纤维皇后”，以其独特的魅力受到古往今来人们的青睐，真丝属于蛋白质纤维。</span></p><blockquote><p><strong><span>优点：</span></strong><span>手感滑爽，富有光泽，穿着舒适，透气性、悬垂性良好。</span></p><p><strong><span>缺点：</span></strong><span>抗皱能力差，耐光性差，不可长时间曝晒，对碱反应敏感，高温易变性。</span></p></blockquote><p><img src="http://p5.itc.cn/q_70/images03/20201120/b12aaa6eee3d464995c73936dfa3a02a.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于真丝衣服的洗涤可用以下方法：</span></strong><span>手洗对衣服最好，并请使用专用真丝洗涤剂或中性皂液。水温不宜太高，衣物在水中浸泡时间也不可以太久，最好不要超过15分钟。然后用手轻柔搓洗。洗完后用清水漂洗，不要拧干。清水中反复漂洗即可。晾晒的时候将衣服反面向外，放在阴凉处任其滴水晾干，晾到七到八成干时再熨烫或抖平。切记不可以放在阳光下暴晒。</span></p><hr /><h4 id='·-羊绒'><span>· 羊绒：</span></h4><p><span>羊绒有山羊绒及绵羊绒，山羊绒价值高于绵羊绒，PC服装均采用山羊绒主要产自于山羊身上的一层细绒毛，山羊绒的产量很低，一般每只山羊年产绒量仅为150克－250克左右，其质地柔软、细腻、滑爽，有光泽等被誉为&quot;软黄金&quot;。它是世上最细的动物纤维，平均纤维细度仅12-15微米。</span></p><blockquote><p><strong><span>优点：</span></strong><span>具有穿着舒适、保暖性强、绒面丰满、手感柔软、光泽柔和、独特风格。</span></p><p><strong><span>缺点：</span></strong><span>清洗不可用洗衣机，晾晒不可钩挂，保存不当易被虫蛀，处理不当易掉绒。</span></p></blockquote><p><img src="http://p5.itc.cn/q_70/images03/20201120/1cdefd834e174dc887b3b5304ffdd59a.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于羊绒衣服的洗涤可用以下方法：</span></strong><span>手洗，不建议使用机洗，虽然滚筒洗衣机上能选择“羊毛档”或“轻柔档”，但易导致残留、缩水等问题。洗前：把衣服内外翻过来，不要用正面洗，减少磨擦力，否则易起球。水温不超过30度，水温过高时，易导致缩水和起球。注意要轻揉，不可使用搓衣板搓洗。稍微轻挤压拧干即可，不能拧麻花的方式强力挤干。平铺摊开晾，以防止变型，避免阳光下曝晒。晾干后，禁止高温熨烫。</span></p><hr /><h4 id='·-尼龙锦纶）'><span>· 尼龙（锦纶）：</span></h4><p><span>学名叫做锦纶，化学名为“聚酯胺纤维”，“尼龙”为商品成名的译音，现在市面上也习惯叫尼龙，尼龙是世界上最早出现的合成纤维，它优良的性能，丰富的原料资源，从而使的一直沿用至今。</span></p><blockquote><p><strong><span>优点：</span></strong><span>柔软轻便，防水防风性能强，耐磨性高，强度弹性良好。</span></p><p><strong><span>缺点：</span></strong><span>不耐晒，易老化，不通气，容易勾丝。</span></p></blockquote><p><img src="http://p1.itc.cn/q_70/images03/20201120/259bff9ba97244b8966cc7ce23000c0e.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于尼龙衣服的洗涤可用以下方法：</span></strong><span>尼龙衣料不易褪色但易染色，清洗时务必和其他深色衣物分开以免染色。清洗尼龙衣物要用中性洗剂，避免用热水，尼龙衣物洗后易干，无须烘干。整烫尼龙衣物要用低温，大约140摄氏度以下。</span></p><hr /><h4 id='·-皮革面料'><span>· 皮革面料：</span></h4><p><span>皮革是经过鞣制而成的动物毛皮面料。又可以分为两类：一是革皮，即经过去毛处理的皮革。二是裘皮，即处理过的连皮带毛的皮革。</span></p><blockquote><p><strong><span>优点：</span></strong><span>轻盈保暖，雍容华贵。</span></p><p><strong><span>缺点：</span></strong><span>价格昂贵，贮藏、护理方面要求较高。</span></p></blockquote><p><img src="http://p4.itc.cn/q_70/images03/20201120/9494b5a1b8ec40848edb837306eb37f9.png" alt="img" style="zoom:50%;" /></p><p><strong><span>对于皮革衣服的洗涤可用以下方法：</span></strong><span>手工清洗：是指用干净棉布或棉球蘸取清洗剂直接对皮革表面的污渍进行擦洗的一种方式。一般在不具备机洗条件的情况下，对一些不太脏的皮衣采取的一种洗涤方法。</span></p><p><span>机器干洗：是指衣物在干洗机内用有机溶剂洗涤的一种方式。其优点是既能清洗皮面脏物，又能清洗里子脏物，且效率比手工清洗高。干洗剂对油性污渍去除力较强。</span></p><hr /><h6 id='参考资料'><span>参考资料：</span></h6><p><a href='https://zhidao.baidu.com/question/204940456.html'><span>纯棉衣服怎么洗？_百度知道 (baidu.com)</span></a></p><p><a href='http://www.5h.com/mr/131641.html'><span>有机棉和纯棉的区别 要学会分清-5号网 (5h.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/230927577.html'><span>莫代尔如何清洗_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/176914602625440044.html'><span>涤纶衣物该如何洗涤_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/872067482974913292.html'><span>牛仔服应该怎么洗？_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/562856348812970244.html'><span>灯芯绒的衣服怎么洗_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/570173910.html'><span>棉麻的衣服怎么洗，_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/1889351920722157348.html'><span>天丝麻面料怎么洗？_百度知道 (baidu.com)</span></a></p><p><a href='https://www.zhihu.com/question/422893382#:~:text=而丝绸服装因为源自天然，价格比较高昂，所以洗涤时一定要小心%3A1.真丝衣服可以选择干洗或手洗。 2.手洗最佳，最好使用专用的真丝洗涤剂或中性皂液。,3.用手将水中的洗涤剂搅匀后方可放入衣物。 4.衣物在水中浸泡的时间不要超过15分钟。'><span>丝绸的衣服要怎么清洗？ - 知乎 (zhihu.com)</span></a></p><p><a href='https://jingyan.baidu.com/article/2fb0ba4099332400f2ec5fd0.html'><span>真丝衣服怎么洗呀-百度经验 (baidu.com)</span></a></p><p><a href='https://zhuanlan.zhihu.com/p/25732582'><span>羊毛羊绒衣服怎么洗 - 知乎 (zhihu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/1964570020457584500.html?qbl=relate_question_0'><span>如何清洗尼龙布？_百度知道 (baidu.com)</span></a></p><p><a href='https://zhuanlan.zhihu.com/p/31223993'><span>皮衣怎么洗？科学的方法最实用 - 知乎 (zhihu.com)</span></a></p></div></div>
+</body>
+</html>

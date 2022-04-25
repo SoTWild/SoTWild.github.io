@@ -1,0 +1,599 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="Shortcut Icon" href="https://i2.imgu.cc/images/2022/02/24/CIoiY.png" type="image/x-icon" />
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>低碳生活</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='怎么做到-低碳生活-'><span>怎么做到 低碳生活 ？</span></h1><h6 id='written-by-sotwild'><span>【Written By SoTWild】</span></h6><p>&nbsp;</p><p><span>工业革命以来，人类生产力飞速发展，同时对环境的污染也愈发严重。温室气体让地球发烧。如今已是21世纪，社会的发展，将人类推进到了从工业文明时代向生态文明时代转折的时期。</span><strong><span>环保低碳</span></strong><span>渐渐成为我们的生活理念。</span></p><p><strong><span>那么，如何做到低碳生活？</span></strong></p><p><img src="http://p5.itc.cn/images01/20200616/aaa27b6b07e2440492b178dd2e4afca7.jpeg" style="zoom:50%;" /></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#怎么做到-低碳生活-">怎么做到 低碳生活 ？</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n2"><a class="md-toc-inner" href="#written-by-sotwild">【Written By SoTWild】</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n11"><a class="md-toc-inner" href="#什么是低碳">什么是“低碳”？</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n17"><a class="md-toc-inner" href="#意义">意义：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n20"><a class="md-toc-inner" href="#碳足迹计算器">碳足迹计算器 </a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n32"><a class="md-toc-inner" href="#低碳的方式">低碳的方式：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n118"><a class="md-toc-inner" href="#日常在家">日常在家：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n200"><a class="md-toc-inner" href="#饮食">饮食：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n201"><a class="md-toc-inner" href="#电器">电器：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n233"><a class="md-toc-inner" href="#其他">其他：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n122"><a class="md-toc-inner" href="#外出">外出：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n247"><a class="md-toc-inner" href="#旅游">旅游：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n248"><a class="md-toc-inner" href="#出行">出行：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n250"><a class="md-toc-inner" href="#diy">DIY：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n273"><a class="md-toc-inner" href="#装修">装修：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n292"><a class="md-toc-inner" href="#让我们把低碳作为生活理念付诸于实践为世界的美好未来添砖加瓦">让我们把低碳作为生活理念，付诸于实践，为世界的美好未来添砖加瓦。</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n287"><a class="md-toc-inner" href="#参考资料">参考资料：</a></span></p></div><hr /><h3 id='什么是低碳'><span>什么是“低碳”？</span></h3><p><span>低碳生活(Low Carbon Living)，就是指</span><strong><span>减少二氧化碳的排放</span></strong><span>，</span><strong><span>低能量</span></strong><span>、</span><strong><span>低消耗</span></strong><span>、</span><strong><span>低开支</span></strong><span>的生活方式。主要是从</span><strong><span>节电、节气和回收</span></strong><span>三个环节来改变生活细节。</span></p><h4 id='意义'><span>意义：</span></h4><p><span>低碳生活代表着</span><strong><span>更健康、更自然、更安全</span></strong><span>，返璞归真地去进行人与自然的活动。当今社会，随着人类生活发展，生活物质条件的提高，随之也对人类周围环境带来了影响与改变。对于普通人来说是一种</span><strong><span>生活态度</span></strong><span>，低碳生活既是一种生活方式，同时更是一种</span><strong><span>可持续发展的环保责任</span></strong><span>。</span></p><h5 id='碳足迹计算器'><a href='http://www.carbonstop.net/carbon_calculator/'><span>碳足迹计算器 </span></a></h5><p><span>低碳生活是一种经济、健康、幸福的生活方式，它不会降低人们的幸福指数，相反会使我们的生活更加幸福。</span></p><hr /><h3 id='低碳的方式'><span>低碳的方式：</span></h3><p><span>接下来列举</span><strong><span>部分简单快捷</span></strong><span>的低碳技巧：</span></p><h4 id='日常在家'><span>日常在家：</span></h4><h5 id='饮食'><span>饮食：</span></h5><p><span>每天的淘米水可以用来洗手、洗脸、洗去含油污的餐具、擦家具、浇花等。干净卫生，天然滋润</span></p><p><span>多用永久性的筷子、饭盒，尽量自带餐具，避免使用一次性的餐具</span></p><p><span>食物废料、残渣，可以用作肥料用</span></p><p><span>过量肉食至少伤害三个对象：动物，你自己和地球</span></p><h5 id='电器'><span>电器：</span></h5><p><span>养成随手关闭电器电源的习惯，避免浪费电力</span></p><p><span>尽量不使用冰箱、空调、电风扇，热时可用蒲扇或其他材质的扇子</span></p><p><span>夏天开空调前，应先打开窗户让室内空气自然更换，开电风扇让室内先降温，开空调后调至室温25～26°C之间（最好26°C以上），用小风，这样既省电也低碳</span></p><p><span>每张纸都双面打印，双面写，相当于保留下半片原本将被砍掉的森林</span></p><p><span>关掉不用的电脑程序，减少硬盘工作量，既省电也维护你的电脑</span></p><p><span>没必要一进门就把全部照明打开，人类发明电灯至今不过130年，之前的几千年也过得好好的</span></p><p><span>洗衣粉出泡多少与洗净能力之间无必然联系，而低泡洗衣粉可以比高泡洗衣粉少漂洗几次，省水省电省时间</span></p><p><span>洗衣机开强档比开弱档更省电，还能延长机器寿命</span></p><p><span>电视机在待机状态下耗电量一般为其开机功率的10%左右，这笔帐算起来还真不太小</span></p><p><span>如果只用电脑听音乐，显示器就可以调暗，或者干脆关掉</span></p><p><span>如果热水用得多，不妨让热水器始终通电保温，因为保温一天所用的降低二氧化碳排放量电，比一箱凉水烧到相同温度还要低</span></p><p><span>买电器看节能指标，这是最简单不过的方法了</span></p><p><span>用节能灯替换60瓦的灯泡；一旦不用电灯、空调，随手关掉</span></p><p><span>冰箱内存放物品的量以占容积的80%为宜，放得过多或过少，都费电</span></p><h5 id='其他'><span>其他：</span></h5><p><span>将废旧报纸铺垫在衣橱的最底层，不仅可以吸潮，还能吸收衣柜中的异味；还可以擦洗玻璃</span></p><p><span>用过的塑料瓶，把它洗干净后可用来盛各种液体物质（也可以盛放一些豆类）</span></p><p><span>少用纸巾，重拾手帕，保护森林，低碳生活</span></p><p><span>绿化不仅是去郊区种树，在家种些花草一样可以，还无须开车</span></p><p><span>是的，一只塑料袋5毛钱，但它造成的污染可能是5毛钱的50倍</span></p><p><span>完美的浴室未必一定要有浴缸；已经安了，未必每次都用；已经用了，请用积水来冲洗马桶</span></p><p><span>尽量少使用一次性牙刷、一次性塑料袋、一次性水杯……因为制造他们所使用的石油也是一次性的</span></p><p><span>未必红木和真皮才能体现居家品味；建议使用竹制家具，因为竹子比树木长得快</span></p><p><span>其实利用太阳能这种环保能源最简单的方式，就是尽量把工作放在白天做</span></p><p><span>婚礼仪式不是你憋足28年劲甩出的面子，更不是家底积累的PK。如今简约、低碳才更是甜蜜文明的附件值</span></p><p><span>认为把水龙头开到最大才能把蔬菜盘碗洗得更干净，那只是心理作用</span></p><p><span>可以理直气壮地说，衣服攒够一桶再洗不是因为懒，而是为了节约水电</span></p><p><span>把一个孩子从婴儿期养到学龄前，花费确实不少，部分玩具、衣物、书籍用二手的就好</span></p><p><span>定期清洗空调，不仅为了健康，还可以省不少电</span></p><p><span>其实空调外机都是按照防水要求设计的，给它穿外套，只会降低散热效果，当然费电</span></p><p><span>可以把马桶水箱里的浮球调低2厘米，一年可以省下近4立方水</span></p><p><span>实验证明，中火烧水最省气</span></p><p><span>非必要的话，尽量买本地、当季产品，运输和包装常常比生产更耗能</span></p><p><span>衣服多选棉质、亚麻和丝绸，不仅环保、时尚，而且优雅、耐穿、</span><a href='popularization/20220228'><span>好洗</span></a></p><p><span>烘干真的很必要吗？还是多让你的衣服晒晒太阳吧</span></p><p><span>用剩的小块肥皂香皂，收集起来装在不能穿的小丝袜中，可以接着用。</span></p><p><span>减少使用塑料物品，塑料废物去到垃圾处理厂及堆田区，一般需要20～30年才能被土壤稀释及完全氧化。泥石流、土地下沉等问题并不是自然现象，而是人为造成的，请爱护我们的土地，爱护地球</span></p><h4 id='外出'><span>外出：</span></h4><h5 id='旅游'><span>旅游：</span></h5><p><span>旅游时，请自带清洁用品，减少更换被铺的需要，因酒店每次回收的毛巾、被单、床铺都需要用大量的水和清洁剂来清洗，造成水质污染。一次性的洗刷用品都要经历回收、再造的过程里产生废物及废料地球是需要好几十年才能氧化掉</span></p><p><span>少坐飞机，飞机从停机坪上升到空中所排出的二氧化碳等于3600台汽车的排放量</span></p><p><span>旅游观光区，避免接触海洋生物，可能会破坏海洋生态平衡</span></p><h5 id='出行'><span>出行：</span></h5><p><span>尽量在出行时选择步行或骑脚踏车，即低碳，又健康。不开汽车而改骑自行车或步行</span></p><p><span>出门购物，尽量自己带环保袋，无论是免费或者收费的塑料袋，都减少使用</span></p><p><span>出门自带喝水杯，减少使用一次性杯子</span></p><p><span>短途出行建议公交车或者地铁，少开一天车，减少尾气排放</span></p><p><span>相比开车来说，骑自行车上下班的人一不担心油价涨，二不担心体重涨</span></p><p><span>如果堵车的队伍太长，还是先熄了火，安心等会儿吧</span></p><p><span>定期检查轮胎气压，气量过低或过足都会增加油耗</span></p><p><span>洗干净同样一辆车，用桶盛水擦洗只是用水龙头冲洗用水量的1/8</span></p><p><span>没事多出去走走，“宅”是很费电的</span></p><h4 id='diy'><span>DIY：</span></h4><p><span>经过手工DIY的再创造，你会发现原来废物也是宝，这样的家居环境健康且充满了创意的小欢乐。 “低碳一族”正以自己生活细节的改变证明：</span><strong><span>气候变化已经不再只是环保主义者、政府官员和专家学者关心的问题</span></strong><span>，而是与我们</span><strong><span>每个人息息相关</span></strong><span>。在提倡健康生活已成潮流的今天，“低碳生活”不再是一种理想了，更是一种“爱护地球，从我做起”的</span><strong><span>生活方式</span></strong><span>。</span></p><h4 id='装修'><span>装修：</span></h4><blockquote><p><span>简约大方最利于节能</span></p><p><span>色彩回归环保自然</span></p><p><span>绿色建材筑就低碳生活</span></p><p><span>简约设计风潮再回归</span></p><p><span>充分利用可循环材料</span></p></blockquote><hr /><p>&nbsp;</p><h4 id='让我们把低碳作为生活理念付诸于实践为世界的美好未来添砖加瓦'><span>让我们把低碳作为生活理念，付诸于实践，为世界的美好未来添砖加瓦。</span></h4><p>&nbsp;</p><hr /><h6 id='参考资料'><span>参考资料：</span></h6><p><a href='https://baike.baidu.com/item/低碳生活/6857178'><span>低碳生活_百度百科 (baidu.com)</span></a></p></div></div>
+</body>
+</html>
