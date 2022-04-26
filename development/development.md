@@ -2,11 +2,13 @@
 
 ###### 这里列举了一些资源网站、生成器和小游戏。
 
-
+[TOC]
 
 #### 图片：
 
 [pixiv.net](https://www.pixiv.net/)
+
+[SauceNAO Reverse Image Search](https://saucenao.com/)
 
 [2.5 million+ Stunning Free Images to Use Anywhere (pixabay.com)](https://pixabay.com/)
 
@@ -23,6 +25,10 @@
 [High Quality Wallpapers, Desktop Backgrounds, Widescreen Wallpapers - WallpaperMaiden](https://www.wallpapermaiden.com/)
 
 [ESO](https://www.eso.org/public/)
+
+[waifu2x (udp.jp)](http://waifu2x.udp.jp/index.zh-CN.html)
+
+[图片合成 (bupt-hjm.github.io)](https://bupt-hjm.github.io/fun-photo-combine/)
 
 
 
@@ -90,15 +96,23 @@
 
 [草料二维码生成器 (cli.im)](https://cli.im/)
 
+[矢量二维码_在线矢量二维码生成器_联图二维码 (liantu.com)](https://www.liantu.com/shiliang/)
+
 [像素化图像 - 免费工具 (imageonline.co)](http://pixelate.imageonline.co/cn/)
 
 [WebP到PNG转换器-在线免费！ (webp-png.com)](https://webp-png.com/cn/)
 
 [PPT转HTML - 在线转换文档文件 (aconvert.com)](https://www.aconvert.com/cn/document/ppt-to-html/)
 
+[Waifu Labs - Magical Anime Portraits](https://waifulabs.com/)
+
 
 
 #### 其他：
+
+[一个木函 - 多功能效率工具箱 (keaiya.top)](http://www.keaiya.top/)
+
+[一个好用的调色板 | 颜色选择器 - Codeeeee 在线工具](https://www.codeeeee.com/color/picker.html)
 
 [RGB颜色对照表 (oschina.net)](https://tool.oschina.net/commons?type=3)
 
@@ -131,3 +145,19 @@
 [slither.io](http://slither.io/)
 
 [florr.io](https://florr.io/)
+
+[https://myip.ipip.net](https://myip.ipip.net/)
+
+[Password Strength Meter (passwordmonster.com)](https://www.passwordmonster.com/)
+
+[The Useless Web](https://theuselessweb.com/)
+
+[逗比拯救世界--专业的表情包搜索网站 (dbbqb.com)](http://www.dbbqb.com/)
+
+[Pointer Pointer](https://pointerpointer.com/)
+
+[Webcam Toy - Take photos online with over 80 fun effects](https://webcamtoy.com/)
+
+[Zoom Earth | 实时天气，风暴追踪器](https://zoom.earth/)
+
+[WINDOWS93](https://www.windows93.net/)
