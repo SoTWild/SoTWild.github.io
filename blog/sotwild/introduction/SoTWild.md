@@ -12,7 +12,7 @@
 
 2021-10-25		[Link —— 一个高性价比的物联网解决方案](/blog/sotwild/20211025.html)
 
-2021-12-03		[WebServer —— 基于ESP32制作的迷你服务器](/notyet)
+2021-12-03		[WebServer —— 基于ESP32制作的迷你服务器](/blog/sotwild/20211203.html)
 
 ------
 
