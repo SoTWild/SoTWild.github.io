@@ -14,6 +14,8 @@
 
 2021-12-03		[WebServer —— 基于ESP32制作的迷你服务器](/blog/sotwild/20211203.html)
 
+2022-04-27		[ESP-HMI —— 基于ESP32-WROVER制作的人机接口](/blog/sotwild/20220427.html)
+
 ------
 
 ## 关于我：
