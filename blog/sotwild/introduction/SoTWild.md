@@ -16,7 +16,7 @@
 
 2022-04-27		[ESP-HMI —— 基于ESP32-WROVER制作的人机接口](/blog/sotwild/20220427.html)
 
-2022-05-04		[如何消渐你的恐惧](/blog/sotwild/20220504.html)
+2022-05-04		[如何消减你的恐惧](/blog/sotwild/20220504.html)
 
 ------
 
