@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>20220504</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='如何消减你的恐惧'><span>如何消减你的恐惧</span></h1><h6 id='written-by-sotwild'><span>【Written By SoTWild】</span></h6><center><b><font size="5">你的恐惧来源于未知和火力不足</font></b></center><hr /><p><span>这篇文章将以 </span><a href='/popularization/20220223.html'><span>东方Project</span></a><span> 中角色为切入点（我这可不是黑角色啊，凡事都有两面性是吧），详细介绍现实中各种（你可能害怕的）生物利弊，（用我的干脆方法）消减你的恐惧和产生的歧义。把你变得 </span><strong><span>“艺高人胆大”</span></strong><span> 而不是 </span><strong><span>“无知者无畏”</span></strong><span>。</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#如何消减你的恐惧">如何消减你的恐惧</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n2"><a class="md-toc-inner" href="#written-by-sotwild">【Written By SoTWild】</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n8"><a class="md-toc-inner" href="#什么是恐惧">什么是恐惧？</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n9"><a class="md-toc-inner" href="#要想消减恐惧就要知道恐惧的本质">要想消减恐惧，就要知道恐惧的本质：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n11"><a class="md-toc-inner" href="#原因">原因：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n21"><a class="md-toc-inner" href="#影响">影响：</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n25"><a class="md-toc-inner" href="#总体对策">总体对策：</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n29"><a class="md-toc-inner" href="#具体现实）对策">具体（现实）对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n31"><a class="md-toc-inner" href="#蜘蛛">蜘蛛：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n37"><a class="md-toc-inner" href="#危险性-1">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n39"><a class="md-toc-inner" href="#对策-1">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n47"><a class="md-toc-inner" href="#老鼠">老鼠：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n53"><a class="md-toc-inner" href="#危险性-2">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n56"><a class="md-toc-inner" href="#传播途径">传播途径：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n61"><a class="md-toc-inner" href="#疾病症状">疾病症状：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n65"><a class="md-toc-inner" href="#对策-2">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n69"><a class="md-toc-inner" href="#老虎">老虎：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n75"><a class="md-toc-inner" href="#危险性-3">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n77"><a class="md-toc-inner" href="#对策-3">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n87"><a class="md-toc-inner" href="#狼">狼：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n96"><a class="md-toc-inner" href="#危险性-4">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n98"><a class="md-toc-inner" href="#对策-4">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n99"><a class="md-toc-inner" href="#如果是孤狼">如果是孤狼：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n107"><a class="md-toc-inner" href="#如果是狼群">如果是狼群：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n114"><a class="md-toc-inner" href="#蝴蝶">蝴蝶：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n120"><a class="md-toc-inner" href="#对策-5">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n129"><a class="md-toc-inner" href="#狗勾">狗勾：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n134"><a class="md-toc-inner" href="#危险性-5">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n136"><a class="md-toc-inner" href="#对策-6">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n137"><a class="md-toc-inner" href="#遇到">遇到：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n144"><a class="md-toc-inner" href="#被咬">被咬：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n150"><a class="md-toc-inner" href="#猫猫">猫猫：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n157"><a class="md-toc-inner" href="#蜈蚣">蜈蚣：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n167"><a class="md-toc-inner" href="#危险性-6">危险性：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n172"><a class="md-toc-inner" href="#对策-7">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n173"><a class="md-toc-inner" href="#消除">消除：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n176"><a class="md-toc-inner" href="#蛇">蛇：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n181"><a class="md-toc-inner" href="#危险性对策">危险性/对策：</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n185"><a class="md-toc-inner" href="#人">人：</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n191"><a class="md-toc-inner" href="#对策-8">对策：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n193"><a class="md-toc-inner" href="#对世界">对世界：</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n197"><a class="md-toc-inner" href="#对人">对人：</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n204"><a class="md-toc-inner" href="#参考资料">参考资料：</a></span></p></div><hr /><h2 id='什么是恐惧'><span>什么是恐惧？</span></h2><h6 id='要想消减恐惧就要知道恐惧的本质'><span>要想消减恐惧，就要知道恐惧的本质：</span></h6><p><span>恐惧，是一种</span><strong><span>人类</span></strong><span>及</span><strong><span>生物心理活动状态</span></strong><span>。恐惧是指人们在面临某种</span><strong><span>危险情境</span></strong><span>，企图摆脱而又</span><strong><span>无能为力</span></strong><span>时所产生的担惊受怕的一种强烈</span><strong><span>压抑</span></strong><span>情绪体验。</span></p><h6 id='原因'><span>原因：</span></h6><p><span>产生恐惧的原因，往往是一些我们</span><strong><span>「自认为」无法克服、无法掌控、无法知晓</span></strong><span>的事物或环境，容易让你联想到</span><strong><span>死亡、威胁生命</span></strong><span>的事物或环境，或者</span><strong><span>极度厌恶</span></strong><span>的事物或环境。</span></p><p><span>例如：</span></p><blockquote><p><span>我们为什么会恐高？</span></p><p><span>因为我们站在高处会想：我不会飞（无法克服），万一从高处掉下去就死定了！（对危险的想象）</span></p><p><span>我们为什么会怕地震、海啸等自然灾害？</span></p><p><span>因为这些自然灾害威力强大，一旦发生，将轻易夺取人们的生命。（无法掌控）</span></p><p><span>我们为什么会怕黑暗？</span></p><p><span>因为我们不知道黑暗里隐藏着什么，（无法知晓）黑暗中可能埋伏着对你生命构成威胁的东西（如鬼怪，猛兽等）</span></p></blockquote><h6 id='影响'><span>影响：</span></h6><p><span>恐惧产生时，常伴随一系列的</span><strong><span>生理变化</span></strong><span>，如</span><strong><span>心跳加速或心律不齐、呼吸短促或停顿、血压升高、脸色苍白、嘴唇颤抖、嘴发干、身冒冷汗、四肢无力</span></strong><span>等等，这些生理功能紊乱的现象，往往会</span><strong><span>导致或促使躯体疾病</span></strong><span>的发生。</span></p><p><span>另一方面，恐惧会使人的</span><strong><span>知觉、记忆和思维</span></strong><span>过程发生障碍，失去对当前情景</span><strong><span>分析、判断</span></strong><span>的能力，并使行为</span><strong><span>失调</span></strong><span>。如旅馆失火时，住在旅馆的人常常显得慌乱、紧张、不知所措、争先恐后往外跑，跑不出去就</span><strong><span>跳楼</span></strong><span>。</span></p><hr /><h2 id='总体对策'><span>总体对策：</span></h2><p><span>对于</span><strong><span>恐高</span></strong><span>等现象，实际上对于自身安全有益，因此不必刻意消减。</span></p><p><span>害怕</span><strong><span>黑暗</span></strong><span>是最普遍的情况，因为你不知道黑暗中隐藏的物体（也就是未知）。仔细想想，无非是害怕</span><strong><span>妖魔鬼怪</span></strong><span>什么的，既然是 “封建迷信” ，那其实也没什么好怕的。</span></p><iframe src="https://player.bilibili.com/player.html?aid=53058902&amp;bvid=BV184411j7Wi&amp;cid=92830344&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" height="600"> </iframe><hr /><h2 id='具体现实）对策'><span>具体（现实）对策：</span></h2><p><span>接下来讲一些</span><del><span>比较</span></del><span>具体的，</span><del><span>上文的 “虚无缥缈” 就一笔带过吧。</span></del></p><h3 id='蜘蛛'><span>蜘蛛：</span></h3><p><a href='https://thwiki.cc/黑谷山女'><span>黑谷山女 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/7/7c/%E9%BB%91%E8%B0%B7%E5%B1%B1%E5%A5%B3%EF%BC%88%E5%9C%B0%E7%81%B5%E6%AE%BF%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：土蜘蛛</center><p><span>蜘蛛，</span><strong><span>节肢动物</span></strong><span>，身体分头胸部（前体）和腹部（后体）</span><strong><span>两部分</span></strong><span>，头胸部覆以背甲和胸板。头胸部有附肢两对，第一对为螯肢，有螯牙、螯牙尖端有毒腺开口。第二对为</span><strong><span>须肢</span></strong><span>，在雌蛛和未成熟的雄蛛呈</span><strong><span>步足</span></strong><span>状，用以</span><strong><span>夹持食物及作感觉器官</span></strong><span>；但在雄性成蛛须肢末节膨大，变为传送精子的交接器。</span></p><p><span>常见蜘蛛：</span><a href='https://www.phb123.com/shijiezhizui/dongwu/27323.html#:~:text=十大常见的室内蜘蛛 1 跳蛛 2 白额高脚蛛 3 巨蟹蛛 4,7 扁蛛 8 斑络新妇 9 悦目金蛛 10 断纹金蛛'><span>十大常见的室内蜘蛛</span></a><span> </span></p><h4 id='危险性-1'><span>危险性：</span></h4><p><span>在</span><strong><span>饲养、操作和采毒</span></strong><span>过程中，有时难免被</span><strong><span>毒</span></strong><span>蜘蛛咬伤。穴居型蜘蛛毒液毒性的大小，随</span><strong><span>种类、性别、个体大小和成熟程度以及季节的不同</span></strong><span>而有所差异。一般</span><strong><span>雌蛛比雄蛛的毒性要大</span></strong><span>些，而成熟蜘蛛又比幼蛛的毒性大些。从季节来看，</span><strong><span>刚出蛰</span></strong><span>的蜘蛛和</span><strong><span>孵化期间</span></strong><span>的雌蛛毒性最强。蜘蛛是以其头胸部前端的一对螯肢进行攻击的，毒液经由螯肢上螯牙的尖端小孔注入皮下，此时被咬处可看到两个针眼口，严重时局部</span><strong><span>红肿</span></strong><span>并逐渐扩大，在伤口的远心端很快发生</span><strong><span>剧烈疼痛</span></strong><span>，常使人难以忍受，个别人被咬伤后大汗淋漓，并发全身症状如头昏嗜睡、困倦无力、眼睑下垂或呕吐腹痛，更严重者出现呼吸困难、脉搏转慢、心律不齐、视力模糊。</span></p><h4 id='对策-1'><span>对策：</span></h4><p><span>万一被蜘蛛咬伤，最</span><strong><span>方便和有效</span></strong><span>的办法是用</span><strong><span>火柴或烟头烧灼伤口</span></strong><span>，以高温破坏其毒素。但这个办法必须抢在</span><strong><span>毒素未扩散之前</span></strong><span>，在被咬伤后</span><strong><span>1～2分钟</span></strong><span>内进行。此外，还有以下几种简便的救护方法：</span></p><blockquote><p><span>用生姜捣碎后敷在伤口处，或用高锰酸钾溶液涂洗伤口，可使症状缓解和消失。</span></p><p><span>用熟烟丝擦拭伤口和红肿部位。</span></p><p><span>用中药秦艽250克，煎水当茶频频服用。</span></p><p><span>服用季德胜蛇药，具体按说明使用。</span></p></blockquote><hr /><h3 id='老鼠'><span>老鼠：</span></h3><p><a href='https://thwiki.cc/娜兹玲'><span>娜兹玲 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/thumb/4/42/%E5%A8%9C%E5%85%B9%E7%8E%B2%EF%BC%88%E6%98%9F%E8%8E%B2%E8%88%B9%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：妖怪鼠</center><p><span>老鼠是哺乳纲、啮齿目、鼠科的</span><strong><span>啮齿类动物</span></strong><span>，繁殖方式是胎生，是哺乳动物中</span><strong><span>繁殖最快、生存能力很强</span></strong><span>的动物。全世界有鼠类大约 480 种，无论室内、野外都可以看到它们的足迹。</span></p><p><span>老鼠常出没于下水道、厕所、厨房、杂物堆、垃圾堆放处等处，在带菌场所与干净场所来回行动，经由鼠脚、体毛及胃携带物来传播病原菌。</span></p><h4 id='危险性-2'><span>危险性：</span></h4><p><del><a href='https://zh.moegirl.org.cn/叔叔我啊，oo'><span>鼠鼠我啊……</span></a></del></p><p><span>老鼠是</span><strong><span>很多疾病</span></strong><span>的贮存宿主或媒介，已知老鼠对人类传播的疾病有鼠疫、流行性出血热、钩端螺旋体、斑疹伤寒、蜱性回归热等 </span><strong><span>57</span></strong><span> 种。</span></p><h5 id='传播途径'><span>传播途径：</span></h5><p><strong><span>经研究老鼠传播疾病有三个途径</span></strong><span>：</span></p><p><strong><span>1、</span></strong><span>鼠体外</span><strong><span>寄生虫</span></strong><span>作媒介，通过叮咬人体吸血时，将病原体传染给人；</span></p><p><strong><span>2、</span></strong><span>体内带致病微生物的鼠，通过鼠的</span><strong><span>活动或粪便污染了食物或水源</span></strong><span>，造成人类食后发病；</span></p><p><strong><span>3、</span></strong><span>老鼠</span><strong><span>直接咬人</span></strong><span>或病原体通过</span><strong><span>外伤</span></strong><span>侵入而引起感染。 </span></p><h5 id='疾病症状'><span>疾病症状：</span></h5><p><strong><span>1、鼠疫：</span></strong><span>临床主要表现为</span><strong><span>高热、淋巴结肿瘤、出血倾向、肺部特殊炎症</span></strong><span>等。</span></p><p><strong><span>2、出血热症状：</span></strong><span>大多经过 </span><strong><span>7～21</span></strong><span> 天潜伏期后突然发病，病情急、进展快、症状重。起病就发烧，体温急剧上升到 39℃ 或更高。同时，表现有头疼、眼眶疼、腰疼，称之为</span><strong><span>“三疼”</span></strong><span>；还表现有面部、颈部、上胸部潮红充血，称之为</span><strong><span>“三红”</span></strong><span>。另外，发病后在口腔上腭、咽部可见有出血点，在腋部可见有线条状出血点连线。</span></p><p><strong><span>3、斑疹伤寒症状：</span></strong><span>多以急性起病，持续发热及头痛为主，体温多在 39～40℃（占72.10%），伴全身关节及肌肉疼痛、咳嗽等症状。主要体征有面部充血、皮疹、咽部充血及肝脾肿大</span></p><h4 id='对策-2'><span>对策：</span></h4><p><span>如果是家里</span><strong><span>第一次</span></strong><span>遇到老鼠，可以用</span><strong><span>传统</span></strong><span>的灭鼠方法。传统灭鼠方法是：灭鼠铁夹、笼子、老鼠粘板。需要注意的是这些方法适合第一次用，效果还可以，如果老鼠</span><strong><span>成精了</span></strong><span>效果就会大打折扣。</span></p><p><strong><span>食物</span></strong><span>都用收纳盒收起来，厨房的食材尽量都放在冰箱，垃圾袋</span><strong><span>不要过夜</span></strong><span>。虽然老鼠视力差，但是嗅觉和听觉都是非常灵敏的，它可以闻到食物散发的味道。</span></p><hr /><h3 id='老虎'><span>老虎：</span></h3><p><a href='https://thwiki.cc/寅丸星'><span>寅丸星 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/thumb/3/3c/%E5%AF%85%E4%B8%B8%E6%98%9F%EF%BC%88%E6%98%9F%E8%8E%B2%E8%88%B9%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：妖怪（吉利的虎形妖怪）</center><p><span>虎，是</span><strong><span>哺乳纲的大型猫科动物</span></strong><span>。共有</span><strong><span>九个亚种</span></strong><span>，各亚种之间的体型和形态差异很大。</span><strong><span>西伯利亚虎最大</span></strong><span>，雄性体长可达3.7米，体重423千克。</span><strong><span>苏门答腊虎</span></strong><span>是最小的</span><strong><span>活</span></strong><span>亚种，雄虎体长2.34米，体重136千克。</span></p><p><span>老虎是典型的山地林栖动物。虎常</span><strong><span>单独</span></strong><span>活动，只有在繁殖季节雌雄才在一起生活。无固定巢穴。能游泳。虎多黄昏活动，白天多潜伏休息，没有惊动则很少出来。虎的活动范围较大，在北方日寻食活动范围可达数十公里。</span></p><h4 id='危险性-3'><span>危险性：</span></h4><p><span>不如说人类对于虎来说更危险：由于人类的猎杀和野外栖息地</span><strong><span>碎片化</span></strong><span>，虎成为</span><strong><span>珍稀濒危物种</span></strong><span>，被列为《濒危野生动植物种国际贸易公约》CITES 附录Ⅰ级保护动物，《世界自然保护联盟濒危物种红色名录》（IUCN）濒危动物。</span><strong><span>2016</span></strong><span>年调查显示，全球</span><strong><span>野生虎</span></strong><span>的数量为</span><strong><span>3890</span></strong><span>只。</span></p><h4 id='对策-3'><span>对策：</span></h4><p><span>如果遇到了：</span></p><p><del><span>变成武松</span></del></p><blockquote><p><span>动物园：还好，问题不大，要是进到笼子里，就祈祷它不饿吧</span></p><p><span>野外：能遇到也是此生无憾了吧……</span></p></blockquote><p><span>与老虎处于警戒距离之外时，千万不能慌张，要</span><strong><span>慢慢后退</span></strong><span>，切不可把身体</span><strong><span>薄弱部位</span></strong><span>，如 背部暴露给老虎，要一边观察它的反应一边不动声色地后撤，扩大你与老虎的距离，增加保险系数。</span></p><p><span>如果站在前面的老虎</span><strong><span>一动不动地盯着你</span></strong><span>看，说明你已处于警戒距离。此时正确的做法是</span><strong><span>一动不动地站立</span></strong><span>，更不能逃走，只需与它静静地对峙。</span></p><p><span>假如与老虎迎面相遇，两者间的距离小于临界距离，此时你能做的是</span><strong><span>双臂抱头，护助喉管</span></strong><span>，尽量减少老虎对你的身体伤害，并大声呼救。</span></p><hr /><h3 id='狼'><span>狼：</span></h3><p><a href='https://thwiki.cc/今泉影狼'><span>今泉影狼 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/d/d3/%E4%BB%8A%E6%B3%89%E5%BD%B1%E7%8B%BC%EF%BC%88%E8%BE%89%E9%92%88%E5%9F%8E%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><p>&nbsp;</p><center>种族：狼女</center><p><span>狼，食肉目犬科犬属。狼群主要捕食</span><strong><span>中大型哺乳动物</span></strong><span>，也拥有着极为严格的</span><strong><span>等级</span></strong><span>制度。一群狼的数量平均组成为</span><strong><span>5-11</span></strong><span>只，也有部分狼群达到过</span><strong><span>30</span></strong><span>只以上。</span></p><p><span>狼群之间的领域范围不重叠，会</span><strong><span>以嚎声向其他群宣告范围</span></strong><span>。由于拥有着极为严格的等级制度和领域范围，因此狼群不太可能与别的狼群合作，也很难出现部分小说中由数个狼群组成、百来头的狼群。</span></p><p><span>野生的狼一般可以活</span><strong><span>9~10</span></strong><span>年，人工饲养的狼有的可以活到</span><strong><span>二十年</span></strong><span>左右。狼通常以耐力持久而闻名，可以以每小时约8公里的速度小跑着长途跋涉；但也能在追逐猎物时，短时间内达到每小时约57-60公里的速度。</span></p><p><span>主要栖息于森林、沙漠、山地、寒带草原、针叶林、草地。夜间活动多，嗅觉敏锐，听觉很好。</span></p><h4 id='危险性-4'><span>危险性：</span></h4><p><span>……和虎类似，狼也是保护动物，为国家二级保护野生动物 ，等级近危。</span></p><h4 id='对策-4'><span>对策：</span></h4><h5 id='如果是孤狼'><span>如果是孤狼：</span></h5><blockquote><p><span>1、不要背对着它，否则在狼看来你就是猎物。</span></p><p><span>2、不要惊慌，掠食动物能感受到对手的情绪。</span></p></blockquote><p><span>反击：</span></p><blockquote><p><span>用兵器，或把衣服一类的东西缠在左手上，多缠几层，一定绑紧。狼进攻的时候，用来格挡，让它咬。</span></p><p><span>然后用另一只手拿武器（实在没有，用石头也很好）反击它的薄弱部位，如眼睛、鼻子、喉管一类。</span></p></blockquote><h5 id='如果是狼群'><span>如果是狼群：</span></h5><p><del><span>我也不知道</span></del></p><blockquote><p><span>1、自驾游如果自己开车遇到狼群，</span><strong><span>躲车里即可</span></strong><span>。 一般狼群不会呆在同一个地方不走动的。 安心等待即可。 </span></p><p><span>2、开车遇到狼群，你可以慢慢低速行驶，确保不激怒狼群。 胆子小的，把窗户摇下一点留个透气缝隙，熄火熄灯休息会吧，说不定狼群就散了。</span></p><p><span>3、徒步。 在平地看到狼群，迅速后撤，判断狼群方向。</span></p></blockquote><hr /><h3 id='蝴蝶'><span>蝴蝶：</span></h3><p><a href='https://thwiki.cc/爱塔妮缇拉尔瓦'><span>爱塔妮缇拉尔瓦 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/b/ba/%E7%88%B1%E5%A1%94%E5%A6%AE%E7%BC%87%E6%8B%89%E5%B0%94%E7%93%A6%EF%BC%88%E5%A4%A9%E7%A9%BA%E7%92%8B%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：妖精（凤蝶的妖精）</center><p><span>蝴蝶有什么好怕的，如果是幼虫时期……</span></p><p><a href='https://www.guokr.com/article/437225'><span>常见幼虫</span></a></p><h4 id='对策-5'><span>对策：</span></h4><p><strong><span>有些</span></strong><span>幼虫（不一定是蝴蝶幼虫）的体表长有毒毛，呈细毛状或棘刺状。毒毛蛰入人体皮肤后，往往随即</span><strong><span>断落</span></strong><span>，放出毒素。被毛毛虫蜇伤后，皮肤会出现</span><strong><span>刺痛烧灼感</span></strong><span>，一段时间后患处皮肤痛痒加重，皮肤表面变红，甚至可溃烂。严重者还可引起荨麻疹、关节炎等全身反应。</span></p><p><span>若被毛毛虫蜇伤后，可按以下方法处理：</span></p><blockquote><p><span>1、 先在放大镜下观察，用刀片顺着毒毛方向刮除毒毛。由于毒液是酸性的，所以只要涂点</span><strong><span>苏打水或者肥皂水</span></strong><span>在疼痛处就可缓解。当然，如果过敏了就要去医院了。</span></p><p><span>2、 可用南通蛇药外敷患处，也可用七叶一枝花或鲜马齿苋捣烂，外敷。</span></p><p><span>3、 伤口溃烂时用抗生素软膏涂抹。</span></p><p><span>4、 有全身症状时，去医院吧。</span></p></blockquote><hr /><h3 id='狗勾'><span>狗勾：</span></h3><p><a href='https://thwiki.cc/高丽野阿吽'><span>高丽野阿吽 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/e/e2/%E9%AB%98%E4%B8%BD%E9%87%8E%E9%98%BF%E5%90%BD%EF%BC%88%E5%A4%A9%E7%A9%BA%E7%92%8B%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：狛犬</center><p><span>狗，犬科动物。中文亦称“犬”，狗分布于</span><strong><span>世界各地</span></strong><span>。狗与马、牛、羊、猪、鸡并称传统“六畜”。有科学家认为狗是由早期人类从灰狼驯化而来，驯养时间在</span><strong><span>4万年前 ~ 1.5万年前</span></strong><span>。被称为“人类最忠实的朋友”，是饲养率最高的宠物，其寿命大约在</span><strong><span>12~18年</span></strong><span> 。在中国文化中，十二生肖中的第11位。</span></p><h4 id='危险性-5'><span>危险性：</span></h4><p><span>被狗咬后会可能会传染给人一些疾病，其中最担心的就是</span><strong><span>狂犬病</span></strong><span>。人类的狂犬病，绝大多数是由狗传染给人，狂犬病是比较严重的疾病，</span><strong><span>发病后</span></strong><span>死亡率可达到 </span><strong><span>100%</span></strong><span> 。</span></p><h4 id='对策-6'><span>对策：</span></h4><h5 id='遇到'><span>遇到：</span></h5><blockquote><p><span>在户外遇到恶犬，切记不要撒腿就跑，这样做，你肯定会被恶犬追击并咬伤。一般人是跑不过狗的。逃跑会激发狗的追击心理，最好的办法是原地站立，并冷静下来。</span></p><p><span>如果它狂吠不止，并尾巴微微翘起，身上的毛直立，这说明它要攻击你。这个时候千万不要动，原地站立不动，并低头，让狗觉得你没有威胁。在狗意识到你没有威胁之后，它狂吠一阵就会离开。</span></p><p><span>这个时候，赶紧远离狗，以免它返回攻击你。离开的时候不要慌张，以平常的速度离开原地。突然的跑动，会让原本放松警惕的狗，立刻追击你。</span></p><p><span>和恶狗狭路相逢的时候，千万不要和它的眼睛对视。有人存在的区域，遇到恶犬，在它发怒攻击之前，要大声呼救，为自己搬救兵。如果狗主人在周围就省了很多麻烦。</span></p><p><span>在狗要咬你的时候，用包之类随身物品遮挡身体，可以避免被狗咬伤。厚一点的物品会让狗的牙齿接触不到你的皮肤。这个时候，如果被狗扑到，立刻保护头部和颈部，并大声呼救。</span></p></blockquote><h5 id='被咬'><span>被咬：</span></h5><blockquote><p><span>狗咬伤人如果程度不重，只有破皮、没有出血，属于二级暴露，可只注射狂犬病的疫苗。</span></p><p><span>如果咬伤后有出血，属于三级暴露，应当同时注射狂犬病血清，如果注射狂犬病免疫球蛋白，也可以代替血清，只是稍微贵些。</span></p><p><span>如果被狗咬后，并没有任何的破损，也没有明显的红肿，在被咬部位涂上酒精没有感觉到任何疼痛，属于一级暴露，这种情况不用担心被传染上疾病的可能。</span></p></blockquote><hr /><h3 id='猫猫'><span>猫猫：</span></h3><p><a href='https://thwiki.cc/豪德寺三花'><span>豪德寺三花 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/1/1c/%E8%B1%AA%E5%BE%B7%E5%AF%BA%E4%B8%89%E8%8A%B1%EF%BC%88%E8%99%B9%E9%BE%99%E6%B4%9E%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：招财猫</center><p><span>猫猫有什么好怕的，很多猫怕你还来不及呢</span></p><p><span>过！</span><del><span>（不是单单为了介绍人物）</span></del></p><hr /><h3 id='蜈蚣'><span>蜈蚣：</span></h3><p><a href='https://thwiki.cc/姬虫百百世'><span>姬虫百百世 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)</span></a></p><p><img src="https://upload.thwiki.cc/6/62/%E5%A7%AC%E8%99%AB%E7%99%BE%E7%99%BE%E4%B8%96%EF%BC%88%E8%99%B9%E9%BE%99%E6%B4%9E%E7%AB%8B%E7%BB%98%EF%BC%89.png" style="zoom:50%;" /></p><center>种族：大蜈蚣</center><p><span>蜈蚣为</span><strong><span>陆生节肢动物</span></strong><span>，身体由许多体节组成，每一节上均长有步足，故为多足生物。蜈蚣又名叫天龙、百脚虫、少棘蜈蚣、吴公、蝍蛆等，是一种</span><strong><span>有毒腺的</span></strong><span>、</span><strong><span>掠食性的</span></strong><span>陆生节肢动物。常见的蜈蚣有</span><strong><span>红头、青头、黑头</span></strong><span>三种。</span></p><blockquote><p><span>红头的背部呈红黑色，腹部现淡红色，足为淡橘红色或黄色。</span></p><p><span>青头的背部和足部呈蓝色，腹部淡蓝色，体型小，长度约为红头蜈蚣的二分之一。</span></p><p><span>黑头蜈蚣背部和足部呈黑色，腹淡黄色，体型更小。</span></p></blockquote><p><span>一般在农村较为多见，常位于潮湿的墙角、砖块下、烂树叶下、破旧潮湿的房屋中等，在夏天较为常见。蜈蚣是肉食性动物，食谱范围比较</span><strong><span>广泛</span></strong><span>，尤其喜欢捕食各种昆虫。蜈蚣与蛇、蝎、壁虎、蟾蜍并称“五毒”。 </span></p><h4 id='危险性-6'><span>危险性：</span></h4><p><span>毒素含两种类似蜂毒的有毒成分，即组胺（Histamine）样物质及溶血性蛋白质；尚含脂肪油、胆固醇（Cholesterol）、蚁酸（Formic acid）等。</span></p><p><span>亦曾分离出δ-羟基赖氨酸（δ-Hydroxylysine）；氨基酸有组氨酸、</span><a href='https://baike.baidu.com/item/精氨酸'><span>精氨酸</span></a><span>、</span><a href='https://baike.baidu.com/item/鸟氨酸'><span>鸟氨酸</span></a><span>、赖氨酸、</span><a href='https://baike.baidu.com/item/甘氨酸'><span>甘氨酸</span></a><span>、丙氨酸、缬氨酸、</span><a href='https://baike.baidu.com/item/亮氨酸'><span>亮氨酸</span></a><span>、</span><a href='https://baike.baidu.com/item/苯丙氨酸'><span>苯丙氨酸</span></a><span>、丝氨酸、</span><a href='https://baike.baidu.com/item/牛磺酸'><span>牛磺酸</span></a><span>（Taurine）、</span><a href='https://baike.baidu.com/item/谷氨酸'><span>谷氨酸</span></a><span>。</span></p><p><span>被小蜈蚣咬伤仅在</span><strong><span>局部发生红肿、疼痛</span></strong><span>。热带型大蜈蚣咬伤，可致淋巴管炎和组织坏死，有时整个肢体出现紫癫。有的可见头痛、发热、眩晕、恶心、呕吐，甚至膻语、抽搐、昏迷等全身症状。</span></p><p><span>如果被长江流域的红头黑身黄脚蜈蚣咬到手，咬伤处会很快产生</span><strong><span>剧烈疼痛</span></strong><span>，一般2个小时内肘关节处，3个小时腋窝处开始剧烈疼痛，4～5小时胸口隐隐作痛，</span><strong><span>一般不会导致生命危险</span></strong><span>。</span><strong><span>4天</span></strong><span>过后症状渐渐消失。</span></p><h4 id='对策-7'><span>对策：</span></h4><h5 id='消除'><span>消除：</span></h5><p><span>蜈蚣喜欢潮湿的环境，所以要让家里</span><strong><span>保持干燥</span></strong><span>。可以到药店买一些</span><strong><span>雄黄或是生石灰</span></strong><span>，在阴暗的角落、床底都撒上一些。撒了几遍后，蜈蚣自然就消失了。</span></p><hr /><h3 id='蛇'><span>蛇：</span></h3><center>目前没有人物</center><p><span>蛇，是脊索动物门、爬行纲下的一类动物。</span></p><p><span>蛇的栖息环境因种类的不同而各不相同，栖息的环境</span><strong><span>多种多样</span></strong><span>，有的生活于</span><strong><span>穴洞</span></strong><span>，有的生活在</span><strong><span>地面</span></strong><span>，有的生活在</span><strong><span>树上</span></strong><span>，又有生活在</span><strong><span>水中</span></strong><span>。蛇是变温动物、肉食性动物，所吃的动物</span><strong><span>种类很多</span></strong><span>，从无脊椎动物到各类脊椎动物。分布于地球上</span><strong><span>除南北极以外的所有地方</span></strong><span>。</span></p><p><span>蛇是历经 </span><strong><span>1.3 亿年</span></strong><span>的漫长进化发展而成的一个</span><strong><span>特殊生物类群</span></strong><span>，对</span><strong><span>维护生态平衡有着重要作用</span></strong><span>。但是一稳定性较为脆弱的生物类群。</span></p><h4 id='危险性对策'><span>危险性/对策：</span></h4><p><span>蛇这个群体比较复杂，我单独写一个科普好了：</span></p><p><a href='/'><span>还没写……</span></a></p><hr /><h3 id='人'><span>人：</span></h3><p><img src="https://tse1-mm.cn.bing.net/th/id/R-C.c8024398815d7c4b6fc9b0769166323a?rik=4a%2bJygoYyxeGZQ&riu=http%3a%2f%2fwww.kisence.com%2fcontent%2fimages%2f2017%2f09%2fa-brief-history.jpg&ehk=mq84qkhiis%2fnQHn5bKIpmsfVgi9T4xr3%2fnmkYevEQHA%3d&risl=&pid=ImgRaw&r=0" style="zoom:30%;" /></p><p><span>人，是一种灵长目人科人属的物种。线粒体DNA与化石证明人类大约于500万年前起源于东非。</span></p><p><span>人类学上，人被定义为能够</span><strong><span>使用语言</span></strong><span>、具有</span><strong><span>复杂的社会组织与科技发展</span></strong><span>的生物，尤其是他们能够建立</span><strong><span>团体与机构</span></strong><span>来达到</span><strong><span>互相支持与协助</span></strong><span>的目的。古人类学家把</span><strong><span>直立行走</span></strong><span>看作是促进人类进化的重要因素和人类诞生的重要标志。</span></p><p><span>人类是社会性的。人尤其擅长用</span><strong><span>口语、手势</span></strong><span>与</span><strong><span>书面语言</span></strong><span>来表达自我、交换意见以及组织。自从语言产生以后，为了辨别个体之间的差异，认知不同的个体，</span><strong><span>姓名</span></strong><span>便随之产生了。</span></p><p><span>人类希望能够理解并改造环境，试图用</span><strong><span>哲学、艺术、科学、神话</span></strong><span>以及</span><strong><span>宗教</span></strong><span>来解释自然界的现象。这种与生俱来的好奇心导致了高级工具和技术的发展。</span></p><h4 id='对策-8'><span>对策：</span></h4><p><span>想必不必多说了</span></p><h5 id='对世界'><span>对世界：</span></h5><blockquote><p><span>怀有感激和敬畏之心</span></p><p><a href='/popularization/20220304.html'><span>保护环境</span></a></p></blockquote><h5 id='对人'><span>对人：</span></h5><blockquote><p><span>必要时亲近和提防</span></p><p><span>我们都是同胞</span></p></blockquote><hr /><p><span>想到再更新吧</span></p><hr /><h6 id='参考资料'><span>参考资料：</span></h6><p><a href='https://baike.baidu.com/item/恐惧/3042343'><span>恐惧（心理活动状态）_百度百科 (baidu.com)</span></a></p><p><a href='https://www.zhihu.com/question/20110684'><span>是什么让我们产生恐惧？恐惧的本质是什么？ - 知乎 (zhihu.com)</span></a></p><p><a href='https://baike.baidu.com/item/蜘蛛/6152'><span>蜘蛛（节肢动物）_百度百科 (baidu.com)</span></a></p><p><a href='https://baike.baidu.com/item/老鼠/186618'><span>老鼠（啮齿目鼠科下的动物统称）_百度百科 (baidu.com)</span></a></p><p><a href='https://zhuanlan.zhihu.com/p/393844084'><span>家里有老鼠怎么办？2021最新灭鼠方法推荐 - 知乎 (zhihu.com)</span></a></p><p><a href='https://cn.bing.com/search?q=遇到老虎怎么办&amp;qs=CT&amp;pq=遇到老虎&amp;sc=4-4&amp;cvid=E918F55CC0324CB48D8AF3DF7ADCBE35&amp;FORM=QBRE&amp;sp=1'><span>遇到老虎怎么办 - 搜索 (bing.com)</span></a></p><p><a href='https://baike.baidu.com/item/狼/12717'><span>狼（犬科犬属下的一种动物）_百度百科 (baidu.com)</span></a></p><p><a href='https://jingyan.baidu.com/article/6b1823094771d3fb58e15997.html#:~:text= 1、自驾游如果自己开车遇到狼群，躲车里即可。 一般狼群不会呆在同一个地方不走动的。 安心等待即可。,2、开车遇到狼群，你可以慢慢低速行驶，确保不激怒狼群。 胆子小的，把窗户摇下一点留个透气缝隙，熄火熄灯休息会吧，说不定狼群就散了。 3、徒步。 在平地看到狼群，迅速后撤，判断狼群方向。'><span>遇到狼群怎么办-百度经验 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/579625273.html#:~:text=专家介绍，一般情况下，被野蜂、毛毛虫等蛰伤，在 叮咬 或蛰伤处涂上风油精、万金油或口水、肥皂等，即能起到消炎、止痒作用。 值得注意的是，被野蜂蛰伤后，如果发现蜂尾部的毒腺及蛰针还留在伤口上，应该用小镊子或小钳子拔除，不要用手掐。,人的皮肤如与毛毛虫身上的毒毛亲密接触，会感到辣、痒、痛，并伴有红肿症状，应小心地将毛毛虫从身上清除，再用胶布粘在毛毛虫附着处，揭下胶布就可将毒毛除掉。 毛毛虫的毒毛进入皮肤后就会断落并流出毒素，被蛰伤的部位会有小丘疹，皮肤会有刺痛烧灼感，直至瘙痒、溃烂，甚至还会出现荨麻疹等症状。 仔细观察伤处，并用刀片顺着毒毛方向刮除毒毛，然后在伤处涂擦3%氨水，也可用橡皮膏贴附于被蜇部位，再用力撕下，毒毛即可被粘出。 你对这个回答的评价是？'><span>被毛毛虫蛰到了怎么办？_百度知道 (baidu.com)</span></a></p><p><a href='https://www.youlai.cn/ask/5CBCB7glaUt.html#:~:text= 被狗咬后会担心狗传染给人一些疾病，其中最担心的就是狂犬病。,人类的狂犬病，绝大多数是由狗传染给人，狂犬病是比较严重的疾病，发病后死亡率可达到100%。 狗咬伤人如果程度不重，只有破皮、没有出血，属于二级暴露，可只注射狂犬病的疫苗。'><span>被狗咬了会怎么样-有来医生 (youlai.cn)</span></a></p><p><a href='https://zhuanlan.zhihu.com/p/49945310'><span>遇到狗怎么办？这四种方法可以防止被狗咬！ - 知乎 (zhihu.com)</span></a></p><p><a href='https://baike.baidu.com/item/蜈蚣/1359'><span>蜈蚣（节肢动物门唇足纲蜈蚣目蜈蚣科动物的统称）_百度百科 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/4561077.html'><span>蜈蚣的毒性大吗?_百度知道 (baidu.com)</span></a></p><p><a href='https://zhidao.baidu.com/question/1240839905568122779.html'><span>遇到蜈蚣怎么办？_百度知道 (baidu.com)</span></a></p><p><a href='https://baike.baidu.com/item/蛇/68023'><span>蛇（爬行纲下的一类动物）_百度百科 (baidu.com)</span></a></p><p><a href='https://baike.baidu.com/item/人/13020851'><span>人（生物物种）_百度百科 (baidu.com)</span></a></p></div></div>
+</body>
+</html>
