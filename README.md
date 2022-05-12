@@ -12,11 +12,7 @@
 
 ------
 
-
-
 ### 本网站的内容会不定期更新，欢迎您的访问！
-
-
 
 ------
 
@@ -42,7 +38,9 @@
 
 ------
 
+#### [推荐阅读](/others/Recommended.html)
 
+------
 
 ##### 本项目开源地址：[SoTWild/SoTWild.github.io](https://github.com/SoTWild/SoTWild.github.io)
 
@@ -55,8 +53,6 @@ Google：sotwild32@gmail.com
 CSND：[SoTWild](https://blog.csdn.net/SoTWild)
 
 BiliBili：[荒野四季SOTW的个人空间](https://space.bilibili.com/482469487)
-
-
 
 ------
 
