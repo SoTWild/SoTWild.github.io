@@ -32,4 +32,10 @@
 
 本站所有页面均在 **Microsoft Edge** 和 **Google Chrome** 测试过，如果你是其他浏览器用户（如 **360**），在访问时可能会出现：<u>自动播放音乐，图片、视频加载不完全</u>等问题。
 
+------
 
+## · 留言：
+
+你可以在本项目[Issues](https://github.com/SoTWild/SoTWild.github.io/issues)上留言、指出问题或建议。
+
+（需要Github账号）
