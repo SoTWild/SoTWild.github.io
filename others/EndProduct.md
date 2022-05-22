@@ -8,7 +8,7 @@
 
 <img src="https://i2.imgu.cc/images/2022/05/22/CtKKr.png" style="zoom:50%;" />
 
-<center><font size="5"><a href="/others/EndProduct/Asthenic" target="" title="">Asthenic</a></font></center>
+<center><font size="5"><a href="/others/EndProduct/Asthenic.html" target="" title="">Asthenic</a></font></center>
 
 ------
 
