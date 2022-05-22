@@ -6,7 +6,7 @@ Asthenic（虚弱）。这是我的**第一首原创曲**子，可能不怎么�
 
 里面有**大量重复**的乐段，大概是表达了虚弱事物**屡次尝试未果**的**循环和绝望**吧……
 
-也可以感受到些许静谧和希望，
+也还可以感受到**些许静谧和希望**，
 
 不过最后还是……
 
@@ -14,4 +14,4 @@ Asthenic（虚弱）。这是我的**第一首原创曲**子，可能不怎么�
 
 
 
-### 下载地址：
+### 下载地址：[Asthenic](https://github.com/SoTWild/SoTWild.github.io/raw/main/others/EndProduct/Asthenic/Asthenic.mp3)
