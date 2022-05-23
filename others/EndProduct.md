@@ -20,7 +20,9 @@
 
 ## 电子：
 
+<img src="https://i2.imgu.cc/images/2022/05/23/CtDZf.png" style="zoom:50%;" />
 
+<center><font size="5"><a href="/others/EndProduct/Rectifier Module/Rectifier Module.html" target="" title="">Rectifier Module</a></font></center>
 
 ------
 
