@@ -18,4 +18,6 @@ Asthenic（虚弱）。这是我的**第一首原创曲**子，可能不怎么�
 
 
 
-### 下载地址：[Asthenic](https://github.com/SoTWild/SoTWild.github.io/raw/main/others/EndProduct/Asthenic/Asthenic.mp3)
+### BiliBili：[Asthenic](https://www.bilibili.com/audio/au3011656)
+
+### 备用下载地址：[Asthenic](https://github.com/SoTWild/SoTWild.github.io/raw/main/others/EndProduct/Asthenic/Asthenic.mp3)
