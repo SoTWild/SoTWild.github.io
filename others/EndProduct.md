@@ -10,6 +10,14 @@
 
 <center><font size="5"><a href="/others/EndProduct/Asthenic/Asthenic.html" target="" title="">Asthenic</a></font></center>
 
+
+
+<img src="https://i2.imgu.cc/images/2022/06/18/C8OPD.png" style="zoom:50%;" />
+
+<center><font size="5"><a href="/others/EndProduct/Teenage ~ Forever Dream/青春 ~ Forever Dream.html" target="" title="">青春 ~ Forever Dream...</a></font></center>
+
+
+
 ------
 
 ## 书籍：
