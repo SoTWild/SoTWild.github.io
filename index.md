@@ -58,7 +58,7 @@ BiliBili：[荒野四季SOTW的个人空间](https://space.bilibili.com/48246948
 
 ##### 更多内容敬请期待……
 
-###### 网站主页自5月14日起访问总量：
+###### 网站主页自2022年5月14日起的访问总量：
 
 <a href="https://www.mfwztj.com/" target="_blank"><img src="https://www.mfwztj.com/hit.php?id=zmxcxd&nd=9&style=71" border="0" alt="免费计数器"></a>
 
