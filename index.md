@@ -46,8 +46,6 @@
 
 ##### 联系站长：
 
-QQ：2919300846@qq.com
-
 Google：sotwild32@gmail.com
 
 CSND：[SoTWild](https://blog.csdn.net/SoTWild)
