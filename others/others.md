@@ -4,13 +4,13 @@
 
 ###### 主人员：
 
-<img src="https://i2.imgu.cc/images/2022/02/23/CIDtX.jpg" style="zoom:40%;" />
+![](https://i2.imgu.cc/images/2022/06/21/C8QF4.jpg)
 
-<center>SoTWild（左），Link+（右）</center>
+<center>初中毕业了……SoTWild（左），Link+（右）</center>
 
 ###### 团队：
 
-<img src="https://s2.loli.net/2022/02/24/KwO16QftRhuGUng.jpg" style="zoom:40%;" />
+![](https://s2.loli.net/2022/02/24/KwO16QftRhuGUng.jpg)
 
 
 
@@ -18,7 +18,7 @@
 
 如果有什么项目，您可以来找我，我会尽力帮忙。
 
-<img src="https://s2.loli.net/2022/03/06/LCgDhFBzW3KpoxN.jpg" style="zoom:25%;" />
+<img src="https://s2.loli.net/2022/03/06/LCgDhFBzW3KpoxN.jpg" style="zoom:20%;" />
 
 ~~以上成员均已遁入幻想~~
 
