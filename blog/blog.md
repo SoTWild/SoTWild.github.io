@@ -1,6 +1,6 @@
 # 博客分享
 
-###### 这里刊登了本站（三位成员）的博客
+###### 这里刊登了本站（和四位成员）的博客
 
 
 
@@ -11,3 +11,5 @@
 ## [Link+](/blog/link/introduction/Link.html)
 
 ## [Haphyxlos](/blog/Haphyxlos/introduction/Haphyxlos.html)
+
+## [Open](/blog/Open/introduction/Open.html)

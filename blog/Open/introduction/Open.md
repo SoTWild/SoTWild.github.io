@@ -1,8 +1,10 @@
 # Open的个人博客
 
-###### 思维锈掉了……
+###### “思维锈掉了……”
 
-<img src="C:\Users\ELLA\Documents\Tencent Files\3257804289\FileRecv\MobileFile\乱七八糟图片\xs.jpg" alt="xs" style="zoom: 25%;" />
+<img src="https://i2.imgu.cc/images/2022/06/25/C8FUs.jpg" alt="头像框" style="zoom:25%;float:left; " />
+
+------
 
 # 目录：
 
@@ -14,7 +16,7 @@
 
 ## 关于我：
 
-
+###### 加入本站时间：2022.06.25
 
 > 某种程度上的水王。可惜语文似乎不太好，语言混乱是常有的事
 >
