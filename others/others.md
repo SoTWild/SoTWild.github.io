@@ -30,9 +30,9 @@
 
 ------
 
-## · 成品展示：
+## · 作品展示：
 
-#### = 倾注了我们的心血：[EndProduct](/others/EndProduct.html)
+#### [EndProduct](/others/EndProduct.html)
 
 ------
 
