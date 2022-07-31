@@ -46,6 +46,8 @@
 
 2022-07-29		[志愿者](/blog/sotwild/20220729.html)
 
+2022-07-30		[ESP-HMI Ver1 PCB完成！](/blog/sotwild/20220730.html)
+
 
 
 ------
