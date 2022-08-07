@@ -48,6 +48,8 @@
 
 2022-07-30		[ESP-HMI Ver1 PCB完成！](/blog/sotwild/20220730.html)
 
+2022-08-05		[乡下三日](/blog/sotwild/20220805.html)
+
 
 
 ------
