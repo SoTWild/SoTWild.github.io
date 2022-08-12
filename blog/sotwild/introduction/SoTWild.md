@@ -54,6 +54,8 @@
 
 2022-08-11		[20年の梦](/blog/sotwild/20220811.html)
 
+2022-08-12		[ESP-HMI Ver 1焊接完成！！！](/blog/sotwild/20220812.html)
+
 
 
 ------
