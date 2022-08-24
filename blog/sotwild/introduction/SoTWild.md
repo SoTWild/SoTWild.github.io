@@ -56,6 +56,8 @@
 
 2022-08-12		[ESP-HMI Ver 1焊接完成！！！](/blog/sotwild/20220812.html)
 
+2022-08-22		[没更新](/blog/sotwild/20220822.html)
+
 
 
 ------
