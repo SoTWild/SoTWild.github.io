@@ -4,7 +4,7 @@
 
 
 
-这里**本来**是一个基于 **[ESP32](https://www.espressif.com/zh-hans/products/socs/esp32)** 芯片和 **[Arduino IDE](https://www.arduino.cc/en/guide/windows)** 开发的个人<u>超迷你服务器</u>，但是由于内网穿透限制，目前转移到了 **Github** 。创建此网站的目的在于**分享信息**，每过一段时间，本站就会发布一些[科普文章](\popularization\popularization.html)或站内成员的[博客介绍](/blog/blog.html)。我是本站的站长 **SoTWild** ，一名初三学生。**Link+** 作为副站长，主要负责**高中板块、部分科普文章以及 奇思妙想 板块**的编写。
+这里**本来**是一个基于 **[ESP32](https://www.espressif.com/zh-hans/products/socs/esp32)** 芯片和 **[Arduino IDE](https://www.arduino.cc/en/guide/windows)** 开发的个人<u>超迷你服务器</u>，但是由于内网穿透限制，目前转移到了 **Github** 。创建此网站的目的在于**分享信息**，每过一段时间，本站就会发布一些[科普文章](\popularization\popularization.html)或站内成员的[博客介绍](/blog/blog.html)。我是本站的站长 **SoTWild** ，一名~~初三~~高一学生。**Link+** 作为副站长，主要负责**高中板块、部分科普文章以及 奇思妙想 板块**的编写。
 
 ###### [本站原来的实现原理点这里](/popularization/20220220.html)
 
