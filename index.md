@@ -48,7 +48,7 @@
 
 Google：sotwild32@gmail.com
 
-CSND：[SoTWild](https://blog.csdn.net/SoTWild)
+CSDN：[SoTWild](https://blog.csdn.net/SoTWild)
 
 BiliBili：[荒野四季SOTW的个人空间](https://space.bilibili.com/482469487)
 
