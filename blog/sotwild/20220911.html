@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>20220911</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=' first-line-indent'><h1 id='囚牢中的生命'><span>囚牢中的生命</span></h1><p><span>忘记成佛的亡灵无法诞生出新的生命，</span></p><p><span>不会死亡的人类无法知晓色彩鲜明的冥界。</span></p><p><span>生生生生暗生始，</span></p><p><span>死死死死冥死终。</span></p><div style="text-align: right;">——藤原妹红</div><hr /><center><font size="6">囚牢中的生命</font></center><center><i>Many people are so ungrateful to be alive.</i></center><p>&nbsp;</p><p><span>我想我从出生的那一刻起，不，从宇宙诞生之时起，我就已经被彻底禁锢了。</span></p><p><span>你问我为什么？</span></p><p><span>我可以滔滔不绝地告诉你一切可能的答案，直到时间过去太久，甚至到你逝去的那一刻，我还是活着。</span></p><p><span>我所活过的，最初的十几年，是我无尽的生命中最值得去留恋的。</span></p><p><span>我享受那一段宝贵的时光，那时的未来对于我来说似乎光芒万丈。</span></p><p><span>直到有一天，我失足落水了。我在水中挣扎，很快就失去了意识。</span></p><p><span>但最后我醒了，躺在干涸的河道中。有人看到了我，大喊叫人前来，他们帮我上了岸。</span></p><p><span>但是我四顾看看，一切都不一样了。</span></p><p><span>我所熟悉的建筑、地貌、人，都不复存在了。惊讶之余，他们问我发生了什么。在谈话中，我猛地发觉：时间已经过去了很久。</span></p><p><span>真的很久。</span></p><p><span>从我落水，到河道干涸的这么多时间。</span></p><p><span>我向他们叙述了这个结果，他们并不相信，将我带到了警察局中。我看了眼墙上的电子日历，心颤抖了一下。</span></p><p><span>已经过去了六十年。</span></p><p><span>他们再次询问我发生的事，我并未做出解释，我也无法做出解释。我建议他们翻看六十年前有无人员失踪的案例，他们也真真切切找到了一例。</span></p><p><span>失踪的人，就是我。</span></p><p><span>他们提取了我的指纹，经行比对，结果在我的意料之中。</span></p><p><span>我没有死，而是沉睡了六十年。</span></p><p><span>一时间，我的事件轰动了全国，轰动了全世界。各地的科研人员和新闻记者争先恐后找到我。</span></p><p><span>他们都说：这是不可能的。</span></p><p><span>但事实就是那样。</span></p><p><span>六十年，我的亲人都已离我而去了，但我还有一个弟弟留存。他也人到中年了，而我仍然还是十几岁的模样。</span></p><p><span>事件逐渐平息，好像所有人都默认这是一场闹剧，生活又回归了正轨。</span></p><p><span>但时间，可怕的时间流逝。我的样貌成长到二十多岁后不再有任何变化，一个个星期，一个个月，一年又一年过去，我周围的人止不住地衰老，而我却丝毫不变。</span></p><p><span>在某个时候，我突然意识到：</span></p><p><span>我似乎永生了。</span></p><p><span>那我就不死吗？会死而复生吗？</span></p><p><span>当时想到几十年前河中醒来的事件，我想，大概是的。</span></p><p><span>正当我迷茫之时，我遇到了一位重要的人，我渐渐喜欢上了她。在梦中，我告诉她我的心声，她回应我星河以表委婉的谢绝。不过我日思夜想，止不住联想到她，我感觉一切又好像美妙了起来。但我还没有意识到，永生是多么巨大的痛苦。</span></p><p><span>终于到了那一天，我亲眼将她送走了，我将永远也见不到她了，在无尽的未来里。</span></p><p><span>我被迫见到了太多的悲剧，我已经感到麻痹，过于痛惜悲剧是没有意义的，因为每时每刻它们都在上演。</span></p><p><span>又过去了很久，直到我一个亲人都没有，直到有一天，世界重新审视了我，一个不老不死的人。</span></p><p><span>当年争先恐后找我的人，都已然离世，不过我还是我。</span></p><p><span>我又被请往参与科学研究，不过他们得到了什么结论呢？</span></p><p><span>又过去了几个世纪，我无奈送走了一代代科学家，他们每个人最后看我的眼神……我也许忘不了了。</span></p><p><span>我开始追求有意义地活着，我为科学献身，为医学献身，我贡献了无数的组织器官和珍贵的实验数据。</span></p><p><span>有人刺杀了我。</span></p><p><span>也许是对我永生的能力感到不平，他不择手段与我同归于尽，但硝烟过后，在一团血肉模糊中，我又站了起来。就像神一样，无视自然的法则，也许我就是所谓上帝，所谓“宇宙大帝”。</span></p><p><span>从那开始，我突然陷入彷徨，最后我选择了黑暗。没有事物能阻挡我的脚步，因为我有无尽的时间在手。我做出了我能做到的所有破坏，我的罪恶罄竹难书。</span></p><p><span>所有人开始强烈谴责我，认为我作为自然的产物但不能存在。面对这些舆论，我只是向他们微笑，他们怎能明白，我心中对死的渴望？而总有一天，他们也都将不复存在，灰飞烟灭。</span></p><p><span>整个世界对我产生了恐惧，它试图阻止我，试图消灭我，试图囚禁我，但在时间面前，都化作了尘土。</span></p><p><span>在我看来，时间只是流逝地越来越快。几十年，几世纪，几千年过去了，我都留了下来。</span></p><p><span>我曾从最高的山峰一跃而下，到最深的海沟陨落堕地，淹没在炽热的火山灰中，气化在世界的核战争里。每当痛苦之时，我就能感到强烈的存在感。</span></p><p><span>一次次，我死去的灵魂游荡，宛如做梦一般，随后梦醒，又涅槃重生。</span></p><p><span>多么了不起啊？</span></p><p><span>但世界淡忘了我。</span></p><p><span>最后它遗忘了我。</span></p><p><span>也许我早就开始厌恶起我自己了，厌恶我不能沉睡，而要被迫接受活着。</span></p><p><span>人类似乎研究出了永生的办法，第一批“永生”之人和我见面了，他们脸上都是无法掩饰的骄傲，但我只是保持了很久的微笑。因为又过了数十万年，组成他们身体的原子，都已各奔东西，而我还是我自己。</span></p><p><span>我活到人类开始真正意义上太阳系外的星际移民。</span></p><p><span>又过了几个世纪，技术发展地相当成熟，他们带上了我，驶向更深的太空。不过没人还记得我是谁。</span></p><p><span>一个不死的人，到了宇宙的深处，会发生什么呢？</span></p><p><span>我似乎又对生活有了兴趣。</span></p><p><span>我游历了宇宙生命所能找到的所有星球，体验了所有。</span></p><p><span>我在岩石组成的单调行星上漫步行走，花了十几年；</span></p><p><span>我站在钻石材质的行星上看超新星的爆炸，花了几百年；</span></p><p><span>我躺在雨林星球上，与原住民探究水的奥秘，直到他们都离我而去，直到我被植物埋没，直到我与它们形成为煤炭，压缩成为石墨，花了几十万年；</span></p><p><span>我在地球上，面向太阳，直到它衰老膨胀，毁灭了我最初的家园，花了几十亿年；</span></p><p><span>我住在类地行星上，看见元素组成了有机化合物，有机物化合物变成了单细胞生物，单细胞生物变成了二级文明，我与他们一同观看仙女座与银河系的华丽碰撞，花了几百亿年；</span></p><p><span>我看见了宇宙文明间星系级的战争浩劫，直到人类的灭绝，直到最强大的一位胜出，直到它也经不起时间的磨洗而覆灭，花了几千亿年；</span></p><p><span>我在宇宙中飘荡，恒行一个个衰老死去，直到最后的红矮星逝去，来到简并纪，花了几万亿年；</span></p><p><span>我与最后苟延残喘的文明依附在白矮星旁，宇宙中仅存的光亮旁，花了百万兆年；</span></p><p><span>直到最后白矮星的光芒消逝，宇宙成为黑洞的世纪，花了兆兆年。</span></p><p><span>我的思绪愈发迟钝，每隔亿万年，才有一个想法在我的脑海涌现。</span></p><p><span>就这样，一步步，我变成了可笑的东西。永生，使我得到了所有能力，使我体验了所有东西，却唯独少了最重要的权力：</span></p><p><span>死亡的权力。</span></p><p><span>因而我不能结束这场闹剧，也没人能为我结束这场闹剧。</span></p><p><span>终将过去不知多久，也许随着宇宙的覆灭，我也能解脱。</span></p><p><span>但就好像宇宙也遗忘了我，熵不再增加了，宇宙陷入了永恒的热寂，把我排斥在外。</span></p><p><span>我再也不是我了，而是不应该存在的存在，而是被囚禁在永远与须臾中的一个东西。</span></p><p><span>古往今来多少人渴望寻觅到长生不老的秘诀？多少人激扬文字写下向往永生的诗篇？现在我做到了，但结局很悲惨，我没有结局。</span></p><p><span>你还是渴望绝对的不死吗？</span></p><p><span>啊？你原来早就不在了。</span></p><p><span>…………</span></p><p>&nbsp;</p><p><span>写到这里，肯弗森停下了手中的笔，坐在街头的他，正体验着流浪的生活。他一直都有着成为作家的理想，但始终没能摆脱平凡的命运，在别人看来，他只是碌碌无为。</span></p><p><span>他活在一个快节奏的世纪，人们对于“大新闻”蜂拥而上，瞩目围观，然后人走茶凉，一哄而散；对于世界，碎片认知，然后肆意评判，对彼此尔虞我诈，对自然白眼相看。</span></p><p><span>“人们从未渴求过真理，他们对不合胃口的证据视而不见，谁向他们提供幻觉，谁就可以轻易的成为他们的主人。”</span></p><p><span>“我讨厌闲聊。</span></p><p><span>我想谈论时间、死亡、性、宇宙、女权、人格、生命、你最爱的咖啡种类、单曲循环的音乐、有趣的回忆、你说过的谎言、你的缺点、你最喜欢的书籍电影、你的童年、让你彻夜难眠的东西、你的不安全感和恐惧。</span></p><p><span>我喜欢有深度的人，他们用扭曲的心态带着情感说话。</span></p><p><span>我不想知道‘怎么了’。</span></p><p><span>但我没有最崇高的思想，我只是一无名之辈，我只是简单想‘雅俗共赏’。”</span></p><p><span>肯弗森在他的一本书中那么写道。</span></p><p><span>“我也时常幻想能够活得很久，然后看着这些喧嚣，烟消云散。”</span></p><p><span>“但是我不能，思考后也不想。”</span></p><p><span>世界的悲惨现实让他感到幻灭，他对着人群说话，没人愿意听清他说了什么。他喜欢站在风雨中，和自然对话，因为风和雨会耐心的听一阵子才离开。</span></p><p><span>他痛苦着，社会投射给他的各种价值观，组合在一起，变幻着他的思维，用他自己攻击他自己。</span></p><p><span>最后，他不能忍受巨大的悲哀：</span></p><p><span>“为什么要取得他人的认可或者让他人感到舒适才能实现自己的价值？”</span></p><p><span>他做出了一个重大的决定。</span></p><p><span>他站在孤岛的峭壁边，看到缓缓下沉的落日。</span></p><p><span>纵然在这偏僻之地，还是有人找到了他。他们为他进行着直播的救援，歇斯底里的呼喊。</span></p><p><span>他转过身，闭上了眼。正当所有人都以为他就要转身离开之时：</span></p><p><span>他静静地感受着，感受到大海洋流的涌动；感受到岩石随着狂风分崩离析；感受到地底的矿藏闪闪发光；感受到夕阳无限好的光辉；感受到海鸥的鸣叫，树叶的簌簌，生命的脉搏；感受到天空星汉灿烂；感受到周围人无知的悲哀……</span></p><p><span>最后他轻轻叹了口气，向后躺了下去，感受到风在他的指间和耳畔穿行，感受到时间的缓缓逝去……</span></p><p><span>“我想坦然试试，我是不是也能不死。”</span></p><p><span>他堕入了大海而躲入了另一个世界，眼睛再没有睁开。</span></p><p><span>周围的人们疯狂了，事后他们收集到他所有的资料，他们极力赞美他思想的光辉，又极力谴责自己混沌秽浊的思绪。他们对于巨星的陨落感到万分痛惜，他们掀起轩然大波，却开始向世人宣告他们自己的伟大思想。</span></p><p><span>然后一切又在一瞬间趋于平静了。</span></p><p><span>最后没人再记得他，囚牢中的生命。</span></p><p><span>…………</span></p><p>&nbsp;</p><p><span>写到这里，苏泊尔停下了颤抖的手，缓缓放下钢笔，合上了自己蓝色封面的笔记本。</span></p><p><span>“我们都被困在怎样的囚牢里？”</span></p><p><span>他在医院漫步着，他患有严重的精神衰弱，正在接受心理放松治疗。</span></p><p><span>他时常和病友聊天：“我总是关心一些远远轮不到我去关心的事物，你觉得我是不是杞人忧天？”</span></p><p><span>“我不能理解，你可以试试把自己的想法发布出去。”病友这样说。</span></p><p><span>“我不会这么做的，不会产生共鸣的想法将会成为笑话的对象。我所创作的东西，终究还是只有我能明白啊！”</span></p><p><span>他时常自己感慨：“你想想生命和宇宙，提到它们我就感慨万千。时间是个多么无情的事物，生命因时间而被成就，也因时间而消失殆尽。不论是永生还是短命，它就这样被永远囚禁。不过我们也能在有限的时光里，创造不朽的奇迹。”</span></p><p><span>“也许我们能少一些无谓的争斗和攀比，也许我们能一起回归自然享受真正意义的生活。那些暗算和鄙夷，在时间长河面前，又将何处遁形？完美无瑕的，是我们最真挚的感情。”</span></p><p><span>“我随波而立，逐波而行，随时空而变，伴海风而静坐黄昏。”</span></p><p><span>“是醒来，抑或是睡去，你心中的答案是怎样的深刻真切？”</span></p><p><span>“你到底是谁，你从何而来，又将走向何方？”</span></p><p><span>“在时间面前，你是否做好了觉悟，坚守信念？”</span></p><p><span>“希望人人都可以明白自己的热爱。”</span></p><p><span>“请生者前行，请不死者宁静。”</span></p><p><span>愿生命摆脱枷锁，</span></p><p><span>愿灵魂安息。</span></p><p><span>Requiescat in pace.</span></p><p><span>…………</span></p></div></div>
+</body>
+</html>
