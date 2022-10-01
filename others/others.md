@@ -4,7 +4,7 @@
 
 ###### 主人员：
 
-![](https://i2.imgu.cc/images/2022/06/21/C8QF4.jpg)
+![](https://s1.328888.xyz/2022/10/01/M7Hwj.jpg)
 
 <center>初中毕业了……SoTWild（左），Link+（右）</center>
 
@@ -24,7 +24,7 @@
 
 ###### Open：
 
-<img src="https://i2.imgu.cc/images/2022/06/25/C8FUs.jpg" style="zoom:30%;" />
+<img src="https://s1.328888.xyz/2022/10/01/Mz8uk.jpg" alt="头像框" style="zoom:25%" />
 
 ~~以上成员均已遁入幻想~~
 
@@ -94,4 +94,4 @@
 
 - #### 加入我们：
 
-	##### [加入我们](/others/JoinUs.html)
+	##### [加入我们](/others/JoinUs/JoinUs.html)

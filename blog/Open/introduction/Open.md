@@ -2,7 +2,7 @@
 
 ###### “思维锈掉了……”
 
-<img src="https://i2.imgu.cc/images/2022/06/25/C8FUs.jpg" alt="头像框" style="zoom:25%;float:left; " />
+<img src="https://s1.328888.xyz/2022/10/01/Mz8uk.jpg" alt="头像框" style="zoom:25%;float:left; " />
 
 ------
 

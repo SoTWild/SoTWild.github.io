@@ -2,7 +2,7 @@
 
 ###### “不要让战斗停下来！”
 
-<img src="https://s2.loli.net/2022/03/06/bmsSwTUIYKc21L8.png" alt="头像框" style="zoom:%;float:left; " />
+<img src="https://s1.328888.xyz/2022/10/01/MzVir.png" alt="头像框" style="float:left; " />
 
 ------
 

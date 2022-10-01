@@ -2,7 +2,7 @@
 
 ###### “游荡的孤高灵魂不需要羁绊之地”
 
-<img src="https://s2.loli.net/2022/03/06/3L74TWSXl8vhiQ2.jpg" alt="头像框" style="zoom:45%;float:left; " />
+<img src="https://s1.328888.xyz/2022/10/01/MzPPm.jpg" alt="头像框" style="zoom:45%;float:left; " />
 
 ------
 

@@ -14,7 +14,7 @@ Asthenic（虚弱）。这是我的**第一首原创曲**子，可能不怎么�
 
 这样的曲子多听了会**损伤精神**吧（笑）
 
-<img src="https://i2.imgu.cc/images/2022/05/22/CtKKr.png" style="zoom:50%;" />
+<img src="https://s1.328888.xyz/2022/10/01/M7PvN.png" style="zoom:50%;" />
 
 
 

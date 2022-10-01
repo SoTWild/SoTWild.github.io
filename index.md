@@ -34,7 +34,7 @@
 
 ###### 这是本站内容地图：
 
-![](https://i2.imgu.cc/images/2022/05/15/CtNjj.png)
+![](https://s1.328888.xyz/2022/10/01/M7SyX.png)
 
 ------
 

@@ -18,7 +18,7 @@ White Night（不眠夜）
 
 感受一下每晚我的不眠吧！（笑）
 
-<img src="https://i2.imgu.cc/images/2022/07/22/CD4WO.png" style="zoom:50%;" />
+<img src="https://s1.328888.xyz/2022/10/01/M77DP.png" style="zoom:50%;" />
 
 
 

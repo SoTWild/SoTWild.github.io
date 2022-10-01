@@ -16,7 +16,7 @@ Rectifier Module（整流滤波板）
 >
 > Maximum Power:**40W**
 
-<img src="https://i2.imgu.cc/images/2022/05/23/CtDZf.png" style="zoom:50%;" />
+<img src="https://s1.328888.xyz/2022/10/01/M7Und.png" style="zoom:50%;" />
 
 
 

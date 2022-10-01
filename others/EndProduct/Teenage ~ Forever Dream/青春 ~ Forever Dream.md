@@ -24,7 +24,7 @@
 
 这是我的**第二首原创曲**子，希望你能喜欢。
 
-<img src="https://i2.imgu.cc/images/2022/06/18/C8OPD.png" style="zoom:50%;" />
+<img src="https://s1.328888.xyz/2022/10/01/M7J4U.png" style="zoom:50%;" />
 
 
 
