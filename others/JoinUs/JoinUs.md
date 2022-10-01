@@ -34,7 +34,7 @@
 
 ### 进阶：
 
-[教程](/others/JoinUs/course.md)
+[教程](/others/JoinUs/course.html)
 
 ------
 
