@@ -2,7 +2,7 @@
 
 ###### “我们的征途是星辰大海”
 
-<img src="https://s1.328888.xyz/2022/10/01/MMz6X.png" alt="头像框" style="zoom:25%;float:left; " />
+<img src="https://s1.328888.xyz/2022/10/01/MMz6X.png" alt="头像框" style="zoom:25%;float:left" />
 
 ------
 
